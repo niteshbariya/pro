@@ -1,0 +1,2638 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TET 1 સ્પેશિયલ: પર્યાવરણ શિક્ષણશાસ્ત્ર (EVS Pedagogy) - ભાગ 5 | ૧૦૦ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-leaf"></i> TET 1 સ્પેશિયલ: પર્યાવરણ શિક્ષણશાસ્ત્ર (EVS Pedagogy) - ભાગ 5</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-earth-asia"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">TET 1 પર્યાવરણ શિક્ષણશાસ્ત્ર (EVS Pedagogy) - ભાગ 5</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">GPSC પરીક્ષા પદ્ધતિ અનુસાર વાંચન, તર્ક, યાદશક્તિ અને વિશ્લેષણ શક્તિ આધારિત ૧૦૦ પ્રશ્નો</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> TET 1 સ્પેશિયલ: પર્યાવરણ શિક્ષણશાસ્ત્ર (EVS Pedagogy) - ભાગ 5 | ૧૦૦ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ ઉચ્ચ કઠિનતામૂલ્ય (HOT) પ્રશ્નોનો ડેટાસેટ (કોર્સ-૧(અ): બોધ અને જ્ઞાન તથા રમતો)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: નીચેના વિધાનો પર વિચાર કરો:
+1. રાષ્ટ્રીય અભ્યાસક્રમની રૂપરેખા (NCF-2005) મુજબ EVS માં વિજ્ઞાન, સામાજિક વિજ્ઞાન અને પર્યાવરણીય શિક્ષણના ખ્યાલોને સંકલિત કરવામાં આવ્યા છે.
+2. NCF-2005 બાળકોને વ્યાખ્યાઓ ગોખવા અને માત્ર માહિતી યાદ રાખવા પર ભાર મૂકે છે.
+3. EVS પાઠ્યપુસ્તકમાં બાળકો દ્વારા બોલવામાં આવતી રોજિંદી અને અનૌપચારિક ભાષાનો ઉપયોગ કરવામાં આવ્યો છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: NCF-2005 બાળકોને વ્યાખ્યાઓ ગોખવા અને માત્ર માહિતી યાદ રાખવા પર ભાર મૂકે છે. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: રાષ્ટ્રીય અભ્યાસક્રમની રૂપરેખા (NCF-2005) મુજબ EVS માં વિજ્ઞાન, સામાજિક વિજ્ઞાન અને પર્યાવરણીય શિક્ષણના ખ્યાલોને સંકલિત કરવામાં આવ્યા છે. અને EVS પાઠ્યપુસ્તકમાં બાળકો દ્વારા બોલવામાં આવતી રોજિંદી અને અનૌપચારિક ભાષાનો ઉપયોગ કરવામાં આવ્યો છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005))"
+  },
+  {
+    "q": "પ્રશ્ન 2: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "બાળકોના અવલોકનો, ચિત્રકામ, ચર્ચા અને પ્રયોગોની પદ્ધતિઓ એ ગુણાત્મક મૂલ્યાંકનની તકો છે.",
+      "EVS માં મૂલ્યાંકન માત્ર સાચા કે ખોટા જવાબોની શરતોમાં ન થવું જોઈએ.",
+      "EVS માં બાળકોના પ્રદર્શનનું મૂલ્યાંકન માત્ર વર્ષના અંતે લેવાતી લેખિત પરીક્ષાથી જ થવું જોઈએ.",
+      "શિક્ષકોએ બાળકોને પોતાના જવાબો અને અનુભવો મુક્ત રીતે વર્ગમાં રજૂ કરવા પ્રોત્સાહિત કરવા જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ))"
+  },
+  {
+    "q": "પ્રશ્ન 3: વિધાન અને કારણ ચકાસો:
+વિધાન (A): બાળકોને કીડીઓના રસ્તામાં પેન્સિલ મૂકી અવલોકન કરવાની પ્રવૃત્તિ કરાવવામાં આવે છે.
+કારણ (R): પ્રાયોગિક અને જાતે કરેલી પ્રવૃત્તિથી બાળકો પ્રાણીઓના વર્તન અને તેમની ઇન્દ્રિયો વિશે ઝડપથી અને ઊંડાણપૂર્વક શીખે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો))"
+  },
+  {
+    "q": "પ્રશ્ન 4: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. મદારીની વાર્તા		a. માનવ-પ્રાણી નિર્ભરતા
+2. ડૉ. બ્યુમોન્ટ		b. વૈજ્ઞાનિક પ્રયોગો પ્રત્યે ઉત્કટતા
+3. સ્વાદની રમત		c. ઇન્દ્રિયોનો પ્રાયોગિક અનુભવ
+4. ગ્લુકોઝની ચર્ચા		d. ઉર્જા અને સ્વાસ્થ્યનો ખ્યાલ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન))"
+  },
+  {
+    "q": "પ્રશ્ન 5: જ્યારે શિક્ષક પૂછે છે કે 'જો બીજ ફેલાય નહીં અને એક જ જગ્યાએ પડી રહે તો શું થાય?', ત્યારે તેઓ બાળકોમાં કઈ ક્ષમતા વિકસાવવા માંગે છે?",
+    "options": [
+      "વાંચન ક્ષમતા",
+      "કાલ્પનિક વિચારસરણી, તર્ક અને વિશ્લેષણ (Critical Thinking)",
+      "માત્ર યાદશક્તિ",
+      "ચિત્રકામની ક્ષમતા"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "આવા 'Open-ended' પ્રશ્નો બાળકોને તર્ક લગાવવા અને વૈકલ્પિક સ્થિતિની કલ્પના કરવા મજબૂર કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 6: નીચેના વિધાનો પર વિચાર કરો:
+1. ઈતિહાસ જાણવાના સ્રોતો તરીકે જૂની ઈમારતો, સિક્કા, ચિત્રો અને પ્રવાસીઓના વર્ણન (જેમ કે અલ-બિરુની) ની ચર્ચા વર્ગમાં કરવી જોઈએ.
+2. શિક્ષકે ધોરણ 5 ના બાળકોને 'ઘનતા' (Density) અને 'બાષ્પીભવન' (Evaporation) ના જટિલ વૈજ્ઞાનિક સમીકરણો ગોખાવવા જ જોઈએ.
+3. પાણીના પ્રયોગો કરતી વખતે બાળકો જે જવાબો આપે (જેમ કે પાણી 'જાડું' છે) તેને સ્વીકારીને ધીમે ધીમે વૈજ્ઞાનિક ખ્યાલો તરફ દોરવા જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: શિક્ષકે ધોરણ 5 ના બાળકોને 'ઘનતા' (Density) અને 'બાષ્પીભવન' (Evaporation) ના જટિલ વૈજ્ઞાનિક સમીકરણો ગોખાવવા જ જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: ઈતિહાસ જાણવાના સ્રોતો તરીકે જૂની ઈમારતો, સિક્કા, ચિત્રો અને પ્રવાસીઓના વર્ણન (જેમ કે અલ-બિરુની) ની ચર્ચા વર્ગમાં કરવી જોઈએ. અને પાણીના પ્રયોગો કરતી વખતે બાળકો જે જવાબો આપે (જેમ કે પાણી 'જાડું' છે) તેને સ્વીકારીને ધીમે ધીમે વૈજ્ઞાનિક ખ્યાલો તરફ દોરવા જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો))"
+  },
+  {
+    "q": "પ્રશ્ન 7: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "રોનાલ્ડ રોસની વાર્તા દર્શાવે છે કે વૈજ્ઞાનિક શોધો માટે કેટલી ધીરજ, નિષ્ફળતાઓ અને સતત પ્રયત્નોની જરૂર હોય છે.",
+      "મેલેરિયા અને પાંડુરોગના મેડિકલ રિપોર્ટ વર્ગમાં લાવીને શિક્ષકે બાળકોને વાસ્તવિક દસ્તાવેજો (Authentic data) વાંચવાની તાલીમ આપવી જોઈએ.",
+      "પર્વતારોહણના પાઠમાં માત્ર પર્વતોના નામ જ યાદ રખાવા જોઈએ, સાહસ કે જવાબદારીની વાતો ન કરવી જોઈએ.",
+      "શિક્ષકે બાળકોને મચ્છરના પોરા શોધવા માટે શાળાની આસપાસના વિસ્તારનું સર્વેક્ષણ (Survey) કરવાનું કાર્ય સોંપવું જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ))"
+  },
+  {
+    "q": "પ્રશ્ન 8: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ગોલકોંડા કિલ્લાના પાણીના નળ કે પાઇપની વ્યવસ્થા બાળકોને બતાવી તેમને જૂની અને આધુનિક ઈજનેરી વચ્ચે સરખામણી કરવા કહેવું જોઈએ.
+કારણ (R): આનાથી બાળકોમાં તુલનાત્મક અભ્યાસ અને ઐતિહાસિક સ્મારકો પ્રત્યે આદરભાવ કેળવાય છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ))"
+  },
+  {
+    "q": "પ્રશ્ન 9: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ઊર્જાના સ્રોતો		a. કરકસર અને વૈકલ્પિક ઊર્જાની ચર્ચા
+2. લદ્દાખનું વાતાવરણ		b. આબોહવા અને રહેઠાણનો સંબંધ
+3. ટ્રાફિક સર્વે		c. વાસ્તવિક દુનિયા સાથે જોડાણ
+4. ડોંગા અને રેબો		d. સાંસ્કૃતિક વિવિધતા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ))"
+  },
+  {
+    "q": "પ્રશ્ન 10: ગાંધીજીના આશ્રમમાં સફાઈના કાર્યો જાતે કરવાના પ્રસંગ પરથી શિક્ષક બાળકોમાં કયું મૂલ્ય વિકસાવવા માંગે છે?",
+    "options": [
+      "સફાઈ માત્ર નોકરોનું કામ છે",
+      "દરેક કામ સમાન છે અને જાતે કામ કરવાથી કોઈ નાનું થઈ જતું નથી (શ્રમનું ગૌરવ)",
+      "સફાઈ કરવાથી પૈસા મળે છે",
+      "માત્ર શાળામાં જ સફાઈ કરવી જોઈએ"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "ગાંધીજીના વિચારો દ્વારા 'Dignity of Labour' નો ગુણ વિકસાવવો એ મુખ્ય હેતુ છે."
+  },
+  {
+    "q": "પ્રશ્ન 11: નીચેના વિધાનો પર વિચાર કરો:
+1. અફસાનાની ટીમની વાર્તા દ્વારા શિક્ષકે વર્ગમાં જાતિભેદ (Gender bias) તોડવા અને 'ટીમ ભાવના' વિશે ચર્ચા કરવી જોઈએ.
+2. શિક્ષકે એવું શીખવવું જોઈએ કે છોકરીઓએ માત્ર ઘરકામ જ કરવું જોઈએ અને રમતો ફક્ત છોકરાઓ માટે છે.
+3. અનુજના ગામ ખેડીના ડૂબમાં જવાના પ્રસંગ દ્વારા શિક્ષકે 'વિકાસ' અને 'વિસ્થાપન' (Displacement) ની બેધારી અસરો સમજાવવી જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: શિક્ષકે એવું શીખવવું જોઈએ કે છોકરીઓએ માત્ર ઘરકામ જ કરવું જોઈએ અને રમતો ફક્ત છોકરાઓ માટે છે. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: અફસાનાની ટીમની વાર્તા દ્વારા શિક્ષકે વર્ગમાં જાતિભેદ (Gender bias) તોડવા અને 'ટીમ ભાવના' વિશે ચર્ચા કરવી જોઈએ. અને અનુજના ગામ ખેડીના ડૂબમાં જવાના પ્રસંગ દ્વારા શિક્ષકે 'વિકાસ' અને 'વિસ્થાપન' (Displacement) ની બેધારી અસરો સમજાવવી જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર))"
+  },
+  {
+    "q": "પ્રશ્ન 12: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "જંગલો અને આદિવાસીઓના સંબંધ (સૂર્યમણિની વાર્તા) દ્વારા જંગલ અધિકાર કાયદો અને પ્રકૃતિ સંરક્ષણ સમજાવવું અગત્યનું છે.",
+      "આધુનિક અને દેશી ખેતીની સરખામણી દ્વારા શિક્ષકે જમીનની ફળદ્રુપતા અને પર્યાવરણને થતા નુકસાનની વૈજ્ઞાનિક ચર્ચા કરવી જોઈએ.",
+      "આનુવંશિકતાના પાઠમાં શિક્ષકે બાળકોને ગ્રેગર મેન્ડેલના ગણિતના અઘરા દાખલા ગણવા આપવા જોઈએ.",
+      "વર્ગમાં જોડિયા બાળકો અથવા પરિવારના સભ્યો સાથેના શારીરિક સામ્યતાના ઉદાહરણોની ચર્ચા કરવી જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21))"
+  },
+  {
+    "q": "પ્રશ્ન 13: વિધાન અને કારણ ચકાસો:
+વિધાન (A): શિક્ષકે વર્ગમાં નકશા વાંચન (Map reading) ની પ્રવૃત્તિ કરાવવી જોઈએ.
+કારણ (R): નકશા વાંચનથી બાળકોમાં અવકાશિય સમજ (Spatial understanding), દિશા અને ભૌગોલિક સ્થાન નક્કી કરવાની કુશળતા વિકસે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ))"
+  },
+  {
+    "q": "પ્રશ્ન 14: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. આપણે શું શીખ્યાં		a. સ્વ-મૂલ્યાંકન અને સમજ ચકાસણી
+2. વાર્તાઓ અને કવિતાઓ		b. રસ જાળવી રાખવા અને કલ્પનાશક્તિ વધારવા
+3. પ્રત્યક્ષ અનુભવ		c. સ્થાયી શિક્ષણ (Permanent learning)
+4. સમાચારપત્રોના લેખ		d. સમકાલીન મુદ્દાઓ (Current issues) સાથે જોડાણ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ))"
+  },
+  {
+    "q": "પ્રશ્ન 15: EVS શિક્ષણમાં શિક્ષકો માટે સૌથી અગત્યની ભૂમિકા કઈ હોવી જોઈએ?",
+    "options": [
+      "માત્ર પાઠ્યપુસ્તક વાંચી જવું",
+      "જ્ઞાનના સર્જન માટે બાળકોને તકો અને પ્રવૃત્તિઓ પૂરી પાડવી",
+      "પરીક્ષામાં સારા માર્ક્સ લાવવા માટે ગોખણપટ્ટી કરાવવી",
+      "વર્ગમાં હંમેશા કડક શિસ્ત જાળવી રાખવી"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "EVS શિક્ષણમાં બાળકોને પ્રશ્નો પૂછવા, પ્રયોગો કરવા અને જાતે શીખવા માટે પ્રેરિત કરવા જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 16: નીચેના વિધાનો પર વિચાર કરો:
+1. EVS માં મૂલ્યાંકન માત્ર સાચા કે ખોટા જવાબોની શરતોમાં ન થવું જોઈએ.
+2. EVS માં બાળકોના પ્રદર્શનનું મૂલ્યાંકન માત્ર વર્ષના અંતે લેવાતી લેખિત પરીક્ષાથી જ થવું જોઈએ.
+3. બાળકોના અવલોકનો, ચિત્રકામ, ચર્ચા અને પ્રયોગોની પદ્ધતિઓ એ ગુણાત્મક મૂલ્યાંકનની તકો છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: EVS માં બાળકોના પ્રદર્શનનું મૂલ્યાંકન માત્ર વર્ષના અંતે લેવાતી લેખિત પરીક્ષાથી જ થવું જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: EVS માં મૂલ્યાંકન માત્ર સાચા કે ખોટા જવાબોની શરતોમાં ન થવું જોઈએ. અને બાળકોના અવલોકનો, ચિત્રકામ, ચર્ચા અને પ્રયોગોની પદ્ધતિઓ એ ગુણાત્મક મૂલ્યાંકનની તકો છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ))"
+  },
+  {
+    "q": "પ્રશ્ન 17: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "'સારી' અને 'ખરાબ' સુગંધ વિશેની ચર્ચા દ્વારા શિક્ષક બાળકોમાં સંવેદનશીલતા અને તર્કશક્તિ વિકસાવી શકે છે.",
+      "શિક્ષકે બાળકોને પ્રાણીઓ અને પક્ષીઓ વિશેના તેમના પોતાના અનુભવોની વર્ગમાં આપ-લે કરવા પ્રોત્સાહિત કરવા જોઈએ.",
+      "શિક્ષકે પ્રાણીઓની ઇન્દ્રિયો વિશે બાળકોને ફક્ત વ્યાખ્યાઓ જ લખાવી દેવી જોઈએ.",
+      "બાળકોને કીડીઓના રસ્તામાં પેન્સિલ મૂકી અવલોકન કરવાની પ્રવૃત્તિ કરાવવામાં આવે છે."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો))"
+  },
+  {
+    "q": "પ્રશ્ન 18: વિધાન અને કારણ ચકાસો:
+વિધાન (A): શિક્ષકે વર્ગમાં એ સમજાવવું જોઈએ કે કોઈ પણ સમુદાય પ્રાણીઓ સાથે ખરાબ વ્યવહાર કરતો નથી (જેમ કે મદારી અને સાપ).
+કારણ (R): આનાથી બાળકોમાં કોઈ ચોક્કસ સમુદાય પ્રત્યેના પૂર્વગ્રહો દૂર થાય છે અને પ્રાણીઓ પ્રત્યે સહાનુભૂતિ વધે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન))"
+  },
+  {
+    "q": "પ્રશ્ન 19: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. બ્રેડનો પ્રયોગ		a. અવલોકન અને વૈજ્ઞાનિક નોંધ
+2. ખોરાકની સાચવણી		b. વિવિધ ઋતુઓ અને પરંપરાગત પદ્ધતિઓ
+3. બીજનો ફેલાવો		c. પ્રકૃતિની અદ્ભુત રચના અને કલ્પનાશક્તિ
+4. વેલ્ક્રોની વાર્તા		d. અવલોકનમાંથી આવિષ્કારની પ્રેરણા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ))"
+  },
+  {
+    "q": "પ્રશ્ન 20: શાળાની આસપાસ જળાશયો કે તળાવની મુલાકાત (Field Trip) લેવાનું NCF-2005 શા માટે ભારપૂર્વક સૂચવે છે?",
+    "options": [
+      "માત્ર શાળાની બહાર જવાની મજા માટે",
+      "પાઠ્યપુસ્તકના જ્ઞાનને વાસ્તવિક જીવન અને સ્થાનિક પર્યાવરણ સાથે જોડવા માટે",
+      "શારીરિક કસરત માટે",
+      "સમય પસાર કરવા માટે"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "ક્ષેત્ર મુલાકાતથી બાળકો વર્ગના શિક્ષણને તેમની વાસ્તવિક દુનિયા સાથે સાંકળી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 21: નીચેના વિધાનો પર વિચાર કરો:
+1. મેલેરિયા અને પાંડુરોગના મેડિકલ રિપોર્ટ વર્ગમાં લાવીને શિક્ષકે બાળકોને વાસ્તવિક દસ્તાવેજો (Authentic data) વાંચવાની તાલીમ આપવી જોઈએ.
+2. પર્વતારોહણના પાઠમાં માત્ર પર્વતોના નામ જ યાદ રખાવા જોઈએ, સાહસ કે જવાબદારીની વાતો ન કરવી જોઈએ.
+3. રોનાલ્ડ રોસની વાર્તા દર્શાવે છે કે વૈજ્ઞાનિક શોધો માટે કેટલી ધીરજ, નિષ્ફળતાઓ અને સતત પ્રયત્નોની જરૂર હોય છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: પર્વતારોહણના પાઠમાં માત્ર પર્વતોના નામ જ યાદ રખાવા જોઈએ, સાહસ કે જવાબદારીની વાતો ન કરવી જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: મેલેરિયા અને પાંડુરોગના મેડિકલ રિપોર્ટ વર્ગમાં લાવીને શિક્ષકે બાળકોને વાસ્તવિક દસ્તાવેજો (Authentic data) વાંચવાની તાલીમ આપવી જોઈએ. અને રોનાલ્ડ રોસની વાર્તા દર્શાવે છે કે વૈજ્ઞાનિક શોધો માટે કેટલી ધીરજ, નિષ્ફળતાઓ અને સતત પ્રયત્નોની જરૂર હોય છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ))"
+  },
+  {
+    "q": "પ્રશ્ન 22: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "સુનીતા વિલિયમ્સના અનુભવો દ્વારા શિક્ષક ગુરુત્વાકર્ષણ જેવા અમૂર્ત (Abstract) ખ્યાલોને વાસ્તવિક ઉદાહરણોથી સમજાવી શકે છે.",
+      "કિલ્લાના નકશાનો અભ્યાસ કરાવતી વખતે શિક્ષકે બાળકોને દિશા (Directions) અને પ્રમાણમાપ (Scale) નો ખ્યાલ સ્પષ્ટ કરવો જોઈએ.",
+      "ઐતિહાસિક સ્થળોની માહિતી શિક્ષકે માત્ર ભાષણ આપીને જ પૂરી કરવી જોઈએ.",
+      "ગોલકોંડા કિલ્લાના પાણીના નળ કે પાઇપની વ્યવસ્થા બાળકોને બતાવી તેમને જૂની અને આધુનિક ઈજનેરી વચ્ચે સરખામણી કરવા કહેવું જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ))"
+  },
+  {
+    "q": "પ્રશ્ન 23: વિધાન અને કારણ ચકાસો:
+વિધાન (A): શિક્ષકે બાળકો પાસે ટ્રાફિક સિગ્નલ પર થતા પ્રદૂષણ વિશે સર્વે કે પોસ્ટર બનાવડાવવા જોઈએ.
+કારણ (R): આવી પ્રવૃત્તિઓથી બાળકોમાં પર્યાવરણ પ્રત્યે સંવેદનશીલતા અને જવાબદાર નાગરિક બનવાના ગુણો વિકસે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ))"
+  },
+  {
+    "q": "પ્રશ્ન 24: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ભૂકંપની મોકડ્રીલ		a. આફત વ્યવસ્થાપન (Disaster Management)
+2. ફૂંક મારવાના પ્રયોગો		b. અનુભવજન્ય વિજ્ઞાન
+3. સફાઈ કામગીરીની ચર્ચા		c. શ્રમનું ગૌરવ અને સમાનતા
+4. આંબેડકરનો પ્રસંગ		d. સામાજિક અન્યાય પ્રત્યે જાગૃતિ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16))"
+  },
+  {
+    "q": "પ્રશ્ન 25: 'દીવાલ ઓળંગી લીધી' પ્રકરણમાં 'દીવાલ' શબ્દ કયા સંદર્ભમાં વપરાયો છે, જેની ચર્ચા શિક્ષકે કરવી જોઈએ?",
+    "options": [
+      "ઈંટો અને સિમેન્ટની બનેલી ઘરની દીવાલ",
+      "છોકરા અને છોકરીઓ વચ્ચે સમાજે ઊભી કરેલી માનસિક અને રૂઢિચુસ્ત દીવાલ (Gender Barrier)",
+      "શાળાની કમ્પાઉન્ડ વોલ",
+      "ભારત-પાકિસ્તાનની બોર્ડરની દીવાલ"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "અહીં 'દીવાલ' એ સમાજના પૂર્વગ્રહો અને ભેદભાવનું પ્રતીક છે જેને છોકરીઓએ પાર કરી."
+  },
+  {
+    "q": "પ્રશ્ન 26: નીચેના વિધાનો પર વિચાર કરો:
+1. આધુનિક અને દેશી ખેતીની સરખામણી દ્વારા શિક્ષકે જમીનની ફળદ્રુપતા અને પર્યાવરણને થતા નુકસાનની વૈજ્ઞાનિક ચર્ચા કરવી જોઈએ.
+2. આનુવંશિકતાના પાઠમાં શિક્ષકે બાળકોને ગ્રેગર મેન્ડેલના ગણિતના અઘરા દાખલા ગણવા આપવા જોઈએ.
+3. જંગલો અને આદિવાસીઓના સંબંધ (સૂર્યમણિની વાર્તા) દ્વારા જંગલ અધિકાર કાયદો અને પ્રકૃતિ સંરક્ષણ સમજાવવું અગત્યનું છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: આનુવંશિકતાના પાઠમાં શિક્ષકે બાળકોને ગ્રેગર મેન્ડેલના ગણિતના અઘરા દાખલા ગણવા આપવા જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: આધુનિક અને દેશી ખેતીની સરખામણી દ્વારા શિક્ષકે જમીનની ફળદ્રુપતા અને પર્યાવરણને થતા નુકસાનની વૈજ્ઞાનિક ચર્ચા કરવી જોઈએ. અને જંગલો અને આદિવાસીઓના સંબંધ (સૂર્યમણિની વાર્તા) દ્વારા જંગલ અધિકાર કાયદો અને પ્રકૃતિ સંરક્ષણ સમજાવવું અગત્યનું છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21))"
+  },
+  {
+    "q": "પ્રશ્ન 27: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "ગુજરાતના નકશાનો અભ્યાસ કરાવતી વખતે શિક્ષકે બાળકોને જિલ્લાઓ, નદીઓ, અને દરિયાકિનારાને નકશા પર શોધવા પ્રોત્સાહિત કરવા જોઈએ.",
+      "શેરડી કાપતા મજૂરોના સ્થળાંતરની વાર્તા દ્વારા શિક્ષકે ઋતુ આધારિત રોજગાર અને શિક્ષણ પર તેની અસરો વિશે ચર્ચા કરવી જોઈએ.",
+      "મજૂરોના બાળકોની શિક્ષણની સમસ્યાઓ અંગે ચર્ચા કરવાનું ટાળવું જોઈએ, કારણ કે તે નકારાત્મક વિષય છે.",
+      "શિક્ષકે વર્ગમાં નકશા વાંચન (Map reading) ની પ્રવૃત્તિ કરાવવી જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ))"
+  },
+  {
+    "q": "પ્રશ્ન 28: વિધાન અને કારણ ચકાસો:
+વિધાન (A): EVS માં વાર્તાઓ, કવિતાઓ અને સમાચારપત્રોના કટિંગ્સનો બહોળો ઉપયોગ કરવામાં આવ્યો છે.
+કારણ (R): વિવિધ માધ્યમોથી વિષયવસ્તુ રસપ્રદ બને છે અને બાળકોને બહુવિધ દ્રષ્ટિકોણ (Multiple perspectives) થી વિચારતા કરે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ))"
+  },
+  {
+    "q": "પ્રશ્ન 29: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. NCF-2005		a. બાળકેન્દ્રી શિક્ષણ
+2. ધોરણ 3 થી 5		b. EVS નું સંકલિત પુસ્તક
+3. ધોરણ 1 અને 2		c. ભાષા અને ગણિત સાથે પર્યાવરણ
+4. પાઠ્યપુસ્તકની ભાષા		d. બાળકોની બોલચાલની ભાષા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005))"
+  },
+  {
+    "q": "પ્રશ્ન 30: નીચેનામાંથી કઈ પદ્ધતિ EVS માં બાળકનું મૂલ્યાંકન (Assessment) કરવા માટે સૌથી યોગ્ય માનવામાં આવે છે?",
+    "options": [
+      "માત્ર બહુવિકલ્પી (MCQ) પ્રશ્નો",
+      "સતત અને સર્વગ્રાહી અવલોકન (Continuous Observation)",
+      "માત્ર મૌખિક પરીક્ષા",
+      "ઝડપી વાંચન સ્પર્ધા"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "NCF મુજબ રોજબરોજનું અને વિવિધ પ્રવૃત્તિઓનું સતત અવલોકન શ્રેષ્ઠ મૂલ્યાંકન છે."
+  },
+  {
+    "q": "પ્રશ્ન 31: નીચેના વિધાનો પર વિચાર કરો:
+1. શિક્ષકે બાળકોને પ્રાણીઓ અને પક્ષીઓ વિશેના તેમના પોતાના અનુભવોની વર્ગમાં આપ-લે કરવા પ્રોત્સાહિત કરવા જોઈએ.
+2. શિક્ષકે પ્રાણીઓની ઇન્દ્રિયો વિશે બાળકોને ફક્ત વ્યાખ્યાઓ જ લખાવી દેવી જોઈએ.
+3. 'સારી' અને 'ખરાબ' સુગંધ વિશેની ચર્ચા દ્વારા શિક્ષક બાળકોમાં સંવેદનશીલતા અને તર્કશક્તિ વિકસાવી શકે છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: શિક્ષકે પ્રાણીઓની ઇન્દ્રિયો વિશે બાળકોને ફક્ત વ્યાખ્યાઓ જ લખાવી દેવી જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: શિક્ષકે બાળકોને પ્રાણીઓ અને પક્ષીઓ વિશેના તેમના પોતાના અનુભવોની વર્ગમાં આપ-લે કરવા પ્રોત્સાહિત કરવા જોઈએ. અને 'સારી' અને 'ખરાબ' સુગંધ વિશેની ચર્ચા દ્વારા શિક્ષક બાળકોમાં સંવેદનશીલતા અને તર્કશક્તિ વિકસાવી શકે છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો))"
+  },
+  {
+    "q": "પ્રશ્ન 32: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "શિક્ષકે પાચનતંત્રના સચોટ અને વૈજ્ઞાનિક ચિત્રો દોરવાને બદલે બાળકોની પોતાની કલ્પના મુજબ પાચનમાર્ગ દોરવા પ્રોત્સાહિત કરવા જોઈએ.",
+      "'સાપ અને મદારી' પ્રકરણ દ્વારા પ્રાણીઓ અને મનુષ્યો વચ્ચેના ગાઢ સંબંધો તથા નિર્ભરતા સમજાવવાનો ઉદ્દેશ્ય છે.",
+      "પાચનની પ્રક્રિયા સમજાવવા માટે ડૉ. બ્યુમોન્ટની વાર્તા એ માત્ર એક કાલ્પનિક વાર્તા છે જે મનોરંજન માટે આપી છે.",
+      "શિક્ષકે વર્ગમાં એ સમજાવવું જોઈએ કે કોઈ પણ સમુદાય પ્રાણીઓ સાથે ખરાબ વ્યવહાર કરતો નથી (જેમ કે મદારી અને સાપ)."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન))"
+  },
+  {
+    "q": "પ્રશ્ન 33: વિધાન અને કારણ ચકાસો:
+વિધાન (A): બ્રેડ પર ફૂગ લાગવાનો પ્રયોગ વર્ગમાં 6 દિવસ સુધી ચાલુ રાખવામાં આવે છે અને બાળકો તેની નોંધ કરે છે.
+કારણ (R): આ પદ્ધતિથી બાળકોમાં લાંબા ગાળા સુધી ધીરજપૂર્વક અવલોકન કરવાની અને ડેટા નોંધવાની વૈજ્ઞાનિક વૃત્તિ વિકસે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ))"
+  },
+  {
+    "q": "પ્રશ્ન 34: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. પાણીના બિલની ચર્ચા		a. સામાજિક અને આર્થિક જાગૃતિ
+2. શું તરે-શું ડૂબે પ્રયોગ		b. હાથથી કરીને શીખવું (Hands-on experience)
+3. દાંડીયાત્રાનો ઉલ્લેખ		c. સ્વાતંત્ર્ય સંગ્રામ અને ઐતિહાસિક સંદર્ભ
+4. વાવ અને કૂવા		d. પ્રાચીન જળ વ્યવસ્થાપન
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો))"
+  },
+  {
+    "q": "પ્રશ્ન 35: લેખિકા અને મિઝોરમની ખાનદોન્બી વચ્ચે ભાષાની સમસ્યા હોવા છતાં તેઓ હૃદયથી નજીક આવ્યા. શિક્ષકે આ ઉદાહરણ દ્વારા વર્ગમાં કયું મૂલ્ય શીખવવું જોઈએ?",
+    "options": [
+      "હંમેશા હિન્દી જ બોલવી જોઈએ",
+      "વિવિધતામાં એકતા અને ભાષાકીય અવરોધો છતાં માનવીય સંબંધો અને સહાનુભૂતિનું મહત્વ",
+      "બીજી ભાષાના લોકો સાથે વાત ન કરવી",
+      "ઈશારાથી જ વાત કરવી"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "રાષ્ટ્રીય એકતા અને સાંસ્કૃતિક વિવિધતાનો આદર એ EVS નો મહત્વનો ઉદ્દેશ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 36: નીચેના વિધાનો પર વિચાર કરો:
+1. કિલ્લાના નકશાનો અભ્યાસ કરાવતી વખતે શિક્ષકે બાળકોને દિશા (Directions) અને પ્રમાણમાપ (Scale) નો ખ્યાલ સ્પષ્ટ કરવો જોઈએ.
+2. ઐતિહાસિક સ્થળોની માહિતી શિક્ષકે માત્ર ભાષણ આપીને જ પૂરી કરવી જોઈએ.
+3. સુનીતા વિલિયમ્સના અનુભવો દ્વારા શિક્ષક ગુરુત્વાકર્ષણ જેવા અમૂર્ત (Abstract) ખ્યાલોને વાસ્તવિક ઉદાહરણોથી સમજાવી શકે છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: ઐતિહાસિક સ્થળોની માહિતી શિક્ષકે માત્ર ભાષણ આપીને જ પૂરી કરવી જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: કિલ્લાના નકશાનો અભ્યાસ કરાવતી વખતે શિક્ષકે બાળકોને દિશા (Directions) અને પ્રમાણમાપ (Scale) નો ખ્યાલ સ્પષ્ટ કરવો જોઈએ. અને સુનીતા વિલિયમ્સના અનુભવો દ્વારા શિક્ષક ગુરુત્વાકર્ષણ જેવા અમૂર્ત (Abstract) ખ્યાલોને વાસ્તવિક ઉદાહરણોથી સમજાવી શકે છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ))"
+  },
+  {
+    "q": "પ્રશ્ન 37: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "ચાંગપા જાતિના જીવનની મુશ્કેલીઓ અને પશ્મિના શાલની મહેનત દ્વારા બાળકોને વિભિન્ન સંસ્કૃતિ અને ભૌગોલિક પરિસ્થિતિનો પરિચય કરાવવો જોઈએ.",
+      "પેટ્રોલ અને ડીઝલ જેવા ઈંધણ મર્યાદિત છે તે સમજાવવા માટે શિક્ષકે 'જો આ ખૂટી જાય તો?' જેવા ખુલ્લા (Open-ended) પ્રશ્નોથી વર્ગમાં ચર્ચા શરૂ કરવી જોઈએ.",
+      "શિક્ષકે પ્રદૂષણ રોકવાના ઉપાયો માત્ર પુસ્તકમાંથી વાંચીને જ લખાવી દેવા જોઈએ.",
+      "શિક્ષકે બાળકો પાસે ટ્રાફિક સિગ્નલ પર થતા પ્રદૂષણ વિશે સર્વે કે પોસ્ટર બનાવડાવવા જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ))"
+  },
+  {
+    "q": "પ્રશ્ન 38: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ભીમરાવ આંબેડકરના બાળપણના પ્રસંગની ચર્ચા વર્ગમાં કરાવવી જોઈએ.
+કારણ (R): આનાથી બાળકો સામાજિક ભેદભાવ, અસ્પૃશ્યતા અને ન્યાય માટેની સંવેદનશીલતા નાનપણથી જ સમજી શકે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16))"
+  },
+  {
+    "q": "પ્રશ્ન 39: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. નાગપાડા ગર્લ્સ ટીમ		a. જેન્ડર સ્ટીરિયોટાઇપ (Gender stereotype) તોડવા
+2. ટીમ ભાવના		b. સહકાર અને ખેલદિલી
+3. ખેડી ગામનું ડૂબવું		c. વિકાસની સામાજિક કિંમત
+4. મુંબઈમાં અનુજનો સંઘર્ષ		d. શહેરીકરણ અને રોજગારીની સમસ્યા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર))"
+  },
+  {
+    "q": "પ્રશ્ન 40: EVS માં ખેડૂતની વાર્તા ભણાવતી વખતે શિક્ષક માત્ર રાસાયણિક ખાતરના ફાયદા ન કહીને તેના ગેરફાયદા પણ શા માટે જણાવે છે?",
+    "options": [
+      "ખેડૂતોનો વિરોધ કરવા માટે",
+      "બાળકોમાં પર્યાવરણ પ્રત્યે જાગૃતિ (Ecological Awareness) અને જમીનના સંરક્ષણની સમજ વિકસાવવા માટે",
+      "માત્ર સરકારી નીતિઓ સમજાવવા",
+      "ખાતર કંપનીઓ બંધ કરાવવા"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "ટકાઉ ખેતી (Sustainable farming) નો ખ્યાલ બાળકોના મનમાં રોપવો એ NCF નો મુખ્ય હેતુ છે."
+  },
+  {
+    "q": "પ્રશ્ન 41: નીચેના વિધાનો પર વિચાર કરો:
+1. શેરડી કાપતા મજૂરોના સ્થળાંતરની વાર્તા દ્વારા શિક્ષકે ઋતુ આધારિત રોજગાર અને શિક્ષણ પર તેની અસરો વિશે ચર્ચા કરવી જોઈએ.
+2. મજૂરોના બાળકોની શિક્ષણની સમસ્યાઓ અંગે ચર્ચા કરવાનું ટાળવું જોઈએ, કારણ કે તે નકારાત્મક વિષય છે.
+3. ગુજરાતના નકશાનો અભ્યાસ કરાવતી વખતે શિક્ષકે બાળકોને જિલ્લાઓ, નદીઓ, અને દરિયાકિનારાને નકશા પર શોધવા પ્રોત્સાહિત કરવા જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: મજૂરોના બાળકોની શિક્ષણની સમસ્યાઓ અંગે ચર્ચા કરવાનું ટાળવું જોઈએ, કારણ કે તે નકારાત્મક વિષય છે. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: શેરડી કાપતા મજૂરોના સ્થળાંતરની વાર્તા દ્વારા શિક્ષકે ઋતુ આધારિત રોજગાર અને શિક્ષણ પર તેની અસરો વિશે ચર્ચા કરવી જોઈએ. અને ગુજરાતના નકશાનો અભ્યાસ કરાવતી વખતે શિક્ષકે બાળકોને જિલ્લાઓ, નદીઓ, અને દરિયાકિનારાને નકશા પર શોધવા પ્રોત્સાહિત કરવા જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ))"
+  },
+  {
+    "q": "પ્રશ્ન 42: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "શિક્ષકે બાળકોને પ્રકૃતિ, પ્રાણીઓ, ઐતિહાસિક સ્થળો અને સમાજના લોકો સાથે પ્રત્યક્ષ અનુભવ (First-hand experience) મેળવવા પ્રેરિત કરવા જોઈએ.",
+      "EVS ના પાઠ્યપુસ્તકમાં દરેક પ્રકરણના અંતે 'આપણે શું શીખ્યાં' વિભાગ આપવામાં આવ્યો છે, જે બાળકોની સમજનું મૂલ્યાંકન કરે છે.",
+      "NCF-2005 અનુસાર, પાઠ્યપુસ્તક એ જ્ઞાનનો એકમાત્ર સ્રોત છે અને તેની બહારનું કશું ભણાવવું ન જોઈએ.",
+      "EVS માં વાર્તાઓ, કવિતાઓ અને સમાચારપત્રોના કટિંગ્સનો બહોળો ઉપયોગ કરવામાં આવ્યો છે."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ))"
+  },
+  {
+    "q": "પ્રશ્ન 43: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ધોરણ 1 અને 2 માં 'પર્યાવરણ' (EVS) નો અલગ વિષય કે પાઠ્યપુસ્તક રાખવામાં આવ્યું નથી.
+કારણ (R): ધોરણ 1 અને 2 માં પર્યાવરણને લગતા મુદ્દાઓ ભાષા અને ગણિત વિષય સાથે જ વણી લેવામાં આવ્યા છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005))"
+  },
+  {
+    "q": "પ્રશ્ન 44: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. અભિવ્યક્તિ		a. ચિત્રકામ, સર્જનાત્મક લખાણ
+2. વર્ગીકરણ		b. જૂથ બનાવવા, સરખામણી કરવી
+3. વિશ્લેષણ		c. ભવિષ્યવાણી અને અનુમાન કરવા
+4. સહકાર		d. સાથે મળીને કામ કરવું
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ))"
+  },
+  {
+    "q": "પ્રશ્ન 45: શિક્ષક બાળકોને કચરાના ઢગલા પાસેથી પસાર થતા થતા અનુભવો વિશે શા માટે પૂછે છે?",
+    "options": [
+      "બાળકોને કચરો ફેંકતા રોકવા",
+      "કચરો ઉપાડતા સફાઈ કામદારો પ્રત્યે સંવેદનશીલતા અને સમાનતાનો ભાવ જગાવવા",
+      "કચરામાંથી ગેસ કેવી રીતે બને તે સમજાવવા",
+      "માત્ર દુર્ગંધ વિશે સમજાવવા"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "સામાજિક મુદ્દાઓ અને શ્રમના ગૌરવ પ્રત્યે બાળકોને સંવેદનશીલ બનાવવા આ ચર્ચા અગત્યની છે."
+  },
+  {
+    "q": "પ્રશ્ન 46: નીચેના વિધાનો પર વિચાર કરો:
+1. 'સાપ અને મદારી' પ્રકરણ દ્વારા પ્રાણીઓ અને મનુષ્યો વચ્ચેના ગાઢ સંબંધો તથા નિર્ભરતા સમજાવવાનો ઉદ્દેશ્ય છે.
+2. પાચનની પ્રક્રિયા સમજાવવા માટે ડૉ. બ્યુમોન્ટની વાર્તા એ માત્ર એક કાલ્પનિક વાર્તા છે જે મનોરંજન માટે આપી છે.
+3. શિક્ષકે પાચનતંત્રના સચોટ અને વૈજ્ઞાનિક ચિત્રો દોરવાને બદલે બાળકોની પોતાની કલ્પના મુજબ પાચનમાર્ગ દોરવા પ્રોત્સાહિત કરવા જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: પાચનની પ્રક્રિયા સમજાવવા માટે ડૉ. બ્યુમોન્ટની વાર્તા એ માત્ર એક કાલ્પનિક વાર્તા છે જે મનોરંજન માટે આપી છે. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: 'સાપ અને મદારી' પ્રકરણ દ્વારા પ્રાણીઓ અને મનુષ્યો વચ્ચેના ગાઢ સંબંધો તથા નિર્ભરતા સમજાવવાનો ઉદ્દેશ્ય છે. અને શિક્ષકે પાચનતંત્રના સચોટ અને વૈજ્ઞાનિક ચિત્રો દોરવાને બદલે બાળકોની પોતાની કલ્પના મુજબ પાચનમાર્ગ દોરવા પ્રોત્સાહિત કરવા જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન))"
+  },
+  {
+    "q": "પ્રશ્ન 47: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "બીજના અંકુરણના પ્રયોગોમાં વાતાવરણના તાપમાન અને ભેજને કારણે લાગતા સમયની વધઘટ વિશે શિક્ષકે ચર્ચા કરવી જોઈએ.",
+      "બાળકોને 'ખોરાક બગડવો' (Spoilage) અને 'ખોરાકનો બગાડ' (Wastage) વચ્ચેનો તફાવત સમજાવવો શિક્ષક માટે અગત્યનો છે.",
+      "શિક્ષકે 'કળશપર્ણ' જેવા શિકારી છોડ વિશે બાળકોને કોઈ જ વૈજ્ઞાનિક કારણ ન આપીને ડરાવવા જોઈએ.",
+      "બ્રેડ પર ફૂગ લાગવાનો પ્રયોગ વર્ગમાં 6 દિવસ સુધી ચાલુ રાખવામાં આવે છે અને બાળકો તેની નોંધ કરે છે."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ))"
+  },
+  {
+    "q": "પ્રશ્ન 48: વિધાન અને કારણ ચકાસો:
+વિધાન (A): પાણીના બિલ અને પાણીના અસમાન વિતરણ અંગે બાળકો સાથે વર્ગખંડમાં ખુલ્લી ચર્ચા કરવી જોઈએ.
+કારણ (R): આ ચર્ચાથી બાળકોમાં જળ સંરક્ષણ, સામાજિક ન્યાય અને પર્યાવરણીય નાગરિકતા (Environmental Citizenship) ની ભાવના કેળવાય છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો))"
+  },
+  {
+    "q": "પ્રશ્ન 49: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. મેડિકલ રિપોર્ટ વાંચન		a. વાસ્તવિક જીવનનું જ્ઞાન
+2. સર્વેક્ષણ (Survey)		b. ડેટા એકત્રીકરણ અને જાગૃતિ
+3. રોનાલ્ડ રોસની વાર્તા		c. વૈજ્ઞાનિક વલણ અને પ્રેરણા
+4. પર્વતારોહણની જવાબદારી		d. નેતૃત્વ અને સાહસિકતા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ))"
+  },
+  {
+    "q": "પ્રશ્ન 50: પૃથ્વીના ગોળા પર દોરેલી રેખાઓ વિશે ચર્ચા કરતી વખતે શિક્ષકે બાળકોમાં કઈ સમજ વિકસાવવી જોઈએ?",
+    "options": [
+      "પૃથ્વી પર ખરેખર એવી મોટી લાઈનો દોરેલી છે",
+      "આ રેખાઓ માત્ર નકશા પર માણસો દ્વારા સમજણ અને વહીવટ માટે દોરેલી કાલ્પનિક રેખાઓ છે",
+      "ભગવાન દ્વારા દોરેલી રેખાઓ છે",
+      "આ રેખાઓ બોર્ડર પર ઊભી કરેલી દીવાલો છે"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "રાષ્ટ્રો વચ્ચેની સરહદો એ માનવસર્જિત છે, કુદરતી નથી, એ ખ્યાલ બાળકના મનમાં સ્પષ્ટ થવો જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 51: નીચેના વિધાનો પર વિચાર કરો:
+1. પેટ્રોલ અને ડીઝલ જેવા ઈંધણ મર્યાદિત છે તે સમજાવવા માટે શિક્ષકે 'જો આ ખૂટી જાય તો?' જેવા ખુલ્લા (Open-ended) પ્રશ્નોથી વર્ગમાં ચર્ચા શરૂ કરવી જોઈએ.
+2. શિક્ષકે પ્રદૂષણ રોકવાના ઉપાયો માત્ર પુસ્તકમાંથી વાંચીને જ લખાવી દેવા જોઈએ.
+3. ચાંગપા જાતિના જીવનની મુશ્કેલીઓ અને પશ્મિના શાલની મહેનત દ્વારા બાળકોને વિભિન્ન સંસ્કૃતિ અને ભૌગોલિક પરિસ્થિતિનો પરિચય કરાવવો જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: શિક્ષકે પ્રદૂષણ રોકવાના ઉપાયો માત્ર પુસ્તકમાંથી વાંચીને જ લખાવી દેવા જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: પેટ્રોલ અને ડીઝલ જેવા ઈંધણ મર્યાદિત છે તે સમજાવવા માટે શિક્ષકે 'જો આ ખૂટી જાય તો?' જેવા ખુલ્લા (Open-ended) પ્રશ્નોથી વર્ગમાં ચર્ચા શરૂ કરવી જોઈએ. અને ચાંગપા જાતિના જીવનની મુશ્કેલીઓ અને પશ્મિના શાલની મહેનત દ્વારા બાળકોને વિભિન્ન સંસ્કૃતિ અને ભૌગોલિક પરિસ્થિતિનો પરિચય કરાવવો જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ))"
+  },
+  {
+    "q": "પ્રશ્ન 52: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "ગાંધીજી અને નારાયણભાઈ દેસાઈના પ્રસંગો દ્વારા શ્રમનું ગૌરવ અને સામાજિક સમાનતાના મૂલ્યો વર્ગમાં પ્રસ્થાપિત કરવા જોઈએ.",
+      "ભૂકંપ જેવી આફતો સમયે શું કરવું તેની મોકડ્રીલ (Mock drill) શાળામાં કરાવવી એ EVS ના શિક્ષણનો એક મહત્વનો પ્રાયોગિક ભાગ છે.",
+      "શિયાળામાં કાચ પર ફૂંક મારવાથી ભેજ કેમ જમા થાય છે તેનું માત્ર રાસાયણિક સમીકરણ જ બાળકોને ગોખાવવું જોઈએ.",
+      "ભીમરાવ આંબેડકરના બાળપણના પ્રસંગની ચર્ચા વર્ગમાં કરાવવી જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16))"
+  },
+  {
+    "q": "પ્રશ્ન 53: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ડેમ બનવાના કારણે વિસ્થાપિત થયેલા લોકોની વેદના વર્ગમાં રજૂ થવી જોઈએ.
+કારણ (R): આનાથી બાળકોમાં સહાનુભૂતિ અને મોટા પ્રોજેક્ટ્સની સામાજિક અસરો વિચારવાની ક્ષમતા વિકસે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર))"
+  },
+  {
+    "q": "પ્રશ્ન 54: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. દેશી બીજ અને ખેતી		a. ટકાઉ વિકાસ (Sustainable Agriculture)
+2. સૂર્યમણિનું 'તોરાંગ'		b. આદિવાસી સંસ્કૃતિનું જતન
+3. ઝૂમ ખેતી		c. વૈકલ્પિક ખેતી પદ્ધતિની સમજ
+4. વટાણાના પ્રયોગો		d. આનુવંશિકતાનો મૂળ ખ્યાલ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21))"
+  },
+  {
+    "q": "પ્રશ્ન 55: ધનુ અને તેના પરિવારના સ્થળાંતરની વાર્તા દ્વારા બાળકોમાં કયા કૌશલ્ય અથવા મૂલ્યનો વિકાસ થઈ શકે છે?",
+    "options": [
+      "શેરડી કાપવાનું કૌશલ્ય",
+      "સમાજના વંચિત વર્ગોની સમસ્યાઓ પ્રત્યે સહાનુભૂતિ (Empathy) અને શિક્ષણના મહત્વની સમજ",
+      "મુકાદમ બનીને પૈસા કમાવવાની વૃત્તિ",
+      "માત્ર ઋતુઓના નામ યાદ રાખવા"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "વાર્તાનો ઉદ્દેશ્ય બાળકોને સમાજની વાસ્તવિકતાઓથી વાકેફ કરી તેમનામાં સંવેદનશીલતા જગાવવાનો છે."
+  },
+  {
+    "q": "પ્રશ્ન 56: નીચેના વિધાનો પર વિચાર કરો:
+1. EVS ના પાઠ્યપુસ્તકમાં દરેક પ્રકરણના અંતે 'આપણે શું શીખ્યાં' વિભાગ આપવામાં આવ્યો છે, જે બાળકોની સમજનું મૂલ્યાંકન કરે છે.
+2. NCF-2005 અનુસાર, પાઠ્યપુસ્તક એ જ્ઞાનનો એકમાત્ર સ્રોત છે અને તેની બહારનું કશું ભણાવવું ન જોઈએ.
+3. શિક્ષકે બાળકોને પ્રકૃતિ, પ્રાણીઓ, ઐતિહાસિક સ્થળો અને સમાજના લોકો સાથે પ્રત્યક્ષ અનુભવ (First-hand experience) મેળવવા પ્રેરિત કરવા જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: NCF-2005 અનુસાર, પાઠ્યપુસ્તક એ જ્ઞાનનો એકમાત્ર સ્રોત છે અને તેની બહારનું કશું ભણાવવું ન જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: EVS ના પાઠ્યપુસ્તકમાં દરેક પ્રકરણના અંતે 'આપણે શું શીખ્યાં' વિભાગ આપવામાં આવ્યો છે, જે બાળકોની સમજનું મૂલ્યાંકન કરે છે. અને શિક્ષકે બાળકોને પ્રકૃતિ, પ્રાણીઓ, ઐતિહાસિક સ્થળો અને સમાજના લોકો સાથે પ્રત્યક્ષ અનુભવ (First-hand experience) મેળવવા પ્રેરિત કરવા જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ))"
+  },
+  {
+    "q": "પ્રશ્ન 57: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "EVS પાઠ્યપુસ્તકમાં બાળકો દ્વારા બોલવામાં આવતી રોજિંદી અને અનૌપચારિક ભાષાનો ઉપયોગ કરવામાં આવ્યો છે.",
+      "રાષ્ટ્રીય અભ્યાસક્રમની રૂપરેખા (NCF-2005) મુજબ EVS માં વિજ્ઞાન, સામાજિક વિજ્ઞાન અને પર્યાવરણીય શિક્ષણના ખ્યાલોને સંકલિત કરવામાં આવ્યા છે.",
+      "NCF-2005 બાળકોને વ્યાખ્યાઓ ગોખવા અને માત્ર માહિતી યાદ રાખવા પર ભાર મૂકે છે.",
+      "ધોરણ 1 અને 2 માં 'પર્યાવરણ' (EVS) નો અલગ વિષય કે પાઠ્યપુસ્તક રાખવામાં આવ્યું નથી."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005))"
+  },
+  {
+    "q": "પ્રશ્ન 58: વિધાન અને કારણ ચકાસો:
+વિધાન (A): શિક્ષકોએ બાળકોને પોતાના જવાબો અને અનુભવો મુક્ત રીતે વર્ગમાં રજૂ કરવા પ્રોત્સાહિત કરવા જોઈએ.
+કારણ (R): આમ કરવાથી બાળકોમાં આત્મવિશ્વાસ વધે છે અને શિક્ષક તેમના શિક્ષણના સ્તરનું સતત મૂલ્યાંકન કરી શકે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ))"
+  },
+  {
+    "q": "પ્રશ્ન 59: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. કીડીનું અવલોકન		a. ધીરજ અને ધ્યાન જરૂરી
+2. પક્ષીઓની આંખ		b. દ્રષ્ટિ વિસ્તાર સમજાવવો
+3. 24 કલાકની ઘડિયાળ		c. અપૂર્ણાંકનો ખ્યાલ વિકસાવવો
+4. અખબારના લેખ		d. રોજિંદા જીવન સાથે જોડાણ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો))"
+  },
+  {
+    "q": "પ્રશ્ન 60: EVS ના વર્ગમાં 'યોગ્ય આહાર' વિશે ચર્ચા કરતી વખતે શિક્ષકનો મુખ્ય ઉદ્દેશ્ય શું હોવો જોઈએ?",
+    "options": [
+      "જંક ફૂડ ખાનારા બાળકોને સજા કરવી",
+      "રશ્મિ અને જયેશના ઉદાહરણથી પોષણ, ગરીબી અને યોગ્ય આહારના અધિકાર (Child Rights) વિશે સામાજિક સમજ વિકસાવવી",
+      "માત્ર વિટામિન્સના નામ ગોખાવવા",
+      "બાળકો પાસે ડાયેટ ચાર્ટ બનાવડાવવો"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "EVS એ વિજ્ઞાન સાથે સામાજિક વિજ્ઞાન પણ છે, તેથી આહારને સામાજિક અસમાનતા સાથે જોડીને શીખવવામાં આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 61: નીચેના વિધાનો પર વિચાર કરો:
+1. બાળકોને 'ખોરાક બગડવો' (Spoilage) અને 'ખોરાકનો બગાડ' (Wastage) વચ્ચેનો તફાવત સમજાવવો શિક્ષક માટે અગત્યનો છે.
+2. શિક્ષકે 'કળશપર્ણ' જેવા શિકારી છોડ વિશે બાળકોને કોઈ જ વૈજ્ઞાનિક કારણ ન આપીને ડરાવવા જોઈએ.
+3. બીજના અંકુરણના પ્રયોગોમાં વાતાવરણના તાપમાન અને ભેજને કારણે લાગતા સમયની વધઘટ વિશે શિક્ષકે ચર્ચા કરવી જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: શિક્ષકે 'કળશપર્ણ' જેવા શિકારી છોડ વિશે બાળકોને કોઈ જ વૈજ્ઞાનિક કારણ ન આપીને ડરાવવા જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: બાળકોને 'ખોરાક બગડવો' (Spoilage) અને 'ખોરાકનો બગાડ' (Wastage) વચ્ચેનો તફાવત સમજાવવો શિક્ષક માટે અગત્યનો છે. અને બીજના અંકુરણના પ્રયોગોમાં વાતાવરણના તાપમાન અને ભેજને કારણે લાગતા સમયની વધઘટ વિશે શિક્ષકે ચર્ચા કરવી જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ))"
+  },
+  {
+    "q": "પ્રશ્ન 62: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "પાણીના પ્રયોગો કરતી વખતે બાળકો જે જવાબો આપે (જેમ કે પાણી 'જાડું' છે) તેને સ્વીકારીને ધીમે ધીમે વૈજ્ઞાનિક ખ્યાલો તરફ દોરવા જોઈએ.",
+      "ઈતિહાસ જાણવાના સ્રોતો તરીકે જૂની ઈમારતો, સિક્કા, ચિત્રો અને પ્રવાસીઓના વર્ણન (જેમ કે અલ-બિરુની) ની ચર્ચા વર્ગમાં કરવી જોઈએ.",
+      "શિક્ષકે ધોરણ 5 ના બાળકોને 'ઘનતા' (Density) અને 'બાષ્પીભવન' (Evaporation) ના જટિલ વૈજ્ઞાનિક સમીકરણો ગોખાવવા જ જોઈએ.",
+      "પાણીના બિલ અને પાણીના અસમાન વિતરણ અંગે બાળકો સાથે વર્ગખંડમાં ખુલ્લી ચર્ચા કરવી જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો))"
+  },
+  {
+    "q": "પ્રશ્ન 63: વિધાન અને કારણ ચકાસો:
+વિધાન (A): શિક્ષકે બાળકોને મચ્છરના પોરા શોધવા માટે શાળાની આસપાસના વિસ્તારનું સર્વેક્ષણ (Survey) કરવાનું કાર્ય સોંપવું જોઈએ.
+કારણ (R): સર્વેક્ષણથી બાળકોમાં સહયોગી શિક્ષણ (Collaborative learning), ડેટા એકત્રીકરણ અને પર્યાવરણ પ્રત્યેની જવાબદારી વિકસે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ))"
+  },
+  {
+    "q": "પ્રશ્ન 64: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. નકશાનું વાંચન		a. દિશા અને ભૌમિતિક સમજ
+2. ગુરુત્વાકર્ષણનો ખ્યાલ		b. ઉદાહરણોથી અમૂર્ત ખ્યાલની સમજ
+3. મ્યુઝિયમની મુલાકાત		c. ઐતિહાસિક જિજ્ઞાસા સંતોષવી
+4. સુનીતાની વાર્તા		d. મહિલા સશક્તિકરણ અને રોલ મોડેલ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ))"
+  },
+  {
+    "q": "પ્રશ્ન 65: લદ્દાખમાં ઘરોની છત સપાટ શા માટે હોય છે, તેની ચર્ચા EVS ના વર્ગમાં શિક્ષક શા માટે કરે છે?",
+    "options": [
+      "માત્ર આર્કિટેક્ચર શીખવવા માટે",
+      "ભૌગોલિક પરિસ્થિતિ અને માનવ જરૂરિયાત (ઉનાળામાં ખોરાક સૂકવવાની ક્રિયા) વચ્ચેનો સંબંધ સમજાવવા",
+      "બાળકોને ઘર બનાવતા શીખવવા",
+      "માત્ર પરીક્ષા માટે"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "EVS નો ઉદ્દેશ્ય ભૌગોલિક વાતાવરણ અને માનવજીવન વચ્ચેનો આંતરસંબંધ સમજાવવાનો છે."
+  },
+  {
+    "q": "પ્રશ્ન 66: નીચેના વિધાનો પર વિચાર કરો:
+1. ભૂકંપ જેવી આફતો સમયે શું કરવું તેની મોકડ્રીલ (Mock drill) શાળામાં કરાવવી એ EVS ના શિક્ષણનો એક મહત્વનો પ્રાયોગિક ભાગ છે.
+2. શિયાળામાં કાચ પર ફૂંક મારવાથી ભેજ કેમ જમા થાય છે તેનું માત્ર રાસાયણિક સમીકરણ જ બાળકોને ગોખાવવું જોઈએ.
+3. ગાંધીજી અને નારાયણભાઈ દેસાઈના પ્રસંગો દ્વારા શ્રમનું ગૌરવ અને સામાજિક સમાનતાના મૂલ્યો વર્ગમાં પ્રસ્થાપિત કરવા જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: શિયાળામાં કાચ પર ફૂંક મારવાથી ભેજ કેમ જમા થાય છે તેનું માત્ર રાસાયણિક સમીકરણ જ બાળકોને ગોખાવવું જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: ભૂકંપ જેવી આફતો સમયે શું કરવું તેની મોકડ્રીલ (Mock drill) શાળામાં કરાવવી એ EVS ના શિક્ષણનો એક મહત્વનો પ્રાયોગિક ભાગ છે. અને ગાંધીજી અને નારાયણભાઈ દેસાઈના પ્રસંગો દ્વારા શ્રમનું ગૌરવ અને સામાજિક સમાનતાના મૂલ્યો વર્ગમાં પ્રસ્થાપિત કરવા જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16))"
+  },
+  {
+    "q": "પ્રશ્ન 67: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "અનુજના ગામ ખેડીના ડૂબમાં જવાના પ્રસંગ દ્વારા શિક્ષકે 'વિકાસ' અને 'વિસ્થાપન' (Displacement) ની બેધારી અસરો સમજાવવી જોઈએ.",
+      "અફસાનાની ટીમની વાર્તા દ્વારા શિક્ષકે વર્ગમાં જાતિભેદ (Gender bias) તોડવા અને 'ટીમ ભાવના' વિશે ચર્ચા કરવી જોઈએ.",
+      "શિક્ષકે એવું શીખવવું જોઈએ કે છોકરીઓએ માત્ર ઘરકામ જ કરવું જોઈએ અને રમતો ફક્ત છોકરાઓ માટે છે.",
+      "ડેમ બનવાના કારણે વિસ્થાપિત થયેલા લોકોની વેદના વર્ગમાં રજૂ થવી જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર))"
+  },
+  {
+    "q": "પ્રશ્ન 68: વિધાન અને કારણ ચકાસો:
+વિધાન (A): વર્ગમાં જોડિયા બાળકો અથવા પરિવારના સભ્યો સાથેના શારીરિક સામ્યતાના ઉદાહરણોની ચર્ચા કરવી જોઈએ.
+કારણ (R): પોતાના જ પરિવારના ઉદાહરણોથી બાળકો આનુવંશિકતા (Heredity) અને પર્યાવરણની અસરો સરળતાથી સમજી શકે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21))"
+  },
+  {
+    "q": "પ્રશ્ન 69: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. શેરડી કાપનારાનું સ્થળાંતર		a. શિક્ષણ પર સામાજિક-આર્થિક અસરો
+2. મુકાદમની ભૂમિકા		b. ગામડાની આર્થિક વ્યવસ્થા
+3. ગુજરાતનો નકશો		c. દિશા અને ભૌગોલિક સમજ
+4. રણ અને દરિયાકિનારો		d. વિવિધ ભૌગોલિક પ્રદેશોનો પરિચય
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ))"
+  },
+  {
+    "q": "પ્રશ્ન 70: EVS નો અભ્યાસક્રમ 'વિષયવસ્તુ' (Themes) આધારિત બનાવવામાં આવ્યો છે (જેમ કે ખોરાક, પાણી, રહેઠાણ), નહીં કે અલગ-અલગ વિષયો (વિજ્ઞાન, ભૂગોળ) આધારિત. આનું મુખ્ય કારણ શું છે?",
+    "options": [
+      "પુસ્તકના પાના ઘટાડવા માટે",
+      "બાળકો પર્યાવરણને એક અખંડિત (Holistic) સ્વરૂપમાં જુએ છે, ટુકડાઓમાં નહીં",
+      "શિક્ષકોને ભણાવવામાં સરળતા રહે માટે",
+      "વિજ્ઞાન અને ભૂગોળ અઘરા વિષયો હોવાથી"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "નાના બાળકો જ્ઞાનને વિષયોની દીવાલોમાં વહેંચી શકતા નથી, તેઓ પર્યાવરણને સમગ્રતામાં અનુભવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 71: નીચેના વિધાનો પર વિચાર કરો:
+1. રાષ્ટ્રીય અભ્યાસક્રમની રૂપરેખા (NCF-2005) મુજબ EVS માં વિજ્ઞાન, સામાજિક વિજ્ઞાન અને પર્યાવરણીય શિક્ષણના ખ્યાલોને સંકલિત કરવામાં આવ્યા છે.
+2. NCF-2005 બાળકોને વ્યાખ્યાઓ ગોખવા અને માત્ર માહિતી યાદ રાખવા પર ભાર મૂકે છે.
+3. EVS પાઠ્યપુસ્તકમાં બાળકો દ્વારા બોલવામાં આવતી રોજિંદી અને અનૌપચારિક ભાષાનો ઉપયોગ કરવામાં આવ્યો છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: NCF-2005 બાળકોને વ્યાખ્યાઓ ગોખવા અને માત્ર માહિતી યાદ રાખવા પર ભાર મૂકે છે. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: રાષ્ટ્રીય અભ્યાસક્રમની રૂપરેખા (NCF-2005) મુજબ EVS માં વિજ્ઞાન, સામાજિક વિજ્ઞાન અને પર્યાવરણીય શિક્ષણના ખ્યાલોને સંકલિત કરવામાં આવ્યા છે. અને EVS પાઠ્યપુસ્તકમાં બાળકો દ્વારા બોલવામાં આવતી રોજિંદી અને અનૌપચારિક ભાષાનો ઉપયોગ કરવામાં આવ્યો છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005))"
+  },
+  {
+    "q": "પ્રશ્ન 72: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "બાળકોના અવલોકનો, ચિત્રકામ, ચર્ચા અને પ્રયોગોની પદ્ધતિઓ એ ગુણાત્મક મૂલ્યાંકનની તકો છે.",
+      "EVS માં મૂલ્યાંકન માત્ર સાચા કે ખોટા જવાબોની શરતોમાં ન થવું જોઈએ.",
+      "EVS માં બાળકોના પ્રદર્શનનું મૂલ્યાંકન માત્ર વર્ષના અંતે લેવાતી લેખિત પરીક્ષાથી જ થવું જોઈએ.",
+      "શિક્ષકોએ બાળકોને પોતાના જવાબો અને અનુભવો મુક્ત રીતે વર્ગમાં રજૂ કરવા પ્રોત્સાહિત કરવા જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ))"
+  },
+  {
+    "q": "પ્રશ્ન 73: વિધાન અને કારણ ચકાસો:
+વિધાન (A): બાળકોને કીડીઓના રસ્તામાં પેન્સિલ મૂકી અવલોકન કરવાની પ્રવૃત્તિ કરાવવામાં આવે છે.
+કારણ (R): પ્રાયોગિક અને જાતે કરેલી પ્રવૃત્તિથી બાળકો પ્રાણીઓના વર્તન અને તેમની ઇન્દ્રિયો વિશે ઝડપથી અને ઊંડાણપૂર્વક શીખે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો))"
+  },
+  {
+    "q": "પ્રશ્ન 74: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. મદારીની વાર્તા		a. માનવ-પ્રાણી નિર્ભરતા
+2. ડૉ. બ્યુમોન્ટ		b. વૈજ્ઞાનિક પ્રયોગો પ્રત્યે ઉત્કટતા
+3. સ્વાદની રમત		c. ઇન્દ્રિયોનો પ્રાયોગિક અનુભવ
+4. ગ્લુકોઝની ચર્ચા		d. ઉર્જા અને સ્વાસ્થ્યનો ખ્યાલ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન))"
+  },
+  {
+    "q": "પ્રશ્ન 75: જ્યારે શિક્ષક પૂછે છે કે 'જો બીજ ફેલાય નહીં અને એક જ જગ્યાએ પડી રહે તો શું થાય?', ત્યારે તેઓ બાળકોમાં કઈ ક્ષમતા વિકસાવવા માંગે છે?",
+    "options": [
+      "વાંચન ક્ષમતા",
+      "કાલ્પનિક વિચારસરણી, તર્ક અને વિશ્લેષણ (Critical Thinking)",
+      "માત્ર યાદશક્તિ",
+      "ચિત્રકામની ક્ષમતા"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "આવા 'Open-ended' પ્રશ્નો બાળકોને તર્ક લગાવવા અને વૈકલ્પિક સ્થિતિની કલ્પના કરવા મજબૂર કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 76: નીચેના વિધાનો પર વિચાર કરો:
+1. ઈતિહાસ જાણવાના સ્રોતો તરીકે જૂની ઈમારતો, સિક્કા, ચિત્રો અને પ્રવાસીઓના વર્ણન (જેમ કે અલ-બિરુની) ની ચર્ચા વર્ગમાં કરવી જોઈએ.
+2. શિક્ષકે ધોરણ 5 ના બાળકોને 'ઘનતા' (Density) અને 'બાષ્પીભવન' (Evaporation) ના જટિલ વૈજ્ઞાનિક સમીકરણો ગોખાવવા જ જોઈએ.
+3. પાણીના પ્રયોગો કરતી વખતે બાળકો જે જવાબો આપે (જેમ કે પાણી 'જાડું' છે) તેને સ્વીકારીને ધીમે ધીમે વૈજ્ઞાનિક ખ્યાલો તરફ દોરવા જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: શિક્ષકે ધોરણ 5 ના બાળકોને 'ઘનતા' (Density) અને 'બાષ્પીભવન' (Evaporation) ના જટિલ વૈજ્ઞાનિક સમીકરણો ગોખાવવા જ જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: ઈતિહાસ જાણવાના સ્રોતો તરીકે જૂની ઈમારતો, સિક્કા, ચિત્રો અને પ્રવાસીઓના વર્ણન (જેમ કે અલ-બિરુની) ની ચર્ચા વર્ગમાં કરવી જોઈએ. અને પાણીના પ્રયોગો કરતી વખતે બાળકો જે જવાબો આપે (જેમ કે પાણી 'જાડું' છે) તેને સ્વીકારીને ધીમે ધીમે વૈજ્ઞાનિક ખ્યાલો તરફ દોરવા જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 6 (પ્રકરણ 6 અને 7: જળ અને પાણીના પ્રયોગો))"
+  },
+  {
+    "q": "પ્રશ્ન 77: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "રોનાલ્ડ રોસની વાર્તા દર્શાવે છે કે વૈજ્ઞાનિક શોધો માટે કેટલી ધીરજ, નિષ્ફળતાઓ અને સતત પ્રયત્નોની જરૂર હોય છે.",
+      "મેલેરિયા અને પાંડુરોગના મેડિકલ રિપોર્ટ વર્ગમાં લાવીને શિક્ષકે બાળકોને વાસ્તવિક દસ્તાવેજો (Authentic data) વાંચવાની તાલીમ આપવી જોઈએ.",
+      "પર્વતારોહણના પાઠમાં માત્ર પર્વતોના નામ જ યાદ રખાવા જોઈએ, સાહસ કે જવાબદારીની વાતો ન કરવી જોઈએ.",
+      "શિક્ષકે બાળકોને મચ્છરના પોરા શોધવા માટે શાળાની આસપાસના વિસ્તારનું સર્વેક્ષણ (Survey) કરવાનું કાર્ય સોંપવું જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ))"
+  },
+  {
+    "q": "પ્રશ્ન 78: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ગોલકોંડા કિલ્લાના પાણીના નળ કે પાઇપની વ્યવસ્થા બાળકોને બતાવી તેમને જૂની અને આધુનિક ઈજનેરી વચ્ચે સરખામણી કરવા કહેવું જોઈએ.
+કારણ (R): આનાથી બાળકોમાં તુલનાત્મક અભ્યાસ અને ઐતિહાસિક સ્મારકો પ્રત્યે આદરભાવ કેળવાય છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ))"
+  },
+  {
+    "q": "પ્રશ્ન 79: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ઊર્જાના સ્રોતો		a. કરકસર અને વૈકલ્પિક ઊર્જાની ચર્ચા
+2. લદ્દાખનું વાતાવરણ		b. આબોહવા અને રહેઠાણનો સંબંધ
+3. ટ્રાફિક સર્વે		c. વાસ્તવિક દુનિયા સાથે જોડાણ
+4. ડોંગા અને રેબો		d. સાંસ્કૃતિક વિવિધતા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ))"
+  },
+  {
+    "q": "પ્રશ્ન 80: ગાંધીજીના આશ્રમમાં સફાઈના કાર્યો જાતે કરવાના પ્રસંગ પરથી શિક્ષક બાળકોમાં કયું મૂલ્ય વિકસાવવા માંગે છે?",
+    "options": [
+      "સફાઈ માત્ર નોકરોનું કામ છે",
+      "દરેક કામ સમાન છે અને જાતે કામ કરવાથી કોઈ નાનું થઈ જતું નથી (શ્રમનું ગૌરવ)",
+      "સફાઈ કરવાથી પૈસા મળે છે",
+      "માત્ર શાળામાં જ સફાઈ કરવી જોઈએ"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "ગાંધીજીના વિચારો દ્વારા 'Dignity of Labour' નો ગુણ વિકસાવવો એ મુખ્ય હેતુ છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: નીચેના વિધાનો પર વિચાર કરો:
+1. અફસાનાની ટીમની વાર્તા દ્વારા શિક્ષકે વર્ગમાં જાતિભેદ (Gender bias) તોડવા અને 'ટીમ ભાવના' વિશે ચર્ચા કરવી જોઈએ.
+2. શિક્ષકે એવું શીખવવું જોઈએ કે છોકરીઓએ માત્ર ઘરકામ જ કરવું જોઈએ અને રમતો ફક્ત છોકરાઓ માટે છે.
+3. અનુજના ગામ ખેડીના ડૂબમાં જવાના પ્રસંગ દ્વારા શિક્ષકે 'વિકાસ' અને 'વિસ્થાપન' (Displacement) ની બેધારી અસરો સમજાવવી જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: શિક્ષકે એવું શીખવવું જોઈએ કે છોકરીઓએ માત્ર ઘરકામ જ કરવું જોઈએ અને રમતો ફક્ત છોકરાઓ માટે છે. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: અફસાનાની ટીમની વાર્તા દ્વારા શિક્ષકે વર્ગમાં જાતિભેદ (Gender bias) તોડવા અને 'ટીમ ભાવના' વિશે ચર્ચા કરવી જોઈએ. અને અનુજના ગામ ખેડીના ડૂબમાં જવાના પ્રસંગ દ્વારા શિક્ષકે 'વિકાસ' અને 'વિસ્થાપન' (Displacement) ની બેધારી અસરો સમજાવવી જોઈએ.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 11 (પ્રકરણ 17 અને 18: રમતગમત અને સ્થળાંતર))"
+  },
+  {
+    "q": "પ્રશ્ન 82: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "જંગલો અને આદિવાસીઓના સંબંધ (સૂર્યમણિની વાર્તા) દ્વારા જંગલ અધિકાર કાયદો અને પ્રકૃતિ સંરક્ષણ સમજાવવું અગત્યનું છે.",
+      "આધુનિક અને દેશી ખેતીની સરખામણી દ્વારા શિક્ષકે જમીનની ફળદ્રુપતા અને પર્યાવરણને થતા નુકસાનની વૈજ્ઞાનિક ચર્ચા કરવી જોઈએ.",
+      "આનુવંશિકતાના પાઠમાં શિક્ષકે બાળકોને ગ્રેગર મેન્ડેલના ગણિતના અઘરા દાખલા ગણવા આપવા જોઈએ.",
+      "વર્ગમાં જોડિયા બાળકો અથવા પરિવારના સભ્યો સાથેના શારીરિક સામ્યતાના ઉદાહરણોની ચર્ચા કરવી જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21))"
+  },
+  {
+    "q": "પ્રશ્ન 83: વિધાન અને કારણ ચકાસો:
+વિધાન (A): શિક્ષકે વર્ગમાં નકશા વાંચન (Map reading) ની પ્રવૃત્તિ કરાવવી જોઈએ.
+કારણ (R): નકશા વાંચનથી બાળકોમાં અવકાશિય સમજ (Spatial understanding), દિશા અને ભૌગોલિક સ્થાન નક્કી કરવાની કુશળતા વિકસે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ))"
+  },
+  {
+    "q": "પ્રશ્ન 84: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. આપણે શું શીખ્યાં		a. સ્વ-મૂલ્યાંકન અને સમજ ચકાસણી
+2. વાર્તાઓ અને કવિતાઓ		b. રસ જાળવી રાખવા અને કલ્પનાશક્તિ વધારવા
+3. પ્રત્યક્ષ અનુભવ		c. સ્થાયી શિક્ષણ (Permanent learning)
+4. સમાચારપત્રોના લેખ		d. સમકાલીન મુદ્દાઓ (Current issues) સાથે જોડાણ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ))"
+  },
+  {
+    "q": "પ્રશ્ન 85: EVS શિક્ષણમાં શિક્ષકો માટે સૌથી અગત્યની ભૂમિકા કઈ હોવી જોઈએ?",
+    "options": [
+      "માત્ર પાઠ્યપુસ્તક વાંચી જવું",
+      "જ્ઞાનના સર્જન માટે બાળકોને તકો અને પ્રવૃત્તિઓ પૂરી પાડવી",
+      "પરીક્ષામાં સારા માર્ક્સ લાવવા માટે ગોખણપટ્ટી કરાવવી",
+      "વર્ગમાં હંમેશા કડક શિસ્ત જાળવી રાખવી"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "EVS શિક્ષણમાં બાળકોને પ્રશ્નો પૂછવા, પ્રયોગો કરવા અને જાતે શીખવા માટે પ્રેરિત કરવા જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: નીચેના વિધાનો પર વિચાર કરો:
+1. EVS માં મૂલ્યાંકન માત્ર સાચા કે ખોટા જવાબોની શરતોમાં ન થવું જોઈએ.
+2. EVS માં બાળકોના પ્રદર્શનનું મૂલ્યાંકન માત્ર વર્ષના અંતે લેવાતી લેખિત પરીક્ષાથી જ થવું જોઈએ.
+3. બાળકોના અવલોકનો, ચિત્રકામ, ચર્ચા અને પ્રયોગોની પદ્ધતિઓ એ ગુણાત્મક મૂલ્યાંકનની તકો છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: EVS માં બાળકોના પ્રદર્શનનું મૂલ્યાંકન માત્ર વર્ષના અંતે લેવાતી લેખિત પરીક્ષાથી જ થવું જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: EVS માં મૂલ્યાંકન માત્ર સાચા કે ખોટા જવાબોની શરતોમાં ન થવું જોઈએ. અને બાળકોના અવલોકનો, ચિત્રકામ, ચર્ચા અને પ્રયોગોની પદ્ધતિઓ એ ગુણાત્મક મૂલ્યાંકનની તકો છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 2 (મૂલ્યાંકન પદ્ધતિઓ))"
+  },
+  {
+    "q": "પ્રશ્ન 87: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "'સારી' અને 'ખરાબ' સુગંધ વિશેની ચર્ચા દ્વારા શિક્ષક બાળકોમાં સંવેદનશીલતા અને તર્કશક્તિ વિકસાવી શકે છે.",
+      "શિક્ષકે બાળકોને પ્રાણીઓ અને પક્ષીઓ વિશેના તેમના પોતાના અનુભવોની વર્ગમાં આપ-લે કરવા પ્રોત્સાહિત કરવા જોઈએ.",
+      "શિક્ષકે પ્રાણીઓની ઇન્દ્રિયો વિશે બાળકોને ફક્ત વ્યાખ્યાઓ જ લખાવી દેવી જોઈએ.",
+      "બાળકોને કીડીઓના રસ્તામાં પેન્સિલ મૂકી અવલોકન કરવાની પ્રવૃત્તિ કરાવવામાં આવે છે."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 3 (પ્રકરણ 1: મજાની ઇન્દ્રિયો))"
+  },
+  {
+    "q": "પ્રશ્ન 88: વિધાન અને કારણ ચકાસો:
+વિધાન (A): શિક્ષકે વર્ગમાં એ સમજાવવું જોઈએ કે કોઈ પણ સમુદાય પ્રાણીઓ સાથે ખરાબ વ્યવહાર કરતો નથી (જેમ કે મદારી અને સાપ).
+કારણ (R): આનાથી બાળકોમાં કોઈ ચોક્કસ સમુદાય પ્રત્યેના પૂર્વગ્રહો દૂર થાય છે અને પ્રાણીઓ પ્રત્યે સહાનુભૂતિ વધે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 4 (પ્રકરણ 2 અને 3: પ્રાણીઓ અને પાચન))"
+  },
+  {
+    "q": "પ્રશ્ન 89: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. બ્રેડનો પ્રયોગ		a. અવલોકન અને વૈજ્ઞાનિક નોંધ
+2. ખોરાકની સાચવણી		b. વિવિધ ઋતુઓ અને પરંપરાગત પદ્ધતિઓ
+3. બીજનો ફેલાવો		c. પ્રકૃતિની અદ્ભુત રચના અને કલ્પનાશક્તિ
+4. વેલ્ક્રોની વાર્તા		d. અવલોકનમાંથી આવિષ્કારની પ્રેરણા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 5 (પ્રકરણ 4 અને 5: ખોરાક અને બીજ))"
+  },
+  {
+    "q": "પ્રશ્ન 90: શાળાની આસપાસ જળાશયો કે તળાવની મુલાકાત (Field Trip) લેવાનું NCF-2005 શા માટે ભારપૂર્વક સૂચવે છે?",
+    "options": [
+      "માત્ર શાળાની બહાર જવાની મજા માટે",
+      "પાઠ્યપુસ્તકના જ્ઞાનને વાસ્તવિક જીવન અને સ્થાનિક પર્યાવરણ સાથે જોડવા માટે",
+      "શારીરિક કસરત માટે",
+      "સમય પસાર કરવા માટે"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "ક્ષેત્ર મુલાકાતથી બાળકો વર્ગના શિક્ષણને તેમની વાસ્તવિક દુનિયા સાથે સાંકળી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 91: નીચેના વિધાનો પર વિચાર કરો:
+1. મેલેરિયા અને પાંડુરોગના મેડિકલ રિપોર્ટ વર્ગમાં લાવીને શિક્ષકે બાળકોને વાસ્તવિક દસ્તાવેજો (Authentic data) વાંચવાની તાલીમ આપવી જોઈએ.
+2. પર્વતારોહણના પાઠમાં માત્ર પર્વતોના નામ જ યાદ રખાવા જોઈએ, સાહસ કે જવાબદારીની વાતો ન કરવી જોઈએ.
+3. રોનાલ્ડ રોસની વાર્તા દર્શાવે છે કે વૈજ્ઞાનિક શોધો માટે કેટલી ધીરજ, નિષ્ફળતાઓ અને સતત પ્રયત્નોની જરૂર હોય છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: પર્વતારોહણના પાઠમાં માત્ર પર્વતોના નામ જ યાદ રખાવા જોઈએ, સાહસ કે જવાબદારીની વાતો ન કરવી જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: મેલેરિયા અને પાંડુરોગના મેડિકલ રિપોર્ટ વર્ગમાં લાવીને શિક્ષકે બાળકોને વાસ્તવિક દસ્તાવેજો (Authentic data) વાંચવાની તાલીમ આપવી જોઈએ. અને રોનાલ્ડ રોસની વાર્તા દર્શાવે છે કે વૈજ્ઞાનિક શોધો માટે કેટલી ધીરજ, નિષ્ફળતાઓ અને સતત પ્રયત્નોની જરૂર હોય છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 7 (પ્રકરણ 8 અને 9: મચ્છર અને પર્વતારોહણ))"
+  },
+  {
+    "q": "પ્રશ્ન 92: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "સુનીતા વિલિયમ્સના અનુભવો દ્વારા શિક્ષક ગુરુત્વાકર્ષણ જેવા અમૂર્ત (Abstract) ખ્યાલોને વાસ્તવિક ઉદાહરણોથી સમજાવી શકે છે.",
+      "કિલ્લાના નકશાનો અભ્યાસ કરાવતી વખતે શિક્ષકે બાળકોને દિશા (Directions) અને પ્રમાણમાપ (Scale) નો ખ્યાલ સ્પષ્ટ કરવો જોઈએ.",
+      "ઐતિહાસિક સ્થળોની માહિતી શિક્ષકે માત્ર ભાષણ આપીને જ પૂરી કરવી જોઈએ.",
+      "ગોલકોંડા કિલ્લાના પાણીના નળ કે પાઇપની વ્યવસ્થા બાળકોને બતાવી તેમને જૂની અને આધુનિક ઈજનેરી વચ્ચે સરખામણી કરવા કહેવું જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 8 (પ્રકરણ 10 અને 11: દીવાલોની કહાણી અને અવકાશ))"
+  },
+  {
+    "q": "પ્રશ્ન 93: વિધાન અને કારણ ચકાસો:
+વિધાન (A): શિક્ષકે બાળકો પાસે ટ્રાફિક સિગ્નલ પર થતા પ્રદૂષણ વિશે સર્વે કે પોસ્ટર બનાવડાવવા જોઈએ.
+કારણ (R): આવી પ્રવૃત્તિઓથી બાળકોમાં પર્યાવરણ પ્રત્યે સંવેદનશીલતા અને જવાબદાર નાગરિક બનવાના ગુણો વિકસે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 9 (પ્રકરણ 12 અને 13: ઊર્જા અને પહાડી રહેઠાણ))"
+  },
+  {
+    "q": "પ્રશ્ન 94: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ભૂકંપની મોકડ્રીલ		a. આફત વ્યવસ્થાપન (Disaster Management)
+2. ફૂંક મારવાના પ્રયોગો		b. અનુભવજન્ય વિજ્ઞાન
+3. સફાઈ કામગીરીની ચર્ચા		c. શ્રમનું ગૌરવ અને સમાનતા
+4. આંબેડકરનો પ્રસંગ		d. સામાજિક અન્યાય પ્રત્યે જાગૃતિ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 10 (પ્રકરણ 14, 15 અને 16))"
+  },
+  {
+    "q": "પ્રશ્ન 95: 'દીવાલ ઓળંગી લીધી' પ્રકરણમાં 'દીવાલ' શબ્દ કયા સંદર્ભમાં વપરાયો છે, જેની ચર્ચા શિક્ષકે કરવી જોઈએ?",
+    "options": [
+      "ઈંટો અને સિમેન્ટની બનેલી ઘરની દીવાલ",
+      "છોકરા અને છોકરીઓ વચ્ચે સમાજે ઊભી કરેલી માનસિક અને રૂઢિચુસ્ત દીવાલ (Gender Barrier)",
+      "શાળાની કમ્પાઉન્ડ વોલ",
+      "ભારત-પાકિસ્તાનની બોર્ડરની દીવાલ"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "અહીં 'દીવાલ' એ સમાજના પૂર્વગ્રહો અને ભેદભાવનું પ્રતીક છે જેને છોકરીઓએ પાર કરી."
+  },
+  {
+    "q": "પ્રશ્ન 96: નીચેના વિધાનો પર વિચાર કરો:
+1. આધુનિક અને દેશી ખેતીની સરખામણી દ્વારા શિક્ષકે જમીનની ફળદ્રુપતા અને પર્યાવરણને થતા નુકસાનની વૈજ્ઞાનિક ચર્ચા કરવી જોઈએ.
+2. આનુવંશિકતાના પાઠમાં શિક્ષકે બાળકોને ગ્રેગર મેન્ડેલના ગણિતના અઘરા દાખલા ગણવા આપવા જોઈએ.
+3. જંગલો અને આદિવાસીઓના સંબંધ (સૂર્યમણિની વાર્તા) દ્વારા જંગલ અધિકાર કાયદો અને પ્રકૃતિ સંરક્ષણ સમજાવવું અગત્યનું છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21)",
+    "exp": "વિધાન 2 ખોટું છે. કારણ કે: આનુવંશિકતાના પાઠમાં શિક્ષકે બાળકોને ગ્રેગર મેન્ડેલના ગણિતના અઘરા દાખલા ગણવા આપવા જોઈએ. આ વિધાન NCF-2005 અને EVS ના સિદ્ધાંતો મુજબ અસત્ય છે. સાચા વિધાનો: આધુનિક અને દેશી ખેતીની સરખામણી દ્વારા શિક્ષકે જમીનની ફળદ્રુપતા અને પર્યાવરણને થતા નુકસાનની વૈજ્ઞાનિક ચર્ચા કરવી જોઈએ. અને જંગલો અને આદિવાસીઓના સંબંધ (સૂર્યમણિની વાર્તા) દ્વારા જંગલ અધિકાર કાયદો અને પ્રકૃતિ સંરક્ષણ સમજાવવું અગત્યનું છે.. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 12 (પ્રકરણ 19, 20 અને 21))"
+  },
+  {
+    "q": "પ્રશ્ન 97: EVS ના શિક્ષણશાસ્ત્ર (Pedagogy) ના સંદર્ભમાં નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "ગુજરાતના નકશાનો અભ્યાસ કરાવતી વખતે શિક્ષકે બાળકોને જિલ્લાઓ, નદીઓ, અને દરિયાકિનારાને નકશા પર શોધવા પ્રોત્સાહિત કરવા જોઈએ.",
+      "શેરડી કાપતા મજૂરોના સ્થળાંતરની વાર્તા દ્વારા શિક્ષકે ઋતુ આધારિત રોજગાર અને શિક્ષણ પર તેની અસરો વિશે ચર્ચા કરવી જોઈએ.",
+      "મજૂરોના બાળકોની શિક્ષણની સમસ્યાઓ અંગે ચર્ચા કરવાનું ટાળવું જોઈએ, કારણ કે તે નકારાત્મક વિષય છે.",
+      "શિક્ષકે વર્ગમાં નકશા વાંચન (Map reading) ની પ્રવૃત્તિ કરાવવી જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ)",
+    "exp": "વિકલ્પ C નું વિધાન બાળકેન્દ્રી શિક્ષણના સિદ્ધાંતો વિરુદ્ધ હોવાથી ખોટું છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 13 (પ્રકરણ 22 અને 23: સ્થળાંતર અને ગુજરાતની ભૂગોળ))"
+  },
+  {
+    "q": "પ્રશ્ન 98: વિધાન અને કારણ ચકાસો:
+વિધાન (A): EVS માં વાર્તાઓ, કવિતાઓ અને સમાચારપત્રોના કટિંગ્સનો બહોળો ઉપયોગ કરવામાં આવ્યો છે.
+કારણ (R): વિવિધ માધ્યમોથી વિષયવસ્તુ રસપ્રદ બને છે અને બાળકોને બહુવિધ દ્રષ્ટિકોણ (Multiple perspectives) થી વિચારતા કરે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી શૈક્ષણિક સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ)",
+    "exp": "વિધાન અને કારણ બંને EVS ના શિક્ષણશાસ્ત્ર અને મનોવિજ્ઞાન મુજબ એકદમ સુસંગત છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 14 (સંકલિત મૂલ્યાંકન અને નિષ્કર્ષ))"
+  },
+  {
+    "q": "પ્રશ્ન 99: શિક્ષણની પદ્ધતિઓ અને તેના હેતુઓ માટે નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. NCF-2005		a. બાળકેન્દ્રી શિક્ષણ
+2. ધોરણ 3 થી 5		b. EVS નું સંકલિત પુસ્તક
+3. ધોરણ 1 અને 2		c. ભાષા અને ગણિત સાથે પર્યાવરણ
+4. પાઠ્યપુસ્તકની ભાષા		d. બાળકોની બોલચાલની ભાષા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે જે શૈક્ષણિક હેતુ સ્પષ્ટ કરે છે. (સંદર્ભ: EVS શિક્ષણશાસ્ત્ર - 1 (પ્રસ્તાવના અને NCF-2005))"
+  },
+  {
+    "q": "પ્રશ્ન 100: નીચેનામાંથી કઈ પદ્ધતિ EVS માં બાળકનું મૂલ્યાંકન (Assessment) કરવા માટે સૌથી યોગ્ય માનવામાં આવે છે?",
+    "options": [
+      "માત્ર બહુવિકલ્પી (MCQ) પ્રશ્નો",
+      "સતત અને સર્વગ્રાહી અવલોકન (Continuous Observation)",
+      "માત્ર મૌખિક પરીક્ષા",
+      "ઝડપી વાંચન સ્પર્ધા"
+    ],
+    "ans": 1,
+    "unit": "EVS શિક્ષણશાસ્ત્ર (Pedagogy & Teaching Methods)",
+    "exp": "NCF મુજબ રોજબરોજનું અને વિવિધ પ્રવૃત્તિઓનું સતત અવલોકન શ્રેષ્ઠ મૂલ્યાંકન છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "TET 1 સ્પેશિયલ: પર્યાવરણ શિક્ષણશાસ્ત્ર (EVS Pedagogy) - ભાગ 5",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "pro",
+            testFileName: "evs5fourpartpedagogy.html",
+            testUploadDate: "2026-11-15"
+        })
+    });
+}
+</script>
+</body>
+</html>
