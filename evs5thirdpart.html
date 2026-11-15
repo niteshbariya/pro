@@ -1,0 +1,2638 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TET 1 સ્પેશિયલ: પર્યાવરણ (EVS) - ધોરણ 5 (પ્રકરણ 10 થી 23) | ૧૦૦ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-leaf"></i> TET 1 સ્પેશિયલ: પર્યાવરણ (EVS) - ધોરણ 5 (પ્રકરણ 10 થી 23)</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-earth-asia"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">TET 1 પર્યાવરણ (EVS) પ્રશ્નો - ધોરણ 5 (પ્રકરણ 10 થી 23)</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">GPSC પરીક્ષા પદ્ધતિ અનુસાર વાંચન, તર્ક, યાદશક્તિ અને વિશ્લેષણ શક્તિ આધારિત ૧૦૦ પ્રશ્નો</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> TET 1 પર્યાવરણ (EVS) - ધોરણ 5 (પ્રકરણ 10 થી 23) | ૧૦૦ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ ઉચ્ચ કઠિનતામૂલ્ય (HOT) પ્રશ્નોનો ડેટાસેટ (કોર્સ-૧(અ): બોધ અને જ્ઞાન તથા રમતો)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: નીચેના વિધાનો પર વિચાર કરો:
+1. ગોલકોંડા કિલ્લાની બહારની દીવાલમાં કુલ 87 અર્ધગોળાકાર ગઢ (Bastions) આવેલા છે, જે સુરક્ષા માટે છે.
+2. ગોલકોંડા કિલ્લો માત્ર ઈંટો અને સિમેન્ટથી જ બનેલો છે, તેમાં પથ્થર કે માટીનો ઉપયોગ થયો નથી.
+3. કુતુબશાહી સુલતાનોએ ઈ.સ. 1518 થી 1687 સુધી ગોલકોંડા કિલ્લા પર રાજ કર્યું હતું.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "દીવાલોની કહાણી (પ્રકરણ 10)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ગોલકોંડા કિલ્લો માત્ર ઈંટો અને સિમેન્ટથી જ બનેલો છે, તેમાં પથ્થર કે માટીનો ઉપયોગ થયો નથી. આ વિધાન અસત્ય છે. સાચું વિધાન: ગોલકોંડા કિલ્લાની બહારની દીવાલમાં કુલ 87 અર્ધગોળાકાર ગઢ (Bastions) આવેલા છે, જે સુરક્ષા માટે છે. અને કુતુબશાહી સુલતાનોએ ઈ.સ. 1518 થી 1687 સુધી ગોલકોંડા કિલ્લા પર રાજ કર્યું હતું.. (સંદર્ભ: દીવાલોની કહાણી (પ્રકરણ 10))"
+  },
+  {
+    "q": "પ્રશ્ન 2: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "કુતુબશાહી સુલતાનોએ ઈ.સ. 1518 થી 1687 સુધી ગોલકોંડા કિલ્લા પર રાજ કર્યું હતું.",
+      "ગોલકોંડા કિલ્લાની બહારની દીવાલમાં કુલ 87 અર્ધગોળાકાર ગઢ (Bastions) આવેલા છે, જે સુરક્ષા માટે છે.",
+      "ગોલકોંડા કિલ્લો માત્ર ઈંટો અને સિમેન્ટથી જ બનેલો છે, તેમાં પથ્થર કે માટીનો ઉપયોગ થયો નથી.",
+      "ગોલકોંડા કિલ્લાના ગઢ (Bastions) માં કાણાં (છીદ્રો) રાખવામાં આવતા હતા."
+    ],
+    "ans": 2,
+    "unit": "દીવાલોની કહાણી (પ્રકરણ 10)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: દીવાલોની કહાણી (પ્રકરણ 10))"
+  },
+  {
+    "q": "પ્રશ્ન 3: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ગોલકોંડા કિલ્લાના ગઢ (Bastions) માં કાણાં (છીદ્રો) રાખવામાં આવતા હતા.
+કારણ (R): આ કાણાંમાંથી સૈનિકો દૂર સુધી જોઈ શકતા હતા અને દુશ્મનો પર સુરક્ષિત રહીને હુમલો કરી શકતા હતા.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "દીવાલોની કહાણી (પ્રકરણ 10)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: દીવાલોની કહાણી (પ્રકરણ 10))"
+  },
+  {
+    "q": "પ્રશ્ન 4: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. કુતુબશાહી સુલતાનો		a. 1518 થી 1687
+2. ગઢ (Bastions)		b. 87 ની સંખ્યા
+3. મહેરાબ (Kaman)		c. કમાન આકાર
+4. કાંસાની તોપ		d. ઔરંગઝેબ દ્વારા ઉપયોગ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "દીવાલોની કહાણી (પ્રકરણ 10)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: દીવાલોની કહાણી (પ્રકરણ 10))"
+  },
+  {
+    "q": "પ્રશ્ન 5: ઔરંગઝેબની સેના ગોલકોંડા કિલ્લાની બહાર આઠ મહિના સુધી શા માટે છાવણી નાખીને પડી રહી હતી?",
+    "options": [
+      "કિલ્લાના દરવાજા ખૂબ નાના હતા",
+      "કિલ્લાની મજબૂત દીવાલો અને ગઢને કારણે સેના અંદર પ્રવેશી શકી ન હતી",
+      "કિલ્લામાં ખજાનો ન હતો",
+      "સેના પાસે પૂરતો દારૂગોળો ન હતો"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "ગોલકોંડાની અભેદ્ય દીવાલો, ઊંડી ખાઈ અને ગઢને કારણે મુઘલ સેના આઠ મહિના સુધી પ્રવેશી શકી નહોતી."
+  },
+  {
+    "q": "પ્રશ્ન 6: નીચેના વિધાનો પર વિચાર કરો:
+1. અવકાશમાં ગુરુત્વાકર્ષણ બળ ન હોવાને કારણે ત્યાં બધું જ હવામાં તરતું રહે છે.
+2. અવકાશમાં પાણી કાચના ગ્લાસમાં જ સ્થિર રહે છે અને ઢોળાતું નથી.
+3. સુનીતા વિલિયમ્સે પૃથ્વીથી 360 કિલોમીટર ઉપર અવકાશયાન (Spaceship) માં મુસાફરી કરી હતી.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "સુનીતા અવકાશમાં (પ્રકરણ 11)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: અવકાશમાં પાણી કાચના ગ્લાસમાં જ સ્થિર રહે છે અને ઢોળાતું નથી. આ વિધાન અસત્ય છે. સાચું વિધાન: અવકાશમાં ગુરુત્વાકર્ષણ બળ ન હોવાને કારણે ત્યાં બધું જ હવામાં તરતું રહે છે. અને સુનીતા વિલિયમ્સે પૃથ્વીથી 360 કિલોમીટર ઉપર અવકાશયાન (Spaceship) માં મુસાફરી કરી હતી.. (સંદર્ભ: સુનીતા અવકાશમાં (પ્રકરણ 11))"
+  },
+  {
+    "q": "પ્રશ્ન 7: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "સુનીતા વિલિયમ્સે પૃથ્વીથી 360 કિલોમીટર ઉપર અવકાશયાન (Spaceship) માં મુસાફરી કરી હતી.",
+      "અવકાશમાં ગુરુત્વાકર્ષણ બળ ન હોવાને કારણે ત્યાં બધું જ હવામાં તરતું રહે છે.",
+      "અવકાશમાં પાણી કાચના ગ્લાસમાં જ સ્થિર રહે છે અને ઢોળાતું નથી.",
+      "અવકાશમાં સુનીતા વિલિયમ્સના વાળ હંમેશા ઊભા રહેતા હતા."
+    ],
+    "ans": 2,
+    "unit": "સુનીતા અવકાશમાં (પ્રકરણ 11)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: સુનીતા અવકાશમાં (પ્રકરણ 11))"
+  },
+  {
+    "q": "પ્રશ્ન 8: વિધાન અને કારણ ચકાસો:
+વિધાન (A): અવકાશમાં સુનીતા વિલિયમ્સના વાળ હંમેશા ઊભા રહેતા હતા.
+કારણ (R): ત્યાં ગુરુત્વાકર્ષણ (Gravity) ની ગેરહાજરી હોવાથી વાળને નીચે ખેંચી રાખતું કોઈ બળ હોતું નથી.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "સુનીતા અવકાશમાં (પ્રકરણ 11)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: સુનીતા અવકાશમાં (પ્રકરણ 11))"
+  },
+  {
+    "q": "પ્રશ્ન 9: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. સુનીતા વિલિયમ્સ		a. અવકાશયાત્રી
+2. કલ્પના ચાવલા		b. પ્રથમ ભારતીય મહિલા અવકાશયાત્રી
+3. ગુરુત્વાકર્ષણ બળ		c. વસ્તુઓને નીચે ખેંચે
+4. પૃથ્વીનો આકાર		d. ગોળ (Globe જેવો)
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "સુનીતા અવકાશમાં (પ્રકરણ 11)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: સુનીતા અવકાશમાં (પ્રકરણ 11))"
+  },
+  {
+    "q": "પ્રશ્ન 10: અવકાશયાનમાં પાણી કે અન્ય પ્રવાહી પીવા માટે અવકાશયાત્રીઓ શું કરે છે?",
+    "options": [
+      "સામાન્ય ગ્લાસમાંથી પીએ છે",
+      "પ્રવાહી હવામાં પરપોટા (Blobs) બની જાય છે, જેને તેઓ સીધા મોંમાં પકડે છે અથવા સ્ટ્રોથી પીએ છે",
+      "પાણી પીવાની જરૂર જ પડતી નથી",
+      "પાણી બરફ બની જાય છે જેને ચાવીને ખાય છે"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "ગુરુત્વાકર્ષણ ન હોવાથી પાણી બ્લોબ્સ (પરપોટા) સ્વરૂપે હવામાં તરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 11: નીચેના વિધાનો પર વિચાર કરો:
+1. પેટ્રોલિયમ એ જમીનની અંદરથી મળતું ઘેરું, કાળું અને દુર્ગંધયુક્ત પ્રવાહી છે.
+2. પેટ્રોલિયમ જમીનની અંદર ખૂબ જ ઝડપથી અને થોડા દિવસોમાં જ બની જાય છે.
+3. રિફાઇનરીમાં શુદ્ધિકરણ પ્રક્રિયા દ્વારા પેટ્રોલિયમમાંથી કેરોસીન, ડીઝલ, પેટ્રોલ અને એન્જિન ઓઇલ છૂટા પડે છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "જો આ ખૂટી જાય તો ? (પ્રકરણ 12)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: પેટ્રોલિયમ જમીનની અંદર ખૂબ જ ઝડપથી અને થોડા દિવસોમાં જ બની જાય છે. આ વિધાન અસત્ય છે. સાચું વિધાન: પેટ્રોલિયમ એ જમીનની અંદરથી મળતું ઘેરું, કાળું અને દુર્ગંધયુક્ત પ્રવાહી છે. અને રિફાઇનરીમાં શુદ્ધિકરણ પ્રક્રિયા દ્વારા પેટ્રોલિયમમાંથી કેરોસીન, ડીઝલ, પેટ્રોલ અને એન્જિન ઓઇલ છૂટા પડે છે.. (સંદર્ભ: જો આ ખૂટી જાય તો ? (પ્રકરણ 12))"
+  },
+  {
+    "q": "પ્રશ્ન 12: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "રિફાઇનરીમાં શુદ્ધિકરણ પ્રક્રિયા દ્વારા પેટ્રોલિયમમાંથી કેરોસીન, ડીઝલ, પેટ્રોલ અને એન્જિન ઓઇલ છૂટા પડે છે.",
+      "પેટ્રોલિયમ એ જમીનની અંદરથી મળતું ઘેરું, કાળું અને દુર્ગંધયુક્ત પ્રવાહી છે.",
+      "પેટ્રોલિયમ જમીનની અંદર ખૂબ જ ઝડપથી અને થોડા દિવસોમાં જ બની જાય છે.",
+      "આપણે પેટ્રોલ અને ડીઝલ જેવા ખનિજ તેલનો સમજદારીપૂર્વક અને કરકસરથી ઉપયોગ કરવો જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "જો આ ખૂટી જાય તો ? (પ્રકરણ 12)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: જો આ ખૂટી જાય તો ? (પ્રકરણ 12))"
+  },
+  {
+    "q": "પ્રશ્ન 13: વિધાન અને કારણ ચકાસો:
+વિધાન (A): આપણે પેટ્રોલ અને ડીઝલ જેવા ખનિજ તેલનો સમજદારીપૂર્વક અને કરકસરથી ઉપયોગ કરવો જોઈએ.
+કારણ (R): ખનિજ તેલના ભંડારો મર્યાદિત છે અને તેને બનતા લાખો વર્ષો લાગે છે, જે ઝડપે તે વપરાય છે તે ઝડપે બનતું નથી.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "જો આ ખૂટી જાય તો ? (પ્રકરણ 12)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: જો આ ખૂટી જાય તો ? (પ્રકરણ 12))"
+  },
+  {
+    "q": "પ્રશ્ન 14: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. કેરોસીન/ડીઝલ		a. પેટ્રોલિયમમાંથી મળે
+2. CNG		b. કોમ્પ્રેસ્ડ નેચરલ ગેસ
+3. ડામર/ગ્રીસ		c. રિફાઇનરીની આડપેદાશ
+4. કોલસો		d. જમીનમાંથી મળતું ઘન ઈંધણ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "જો આ ખૂટી જાય તો ? (પ્રકરણ 12)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: જો આ ખૂટી જાય તો ? (પ્રકરણ 12))"
+  },
+  {
+    "q": "પ્રશ્ન 15: નીચેનામાંથી કયો ઊર્જાનો સ્રોત અખૂટ (Renewable) છે અને પ્રદૂષણ ફેલાવતો નથી?",
+    "options": [
+      "કોલસો",
+      "પેટ્રોલ",
+      "સૂર્યપ્રકાશ (Solar Energy)",
+      "લાકડું"
+    ],
+    "ans": 2,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "સૂર્યપ્રકાશ એ પુનઃપ્રાપ્ય (અખૂટ) અને સ્વચ્છ ઊર્જા સ્રોત છે."
+  },
+  {
+    "q": "પ્રશ્ન 16: નીચેના વિધાનો પર વિચાર કરો:
+1. ચાંગપા જાતિના લોકો 'રેબો' નામના શંકુ આકારના તંબુમાં રહે છે, જે યાકના વાળમાંથી બનાવેલા પટ્ટાઓથી બને છે.
+2. ચાંગપા લોકો પર્વતોના નીચેના અને ગરમ વિસ્તારોમાં રહેવાનું વધુ પસંદ કરે છે.
+3. પશ્મિના શાલ છ સ્વેટર જેટલી ગરમી આપે છે અને તે ખાસ પ્રકારની બકરીના મુલાયમ વાળમાંથી બને છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "પહાડી રહેઠાણ ! (પ્રકરણ 13)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ચાંગપા લોકો પર્વતોના નીચેના અને ગરમ વિસ્તારોમાં રહેવાનું વધુ પસંદ કરે છે. આ વિધાન અસત્ય છે. સાચું વિધાન: ચાંગપા જાતિના લોકો 'રેબો' નામના શંકુ આકારના તંબુમાં રહે છે, જે યાકના વાળમાંથી બનાવેલા પટ્ટાઓથી બને છે. અને પશ્મિના શાલ છ સ્વેટર જેટલી ગરમી આપે છે અને તે ખાસ પ્રકારની બકરીના મુલાયમ વાળમાંથી બને છે.. (સંદર્ભ: પહાડી રહેઠાણ ! (પ્રકરણ 13))"
+  },
+  {
+    "q": "પ્રશ્ન 17: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "પશ્મિના શાલ છ સ્વેટર જેટલી ગરમી આપે છે અને તે ખાસ પ્રકારની બકરીના મુલાયમ વાળમાંથી બને છે.",
+      "ચાંગપા જાતિના લોકો 'રેબો' નામના શંકુ આકારના તંબુમાં રહે છે, જે યાકના વાળમાંથી બનાવેલા પટ્ટાઓથી બને છે.",
+      "ચાંગપા લોકો પર્વતોના નીચેના અને ગરમ વિસ્તારોમાં રહેવાનું વધુ પસંદ કરે છે.",
+      "લદ્દાખમાં મોટાભાગના મકાનોના છાપરાં સપાટ હોય છે અને મકાનો પથ્થર, માટી તથા ચૂનાથી બનેલા હોય છે."
+    ],
+    "ans": 2,
+    "unit": "પહાડી રહેઠાણ ! (પ્રકરણ 13)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: પહાડી રહેઠાણ ! (પ્રકરણ 13))"
+  },
+  {
+    "q": "પ્રશ્ન 18: વિધાન અને કારણ ચકાસો:
+વિધાન (A): લદ્દાખમાં મોટાભાગના મકાનોના છાપરાં સપાટ હોય છે અને મકાનો પથ્થર, માટી તથા ચૂનાથી બનેલા હોય છે.
+કારણ (R): સપાટ છાપરાં પર લોકો ઉનાળામાં ફળ અને શાકભાજી સૂકવે છે, જે શિયાળામાં બરફ પડે ત્યારે ખાવામાં કામ આવે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "પહાડી રહેઠાણ ! (પ્રકરણ 13)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: પહાડી રહેઠાણ ! (પ્રકરણ 13))"
+  },
+  {
+    "q": "પ્રશ્ન 19: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. રેબો		a. ચાંગપાનો તંબુ
+2. લેખા		b. ઘેટાં-બકરા રાખવાની જગ્યા
+3. પશ્મિના		c. ખાસ પ્રકારની શાલ
+4. ડોંગા		d. શ્રીનગરની ખાસ હોડી (Houseboat)
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "પહાડી રહેઠાણ ! (પ્રકરણ 13)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: પહાડી રહેઠાણ ! (પ્રકરણ 13))"
+  },
+  {
+    "q": "પ્રશ્ન 20: જમ્મુ-કાશ્મીરના શ્રીનગરમાં દાલ લેક અને ઝેલમ નદીમાં જોવા મળતા લાકડાના કોતરણીવાળા સુંદર ઘરને શું કહેવાય છે?",
+    "options": [
+      "ઇગ્લૂ",
+      "રેબો",
+      "હાઉસબોટ (Houseboat / Donga)",
+      "લેખા"
+    ],
+    "ans": 2,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "શ્રીનગરમાં પ્રવાસીઓ હાઉસબોટમાં રહેવાનું પસંદ કરે છે, જેમાં અંદરથી અનેક ઓરડાઓ હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 21: નીચેના વિધાનો પર વિચાર કરો:
+1. 26 જાન્યુઆરી, 2001 ના રોજ ગુજરાતના કચ્છ અને ભુજ વિસ્તારમાં ભયંકર ભૂકંપ આવ્યો હતો.
+2. ભૂકંપ આવે ત્યારે ઊંચી ઇમારતોમાં રહેતા લોકોએ ઝડપથી નીચે ઉતરવા માટે લિફ્ટનો ઉપયોગ કરવો જોઈએ.
+3. ભૂકંપ આવે ત્યારે ખુલ્લા મેદાનમાં જતું રહેવું જોઈએ અથવા ટેબલ જેવી મજબૂત વસ્તુ નીચે સંતાઈ જવું જોઈએ.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "જ્યારે ધરતી ધ્રૂજી ઊઠી ! (પ્રકરણ 14)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ભૂકંપ આવે ત્યારે ઊંચી ઇમારતોમાં રહેતા લોકોએ ઝડપથી નીચે ઉતરવા માટે લિફ્ટનો ઉપયોગ કરવો જોઈએ. આ વિધાન અસત્ય છે. સાચું વિધાન: 26 જાન્યુઆરી, 2001 ના રોજ ગુજરાતના કચ્છ અને ભુજ વિસ્તારમાં ભયંકર ભૂકંપ આવ્યો હતો. અને ભૂકંપ આવે ત્યારે ખુલ્લા મેદાનમાં જતું રહેવું જોઈએ અથવા ટેબલ જેવી મજબૂત વસ્તુ નીચે સંતાઈ જવું જોઈએ.. (સંદર્ભ: જ્યારે ધરતી ધ્રૂજી ઊઠી ! (પ્રકરણ 14))"
+  },
+  {
+    "q": "પ્રશ્ન 22: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "ભૂકંપ આવે ત્યારે ખુલ્લા મેદાનમાં જતું રહેવું જોઈએ અથવા ટેબલ જેવી મજબૂત વસ્તુ નીચે સંતાઈ જવું જોઈએ.",
+      "26 જાન્યુઆરી, 2001 ના રોજ ગુજરાતના કચ્છ અને ભુજ વિસ્તારમાં ભયંકર ભૂકંપ આવ્યો હતો.",
+      "ભૂકંપ આવે ત્યારે ઊંચી ઇમારતોમાં રહેતા લોકોએ ઝડપથી નીચે ઉતરવા માટે લિફ્ટનો ઉપયોગ કરવો જોઈએ.",
+      "ભૂકંપ પછી પુનર્વસન દરમિયાન ભૂકંપ-પ્રતિરોધક (Earthquake resistant) મકાનો બનાવવામાં આવે છે."
+    ],
+    "ans": 2,
+    "unit": "જ્યારે ધરતી ધ્રૂજી ઊઠી ! (પ્રકરણ 14)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: જ્યારે ધરતી ધ્રૂજી ઊઠી ! (પ્રકરણ 14))"
+  },
+  {
+    "q": "પ્રશ્ન 23: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ભૂકંપ પછી પુનર્વસન દરમિયાન ભૂકંપ-પ્રતિરોધક (Earthquake resistant) મકાનો બનાવવામાં આવે છે.
+કારણ (R): આવા મકાનોમાં હળવા વજનના સાધનો (જેમકે માટી, લાકડું, છાણ) નો ઉપયોગ થાય છે જેથી ફરી ભૂકંપ આવે તો નુકસાન ઓછું થાય.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "જ્યારે ધરતી ધ્રૂજી ઊઠી ! (પ્રકરણ 14)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: જ્યારે ધરતી ધ્રૂજી ઊઠી ! (પ્રકરણ 14))"
+  },
+  {
+    "q": "પ્રશ્ન 24: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ભૂકંપ		a. ધરતીનું ધ્રૂજવું
+2. ભુજ-કચ્છ		b. 2001 માં ભૂકંપનું કેન્દ્ર
+3. આફત		c. કુદરતી કે માનવસર્જિત વિનાશ
+4. બચાવ કામગીરી		d. આર્મી અને પોલીસ દ્વારા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "જ્યારે ધરતી ધ્રૂજી ઊઠી ! (પ્રકરણ 14)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: જ્યારે ધરતી ધ્રૂજી ઊઠી ! (પ્રકરણ 14))"
+  },
+  {
+    "q": "પ્રશ્ન 25: ભૂકંપ જેવી કુદરતી આફત સમયે જો તમે ઘરમાં ફસાઈ ગયા હોવ અને બહાર નીકળી શકો તેમ ન હોવ તો શું કરવું જોઈએ?",
+    "options": [
+      "કાચની બારીઓ પાસે ઊભા રહેવું",
+      "ખૂણામાં ઊભા રહેવું અથવા મજબૂત ટેબલ નીચે જમીન પર બેસી માથું ઢાંકી દેવું",
+      "છત પર જતું રહેવું",
+      "ઇલેક્ટ્રિક થાંભલાને પકડી રાખવો"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "મજબૂત ફર્નિચર નીચે આશરો લેવાથી માથા પર વસ્તુઓ પડવાથી બચી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 26: નીચેના વિધાનો પર વિચાર કરો:
+1. આપણા મોંમાંથી નીકળતી હવા શિયાળામાં આસપાસની હવા કરતા ગરમ હોય છે, તેથી તે કાચ પર ભેજ (Condensation) બનાવે છે.
+2. મોંમાંથી નીકળતી હવા હંમેશા આસપાસના વાતાવરણ કરતા ઠંડી જ હોય છે.
+3. ગરમ ચા કે દૂધને ઠંડુ કરવા માટે આપણે તેના પર મોંથી ફૂંક મારીને ફૂંક મારવાથી હવાની ગતિ વધે છે અને બાષ્પીભવન ઝડપી બને છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "ઠંડું કે ગરમ ? (પ્રકરણ 15)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: મોંમાંથી નીકળતી હવા હંમેશા આસપાસના વાતાવરણ કરતા ઠંડી જ હોય છે. આ વિધાન અસત્ય છે. સાચું વિધાન: આપણા મોંમાંથી નીકળતી હવા શિયાળામાં આસપાસની હવા કરતા ગરમ હોય છે, તેથી તે કાચ પર ભેજ (Condensation) બનાવે છે. અને ગરમ ચા કે દૂધને ઠંડુ કરવા માટે આપણે તેના પર મોંથી ફૂંક મારીને ફૂંક મારવાથી હવાની ગતિ વધે છે અને બાષ્પીભવન ઝડપી બને છે.. (સંદર્ભ: ઠંડું કે ગરમ ? (પ્રકરણ 15))"
+  },
+  {
+    "q": "પ્રશ્ન 27: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "ગરમ ચા કે દૂધને ઠંડુ કરવા માટે આપણે તેના પર મોંથી ફૂંક મારીને ફૂંક મારવાથી હવાની ગતિ વધે છે અને બાષ્પીભવન ઝડપી બને છે.",
+      "આપણા મોંમાંથી નીકળતી હવા શિયાળામાં આસપાસની હવા કરતા ગરમ હોય છે, તેથી તે કાચ પર ભેજ (Condensation) બનાવે છે.",
+      "મોંમાંથી નીકળતી હવા હંમેશા આસપાસના વાતાવરણ કરતા ઠંડી જ હોય છે.",
+      "શિયાળામાં લોકો પોતાના હાથને ગરમ કરવા માટે મોંમાંથી જોરથી ફૂંક મારે છે."
+    ],
+    "ans": 2,
+    "unit": "ઠંડું કે ગરમ ? (પ્રકરણ 15)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: ઠંડું કે ગરમ ? (પ્રકરણ 15))"
+  },
+  {
+    "q": "પ્રશ્ન 28: વિધાન અને કારણ ચકાસો:
+વિધાન (A): શિયાળામાં લોકો પોતાના હાથને ગરમ કરવા માટે મોંમાંથી જોરથી ફૂંક મારે છે.
+કારણ (R): આપણા શરીરનું તાપમાન બહારની ઠંડી હવા કરતા વધુ હોય છે, જેથી મોંમાંથી નીકળતી હવા હાથને ગરમી આપે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "ઠંડું કે ગરમ ? (પ્રકરણ 15)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: ઠંડું કે ગરમ ? (પ્રકરણ 15))"
+  },
+  {
+    "q": "પ્રશ્ન 29: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ગરમ ચા ને ફૂંક મારવી		a. ઠંડી કરવા માટે
+2. શિયાળામાં હાથ પર ફૂંક મારવી		b. ગરમ કરવા માટે
+3. અરીસા પર ફૂંક મારવી		c. કાચ ઝાંખો પડે (ભેજ)
+4. વાંસળી વગાડવી		d. હવાના પ્રવાહથી અવાજ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "ઠંડું કે ગરમ ? (પ્રકરણ 15)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: ઠંડું કે ગરમ ? (પ્રકરણ 15))"
+  },
+  {
+    "q": "પ્રશ્ન 30: ડૉ. ઝાકિર હુસૈને કઈ વાર્તા લખી છે જેમાં એક કઠિયારો પોતાના હાથ ગરમ કરવા અને બટાટા ઠંડા કરવા ફૂંક મારે છે?",
+    "options": [
+      "ઠંડું કે ગરમ? (Blowing hot, Blowing cold)",
+      "પવન અને સૂર્ય",
+      "જાદુઈ ફૂંક",
+      "લાકડાં અને આગ"
+    ],
+    "ans": 0,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "આ પાઠ ડૉ. ઝાકિર હુસૈનની વાર્તા 'Blowing hot, Blowing cold' પર આધારિત છે."
+  },
+  {
+    "q": "પ્રશ્ન 31: નીચેના વિધાનો પર વિચાર કરો:
+1. ગાંધીજી અને તેમના સાથીઓ આશ્રમમાં સફાઈનું કામ જાતે જ કરતા હતા અને શૌચાલયની સફાઈ પણ જાતે કરતા.
+2. ગાંધીજી માનતા હતા કે સફાઈનું કામ માત્ર કોઈ એક ચોક્કસ જાતિ કે સમુદાયનું જ છે.
+3. ગાંધીજીના આશ્રમમાં આવતા દરેક મહેમાનને પણ પહેલા શૌચાલય સાફ કરવાનું કામ શીખવવામાં આવતું હતું.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "સ્વચ્છતા આપણું કામ (પ્રકરણ 16)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ગાંધીજી માનતા હતા કે સફાઈનું કામ માત્ર કોઈ એક ચોક્કસ જાતિ કે સમુદાયનું જ છે. આ વિધાન અસત્ય છે. સાચું વિધાન: ગાંધીજી અને તેમના સાથીઓ આશ્રમમાં સફાઈનું કામ જાતે જ કરતા હતા અને શૌચાલયની સફાઈ પણ જાતે કરતા. અને ગાંધીજીના આશ્રમમાં આવતા દરેક મહેમાનને પણ પહેલા શૌચાલય સાફ કરવાનું કામ શીખવવામાં આવતું હતું.. (સંદર્ભ: સ્વચ્છતા આપણું કામ (પ્રકરણ 16))"
+  },
+  {
+    "q": "પ્રશ્ન 32: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "ગાંધીજીના આશ્રમમાં આવતા દરેક મહેમાનને પણ પહેલા શૌચાલય સાફ કરવાનું કામ શીખવવામાં આવતું હતું.",
+      "ગાંધીજી અને તેમના સાથીઓ આશ્રમમાં સફાઈનું કામ જાતે જ કરતા હતા અને શૌચાલયની સફાઈ પણ જાતે કરતા.",
+      "ગાંધીજી માનતા હતા કે સફાઈનું કામ માત્ર કોઈ એક ચોક્કસ જાતિ કે સમુદાયનું જ છે.",
+      "ગાંધીજીએ સાબરમતી આશ્રમમાં અસ્પૃશ્યતા અને ભેદભાવ દૂર કરવાના ભગીરથ પ્રયત્નો કર્યા હતા."
+    ],
+    "ans": 2,
+    "unit": "સ્વચ્છતા આપણું કામ (પ્રકરણ 16)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: સ્વચ્છતા આપણું કામ (પ્રકરણ 16))"
+  },
+  {
+    "q": "પ્રશ્ન 33: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ગાંધીજીએ સાબરમતી આશ્રમમાં અસ્પૃશ્યતા અને ભેદભાવ દૂર કરવાના ભગીરથ પ્રયત્નો કર્યા હતા.
+કારણ (R): તેઓ માનતા હતા કે દરેક કામ સમાન છે અને કોઈ કામ ઉચ્ચ કે નીચ નથી, શ્રમનું ગૌરવ હોવું જોઈએ.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "સ્વચ્છતા આપણું કામ (પ્રકરણ 16)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: સ્વચ્છતા આપણું કામ (પ્રકરણ 16))"
+  },
+  {
+    "q": "પ્રશ્ન 34: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ગાંધીજી		a. સફાઈ અને સમાનતાના આગ્રહી
+2. નારાયણભાઈ દેસાઈ		b. સંત ચરણ રજ સેવિયા સહજ
+3. મહાદેવભાઈ દેસાઈ		c. ગાંધીજીના સાથી
+4. સાબરમતી આશ્રમ		d. આશ્રમમાં નિયમિત સફાઈ
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "સ્વચ્છતા આપણું કામ (પ્રકરણ 16)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: સ્વચ્છતા આપણું કામ (પ્રકરણ 16))"
+  },
+  {
+    "q": "પ્રશ્ન 35: ગાંધીજીના મત મુજબ, જો દરેક વ્યક્તિ પોતાનો કચરો જાતે સાફ કરે અને સ્વચ્છતા રાખે તો સમાજમાં કયો સૌથી મોટો બદલાવ આવી શકે?",
+    "options": [
+      "લોકોને વધારે પૈસા મળશે",
+      "માત્ર કોઈ ચોક્કસ જાતિ પર સફાઈનો બોજ નહીં રહે અને અસ્પૃશ્યતા (ભેદભાવ) દૂર થશે",
+      "બધા લોકો ડોક્ટર બની જશે",
+      "કચરાપેટીઓની જરૂર નહીં પડે"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "જો દરેક વ્યક્તિ પોતાનું કામ જાતે કરે તો 'આ કામ અમુક લોકોનું જ છે' એવો ભેદભાવ દૂર થાય."
+  },
+  {
+    "q": "પ્રશ્ન 36: નીચેના વિધાનો પર વિચાર કરો:
+1. અફસાના અને તેની સાથી ખેલાડીઓએ નાગપાડા બાસ્કેટબોલ એસોસિએશન (મુંબઈ) માં બાસ્કેટબોલ રમવાની શરૂઆત કરી હતી.
+2. અફસાનાના માતા-પિતાએ તેને પહેલેથી જ બાસ્કેટબોલ રમવાની છૂટ આપી દીધી હતી.
+3. રમતમાં ખેલાડીની ઓળખ તેની જાતિ કે આર્થિક સ્થિતિથી નહીં, પરંતુ તેની 'ટીમ ભાવના' અને 'ક્ષમતા' થી થાય છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "દીવાલ ઓળંગી લીધી (પ્રકરણ 17)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: અફસાનાના માતા-પિતાએ તેને પહેલેથી જ બાસ્કેટબોલ રમવાની છૂટ આપી દીધી હતી. આ વિધાન અસત્ય છે. સાચું વિધાન: અફસાના અને તેની સાથી ખેલાડીઓએ નાગપાડા બાસ્કેટબોલ એસોસિએશન (મુંબઈ) માં બાસ્કેટબોલ રમવાની શરૂઆત કરી હતી. અને રમતમાં ખેલાડીની ઓળખ તેની જાતિ કે આર્થિક સ્થિતિથી નહીં, પરંતુ તેની 'ટીમ ભાવના' અને 'ક્ષમતા' થી થાય છે.. (સંદર્ભ: દીવાલ ઓળંગી લીધી (પ્રકરણ 17))"
+  },
+  {
+    "q": "પ્રશ્ન 37: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "રમતમાં ખેલાડીની ઓળખ તેની જાતિ કે આર્થિક સ્થિતિથી નહીં, પરંતુ તેની 'ટીમ ભાવના' અને 'ક્ષમતા' થી થાય છે.",
+      "અફસાના અને તેની સાથી ખેલાડીઓએ નાગપાડા બાસ્કેટબોલ એસોસિએશન (મુંબઈ) માં બાસ્કેટબોલ રમવાની શરૂઆત કરી હતી.",
+      "અફસાનાના માતા-પિતાએ તેને પહેલેથી જ બાસ્કેટબોલ રમવાની છૂટ આપી દીધી હતી.",
+      "રમતમાં ક્યારેય છોકરા અને છોકરી વચ્ચે ભેદભાવ ન કરવો જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "દીવાલ ઓળંગી લીધી (પ્રકરણ 17)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: દીવાલ ઓળંગી લીધી (પ્રકરણ 17))"
+  },
+  {
+    "q": "પ્રશ્ન 38: વિધાન અને કારણ ચકાસો:
+વિધાન (A): રમતમાં ક્યારેય છોકરા અને છોકરી વચ્ચે ભેદભાવ ન કરવો જોઈએ.
+કારણ (R): શારીરિક ક્ષમતા, મહેનત અને કૌશલ્યના આધારે છોકરીઓ પણ છોકરાઓ જેટલું જ ઉત્તમ પ્રદર્શન કરી શકે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "દીવાલ ઓળંગી લીધી (પ્રકરણ 17)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: દીવાલ ઓળંગી લીધી (પ્રકરણ 17))"
+  },
+  {
+    "q": "પ્રશ્ન 39: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. અફસાના મનસુરી		a. બાસ્કેટબોલ ખેલાડી
+2. નૂરખાન		b. બાસ્કેટબોલ કોચ
+3. નાગપાડા		c. મુંબઈનો વિસ્તાર
+4. ટીમ ભાવના		d. એકબીજાને મદદ કરવી
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "દીવાલ ઓળંગી લીધી (પ્રકરણ 17)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: દીવાલ ઓળંગી લીધી (પ્રકરણ 17))"
+  },
+  {
+    "q": "પ્રશ્ન 40: રમતગમતમાં ખેલાડીઓ માટે સૌથી અગત્યની બાબત કઈ છે?",
+    "options": [
+      "માત્ર પોતાના જ સ્કોર (પોઈન્ટ) વધારવા",
+      "પોતાની ટીમ માટે રમવું અને ટીમ ભાવના (Team Spirit) જાળવી રાખવી",
+      "સામેની ટીમના ખેલાડીઓ સાથે ઝઘડો કરવો",
+      "નવા કપડાં અને બૂટ પહેરીને રમવું"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "રમતગમતમાં ટીમ ભાવના અને એકતા સૌથી મહત્વપૂર્ણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 41: નીચેના વિધાનો પર વિચાર કરો:
+1. મોટો ડેમ (બંધ) બનવાના કારણે નદી કાંઠાના ગામના લોકોએ પોતાનું ગામ અને જમીન છોડીને સ્થળાંતર કરવું પડે છે.
+2. ડેમ બન્યા પછી વિસ્થાપિત થયેલા લોકોને શહેરમાં તરત જ મોટી નોકરીઓ અને વૈભવી મકાનો મળી જાય છે.
+3. અનુજ અને તેના ગામ ખેડીના લોકો જંગલની પેદાશો ભેગી કરીને અને માછલી પકડીને પોતાનું ગુજરાન ચલાવતા હતા.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "હવે અમે ક્યાં જઈએ ? (પ્રકરણ 18)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ડેમ બન્યા પછી વિસ્થાપિત થયેલા લોકોને શહેરમાં તરત જ મોટી નોકરીઓ અને વૈભવી મકાનો મળી જાય છે. આ વિધાન અસત્ય છે. સાચું વિધાન: મોટો ડેમ (બંધ) બનવાના કારણે નદી કાંઠાના ગામના લોકોએ પોતાનું ગામ અને જમીન છોડીને સ્થળાંતર કરવું પડે છે. અને અનુજ અને તેના ગામ ખેડીના લોકો જંગલની પેદાશો ભેગી કરીને અને માછલી પકડીને પોતાનું ગુજરાન ચલાવતા હતા.. (સંદર્ભ: હવે અમે ક્યાં જઈએ ? (પ્રકરણ 18))"
+  },
+  {
+    "q": "પ્રશ્ન 42: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "અનુજ અને તેના ગામ ખેડીના લોકો જંગલની પેદાશો ભેગી કરીને અને માછલી પકડીને પોતાનું ગુજરાન ચલાવતા હતા.",
+      "મોટો ડેમ (બંધ) બનવાના કારણે નદી કાંઠાના ગામના લોકોએ પોતાનું ગામ અને જમીન છોડીને સ્થળાંતર કરવું પડે છે.",
+      "ડેમ બન્યા પછી વિસ્થાપિત થયેલા લોકોને શહેરમાં તરત જ મોટી નોકરીઓ અને વૈભવી મકાનો મળી જાય છે.",
+      "વિસ્થાપિત (Displaced) લોકો જ્યારે નવા શહેરમાં આવે છે ત્યારે તેમને અનેક મુશ્કેલીઓનો સામનો કરવો પડે છે."
+    ],
+    "ans": 2,
+    "unit": "હવે અમે ક્યાં જઈએ ? (પ્રકરણ 18)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: હવે અમે ક્યાં જઈએ ? (પ્રકરણ 18))"
+  },
+  {
+    "q": "પ્રશ્ન 43: વિધાન અને કારણ ચકાસો:
+વિધાન (A): વિસ્થાપિત (Displaced) લોકો જ્યારે નવા શહેરમાં આવે છે ત્યારે તેમને અનેક મુશ્કેલીઓનો સામનો કરવો પડે છે.
+કારણ (R): નવા સ્થળે તેમને ઘર, રોજગાર, શાળા અને હોસ્પિટલની સુવિધા નવેસરથી શોધવી પડે છે અને પારકા હોવાનો અહેસાસ થાય છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "હવે અમે ક્યાં જઈએ ? (પ્રકરણ 18)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: હવે અમે ક્યાં જઈએ ? (પ્રકરણ 18))"
+  },
+  {
+    "q": "પ્રશ્ન 44: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ડેમ (બંધ)		a. નદી પર બંધાય
+2. વિસ્થાપન		b. મૂળ જગ્યા છોડી બીજે જવું
+3. ખેડી ગામ		c. જંગલ અને પ્રકૃતિની વચ્ચે
+4. સિંદૂરી ગામ		d. અનુજને મળેલી નવી જગ્યા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "હવે અમે ક્યાં જઈએ ? (પ્રકરણ 18)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: હવે અમે ક્યાં જઈએ ? (પ્રકરણ 18))"
+  },
+  {
+    "q": "પ્રશ્ન 45: અનુજના ગામ ખેડીના લોકોને પોતાનું ગામ શા માટે છોડવું પડ્યું હતું?",
+    "options": [
+      "ગામમાં રોગચાળો ફેલાયો હતો",
+      "ગામ પાસે નદી પર મોટો બંધ (Dam) બાંધવામાં આવનાર હતો, જેથી ગામ પાણીમાં ડૂબી જવાનું હતું",
+      "તેઓને શહેરમાં રહેવાનો શોખ હતો",
+      "ભૂકંપના કારણે ગામ નાશ પામ્યું હતું"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "નદી પર બંધ બાંધવાથી પાછળના વિસ્તારમાં પાણી ભરાઈ જાય છે અને ગામ ડૂબમાં જાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 46: નીચેના વિધાનો પર વિચાર કરો:
+1. પહેલાના સમયમાં ખેડૂતો સારા પાકના બીજને સૂકી દૂધીમાં માટીનો લેપ લગાવીને સાચવતા હતા.
+2. આધુનિક ખેતીમાં રાસાયણિક ખાતર અને દવાઓનો વધુ પડતો ઉપયોગ જમીનને લાંબા ગાળે વધુ ફળદ્રુપ બનાવે છે.
+3. લીમડાના પાંદડા બીજને જીવજંતુઓથી બચાવવામાં મદદરૂપ થાય છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "બીજ કહે છે ખેડૂતની વાર્તા (પ્રકરણ 19)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: આધુનિક ખેતીમાં રાસાયણિક ખાતર અને દવાઓનો વધુ પડતો ઉપયોગ જમીનને લાંબા ગાળે વધુ ફળદ્રુપ બનાવે છે. આ વિધાન અસત્ય છે. સાચું વિધાન: પહેલાના સમયમાં ખેડૂતો સારા પાકના બીજને સૂકી દૂધીમાં માટીનો લેપ લગાવીને સાચવતા હતા. અને લીમડાના પાંદડા બીજને જીવજંતુઓથી બચાવવામાં મદદરૂપ થાય છે.. (સંદર્ભ: બીજ કહે છે ખેડૂતની વાર્તા (પ્રકરણ 19))"
+  },
+  {
+    "q": "પ્રશ્ન 47: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "લીમડાના પાંદડા બીજને જીવજંતુઓથી બચાવવામાં મદદરૂપ થાય છે.",
+      "પહેલાના સમયમાં ખેડૂતો સારા પાકના બીજને સૂકી દૂધીમાં માટીનો લેપ લગાવીને સાચવતા હતા.",
+      "આધુનિક ખેતીમાં રાસાયણિક ખાતર અને દવાઓનો વધુ પડતો ઉપયોગ જમીનને લાંબા ગાળે વધુ ફળદ્રુપ બનાવે છે.",
+      "હાલના સમયમાં ખેડૂતો ટ્રેક્ટર, થ્રેશર, ઇલેક્ટ્રિક મોટર અને રાસાયણિક ખાતરોનો ઉપયોગ કરે છે."
+    ],
+    "ans": 2,
+    "unit": "બીજ કહે છે ખેડૂતની વાર્તા (પ્રકરણ 19)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: બીજ કહે છે ખેડૂતની વાર્તા (પ્રકરણ 19))"
+  },
+  {
+    "q": "પ્રશ્ન 48: વિધાન અને કારણ ચકાસો:
+વિધાન (A): હાલના સમયમાં ખેડૂતો ટ્રેક્ટર, થ્રેશર, ઇલેક્ટ્રિક મોટર અને રાસાયણિક ખાતરોનો ઉપયોગ કરે છે.
+કારણ (R): આધુનિક યંત્રોથી કામ ઝડપી બને છે અને રાસાયણિક ખાતરથી ટૂંકા ગાળામાં ઉત્પાદન વધે છે, પરંતુ લાંબા ગાળે જમીન બગડે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "બીજ કહે છે ખેડૂતની વાર્તા (પ્રકરણ 19)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: બીજ કહે છે ખેડૂતની વાર્તા (પ્રકરણ 19))"
+  },
+  {
+    "q": "પ્રશ્ન 49: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. સૂકી દૂધી		a. બીજ સાચવવાની દેશી રીત
+2. લીમડાના પાન		b. જીવાતથી રક્ષણ
+3. દેશી ખાતર		c. છાણ અને કચરામાંથી બનેલું (સેન્દ્રિય)
+4. ઉંધિયું		d. શિયાળાની ખાસ વાનગી
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "બીજ કહે છે ખેડૂતની વાર્તા (પ્રકરણ 19)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: બીજ કહે છે ખેડૂતની વાર્તા (પ્રકરણ 19))"
+  },
+  {
+    "q": "પ્રશ્ન 50: ગુજરાતના ખેડૂતો શિયાળામાં તાજા શાકભાજી અને મસાલાઓ માટલામાં ભરી, તેને સીલ કરી, ઊંધું રાખીને દેવતા (કોલસા) માં પકવે છે. આ વાનગી કયા નામે ઓળખાય છે?",
+    "options": [
+      "પાવભાજી",
+      "ઉંબાડિયું / ઊંધિયું",
+      "ઢોકળા",
+      "ખીચડી"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "દેશી પદ્ધતિથી માટલામાં બનતું શાક 'ઉંબાડિયું' કે 'ઊંધિયું' કહેવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 51: નીચેના વિધાનો પર વિચાર કરો:
+1. જંગલો આદિવાસી લોકોનું જીવન છે, તેઓ જંગલમાંથી ફળ, મૂળ, લાકડા અને ઔષધિઓ મેળવે છે.
+2. જંગલ અધિકાર કાયદો, 2007 (Forest Rights Act) જંગલમાં રહેતા લોકોને જંગલમાંથી હાંકી કાઢવા માટે બનાવવામાં આવ્યો છે.
+3. સૂર્યમણિએ ઝારખંડમાં 'તોરાંગ' (જેનો કુડુક ભાષામાં અર્થ 'જંગલ' થાય છે) નામનું કેન્દ્ર શરૂ કર્યું હતું.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "જંગલો કોનાં ? (પ્રકરણ 20)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: જંગલ અધિકાર કાયદો, 2007 (Forest Rights Act) જંગલમાં રહેતા લોકોને જંગલમાંથી હાંકી કાઢવા માટે બનાવવામાં આવ્યો છે. આ વિધાન અસત્ય છે. સાચું વિધાન: જંગલો આદિવાસી લોકોનું જીવન છે, તેઓ જંગલમાંથી ફળ, મૂળ, લાકડા અને ઔષધિઓ મેળવે છે. અને સૂર્યમણિએ ઝારખંડમાં 'તોરાંગ' (જેનો કુડુક ભાષામાં અર્થ 'જંગલ' થાય છે) નામનું કેન્દ્ર શરૂ કર્યું હતું.. (સંદર્ભ: જંગલો કોનાં ? (પ્રકરણ 20))"
+  },
+  {
+    "q": "પ્રશ્ન 52: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "સૂર્યમણિએ ઝારખંડમાં 'તોરાંગ' (જેનો કુડુક ભાષામાં અર્થ 'જંગલ' થાય છે) નામનું કેન્દ્ર શરૂ કર્યું હતું.",
+      "જંગલો આદિવાસી લોકોનું જીવન છે, તેઓ જંગલમાંથી ફળ, મૂળ, લાકડા અને ઔષધિઓ મેળવે છે.",
+      "જંગલ અધિકાર કાયદો, 2007 (Forest Rights Act) જંગલમાં રહેતા લોકોને જંગલમાંથી હાંકી કાઢવા માટે બનાવવામાં આવ્યો છે.",
+      "ઝૂમ ખેતી (Jhum Farming) માં એક પાક લીધા પછી જમીનને થોડા વર્ષો માટે ખાલી (પડતર) છોડી દેવામાં આવે છે."
+    ],
+    "ans": 2,
+    "unit": "જંગલો કોનાં ? (પ્રકરણ 20)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: જંગલો કોનાં ? (પ્રકરણ 20))"
+  },
+  {
+    "q": "પ્રશ્ન 53: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ઝૂમ ખેતી (Jhum Farming) માં એક પાક લીધા પછી જમીનને થોડા વર્ષો માટે ખાલી (પડતર) છોડી દેવામાં આવે છે.
+કારણ (R): આમ કરવાથી જમીન તેની ફળદ્રુપતા અને પોષકતત્વો કુદરતી રીતે પાછા મેળવી લે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "જંગલો કોનાં ? (પ્રકરણ 20)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: જંગલો કોનાં ? (પ્રકરણ 20))"
+  },
+  {
+    "q": "પ્રશ્ન 54: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. તોરાંગ		a. કુડુક ભાષામાં અર્થ 'જંગલ'
+2. સૂર્યમણિ		b. ઝારખંડની જંગલ બચાવ કાર્યકર
+3. ઝૂમ ખેતી		c. મિઝોરમની વિશિષ્ટ ખેતી
+4. જંગલ અધિકાર કાયદો		d. 2007 માં અમલમાં આવ્યો
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "જંગલો કોનાં ? (પ્રકરણ 20)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: જંગલો કોનાં ? (પ્રકરણ 20))"
+  },
+  {
+    "q": "પ્રશ્ન 55: જંગલ અધિકાર કાયદો (Forest Rights Act), 2007 નો મુખ્ય ઉદ્દેશ્ય શું છે?",
+    "options": [
+      "જંગલ કાપીને ફેક્ટરીઓ બનાવવી",
+      "જે લોકો ઓછામાં ઓછા 25 વર્ષથી જંગલમાં રહે છે, તેમનો જંગલની જમીન અને પેદાશો પર અધિકાર પ્રસ્થાપિત કરવો",
+      "જંગલમાં શિકાર કરવાની છૂટ આપવી",
+      "આદિવાસીઓ પાસેથી જમીન છીનવી લેવી"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "આ કાયદો જંગલવાસીઓના હક અને જમીનનું રક્ષણ કરવા માટે છે."
+  },
+  {
+    "q": "પ્રશ્ન 56: નીચેના વિધાનો પર વિચાર કરો:
+1. આપણને આંખનો રંગ, વાળનો પ્રકાર અને ચહેરાના લક્ષણો આપણા માતા-પિતા કે પરિવારના સભ્યો પાસેથી વારસામાં મળે છે.
+2. દરેક વ્યક્તિની તમામ આદતો અને આવડતો માત્ર વારસામાં જ મળે છે, પર્યાવરણ કે શીખવાથી કંઈ બદલાતું નથી.
+3. પોલિયો એ વારસાગત (Hereditary) રોગ નથી, તે વાયરસથી ફેલાતો રોગ છે જે રસી (Vaccine) થી અટકાવી શકાય છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "જેવા પિતા તેવી દીકરી (પ્રકરણ 21)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: દરેક વ્યક્તિની તમામ આદતો અને આવડતો માત્ર વારસામાં જ મળે છે, પર્યાવરણ કે શીખવાથી કંઈ બદલાતું નથી. આ વિધાન અસત્ય છે. સાચું વિધાન: આપણને આંખનો રંગ, વાળનો પ્રકાર અને ચહેરાના લક્ષણો આપણા માતા-પિતા કે પરિવારના સભ્યો પાસેથી વારસામાં મળે છે. અને પોલિયો એ વારસાગત (Hereditary) રોગ નથી, તે વાયરસથી ફેલાતો રોગ છે જે રસી (Vaccine) થી અટકાવી શકાય છે.. (સંદર્ભ: જેવા પિતા તેવી દીકરી (પ્રકરણ 21))"
+  },
+  {
+    "q": "પ્રશ્ન 57: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "પોલિયો એ વારસાગત (Hereditary) રોગ નથી, તે વાયરસથી ફેલાતો રોગ છે જે રસી (Vaccine) થી અટકાવી શકાય છે.",
+      "આપણને આંખનો રંગ, વાળનો પ્રકાર અને ચહેરાના લક્ષણો આપણા માતા-પિતા કે પરિવારના સભ્યો પાસેથી વારસામાં મળે છે.",
+      "દરેક વ્યક્તિની તમામ આદતો અને આવડતો માત્ર વારસામાં જ મળે છે, પર્યાવરણ કે શીખવાથી કંઈ બદલાતું નથી.",
+      "ગ્રેગર મેન્ડેલ નામના વૈજ્ઞાનિકે વટાણાના છોડ પર પ્રયોગો કરી આનુવંશિકતા (Genetics) ના સિદ્ધાંતો શોધ્યા હતા."
+    ],
+    "ans": 2,
+    "unit": "જેવા પિતા તેવી દીકરી (પ્રકરણ 21)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: જેવા પિતા તેવી દીકરી (પ્રકરણ 21))"
+  },
+  {
+    "q": "પ્રશ્ન 58: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ગ્રેગર મેન્ડેલ નામના વૈજ્ઞાનિકે વટાણાના છોડ પર પ્રયોગો કરી આનુવંશિકતા (Genetics) ના સિદ્ધાંતો શોધ્યા હતા.
+કારણ (R): તેમણે સાબિત કર્યું કે છોડના અમુક લક્ષણો (જેમકે બીજનો રંગ, ખરબચડાપણું) જોડીમાં આવે છે અને તે આગલી પેઢીમાં ઉતરે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "જેવા પિતા તેવી દીકરી (પ્રકરણ 21)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: જેવા પિતા તેવી દીકરી (પ્રકરણ 21))"
+  },
+  {
+    "q": "પ્રશ્ન 59: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. વારસાગત લક્ષણો		a. માતાપિતા તરફથી મળે
+2. પોલિયો		b. વાયરસથી થતો રોગ, વારસાગત નથી
+3. ગ્રેગર મેન્ડેલ		c. વટાણા પર આનુવંશિકતાના પ્રયોગો
+4. ટેવો અને કૌશલ્ય		d. પર્યાવરણ અને પ્રેક્ટિસથી શીખી શકાય
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "જેવા પિતા તેવી દીકરી (પ્રકરણ 21)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: જેવા પિતા તેવી દીકરી (પ્રકરણ 21))"
+  },
+  {
+    "q": "પ્રશ્ન 60: નીચેનામાંથી કયું લક્ષણ મોટેભાગે વારસાગત (આનુવંશિક) હોતું નથી, પરંતુ આપણે જીવન દરમિયાન શીખીએ છીએ?",
+    "options": [
+      "આંખનો રંગ",
+      "વાળની પ્રકૃતિ (વાંકડિયા કે સીધા)",
+      "સાઇકલ ચલાવવાની આવડત કે ભાષા બોલવી",
+      "નાકનો આકાર"
+    ],
+    "ans": 2,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "શારીરિક લક્ષણો વારસામાં મળે છે, જ્યારે આવડત (Skills) શીખવી પડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 61: નીચેના વિધાનો પર વિચાર કરો:
+1. શેરડી કાપનારા મજૂરો અને ખેતમજૂરો ચોમાસા પછી કામની શોધમાં પોતાના ગામથી દૂર સ્થળાંતર કરે છે.
+2. સ્થળાંતર કરનારા મજૂરોના બાળકોને નવું સ્થળ મળતા જ ત્યાંની મોટી શાળાઓમાં તરત પ્રવેશ મળી જાય છે.
+3. મુકાદમ (Agent) એ વ્યક્તિ છે જે મજૂરોને પૈસા ઉધાર આપે છે અને તેમને કામ શોધવામાં મદદ કરે છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "ફરી ઊપડ્યા (પ્રકરણ 22)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: સ્થળાંતર કરનારા મજૂરોના બાળકોને નવું સ્થળ મળતા જ ત્યાંની મોટી શાળાઓમાં તરત પ્રવેશ મળી જાય છે. આ વિધાન અસત્ય છે. સાચું વિધાન: શેરડી કાપનારા મજૂરો અને ખેતમજૂરો ચોમાસા પછી કામની શોધમાં પોતાના ગામથી દૂર સ્થળાંતર કરે છે. અને મુકાદમ (Agent) એ વ્યક્તિ છે જે મજૂરોને પૈસા ઉધાર આપે છે અને તેમને કામ શોધવામાં મદદ કરે છે.. (સંદર્ભ: ફરી ઊપડ્યા (પ્રકરણ 22))"
+  },
+  {
+    "q": "પ્રશ્ન 62: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "મુકાદમ (Agent) એ વ્યક્તિ છે જે મજૂરોને પૈસા ઉધાર આપે છે અને તેમને કામ શોધવામાં મદદ કરે છે.",
+      "શેરડી કાપનારા મજૂરો અને ખેતમજૂરો ચોમાસા પછી કામની શોધમાં પોતાના ગામથી દૂર સ્થળાંતર કરે છે.",
+      "સ્થળાંતર કરનારા મજૂરોના બાળકોને નવું સ્થળ મળતા જ ત્યાંની મોટી શાળાઓમાં તરત પ્રવેશ મળી જાય છે.",
+      "સ્થળાંતર કરતા પરિવારોના બાળકોનું શિક્ષણ અટકી જાય છે અથવા બગડે છે."
+    ],
+    "ans": 2,
+    "unit": "ફરી ઊપડ્યા (પ્રકરણ 22)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: ફરી ઊપડ્યા (પ્રકરણ 22))"
+  },
+  {
+    "q": "પ્રશ્ન 63: વિધાન અને કારણ ચકાસો:
+વિધાન (A): સ્થળાંતર કરતા પરિવારોના બાળકોનું શિક્ષણ અટકી જાય છે અથવા બગડે છે.
+કારણ (R): વારંવાર જગ્યા બદલવાને કારણે બાળકો એક જ શાળામાં નિયમિત જઈ શકતા નથી અને તેમને ભણવામાં મુશ્કેલી પડે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "ફરી ઊપડ્યા (પ્રકરણ 22)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: ફરી ઊપડ્યા (પ્રકરણ 22))"
+  },
+  {
+    "q": "પ્રશ્ન 64: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. મુકાદમ		a. મજૂરોનો એજન્ટ / નાણાં ધીરનાર
+2. શેરડીનો પાક		b. વરસાદ અને સિંચાઈ જરૂરી
+3. સ્થળાંતર (Migration)		c. રોજગાર માટે ગામ છોડવું
+4. દશેરા		d. વરસાદની ઋતુ પછીનો તહેવાર
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "ફરી ઊપડ્યા (પ્રકરણ 22)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: ફરી ઊપડ્યા (પ્રકરણ 22))"
+  },
+  {
+    "q": "પ્રશ્ન 65: જે વિસ્તારોમાં સિંચાઈની સુવિધા ન હોય ત્યાં ખેડૂતો માત્ર કઈ ઋતુમાં જ ખેતી કરી શકે છે?",
+    "options": [
+      "માત્ર શિયાળામાં",
+      "માત્ર ઉનાળામાં",
+      "માત્ર ચોમાસામાં (વરસાદ પર આધારિત)",
+      "બારેમાસ"
+    ],
+    "ans": 2,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "સિંચાઈ ન હોય ત્યાં ખેતી માત્ર વરસાદ (ચોમાસા) પર નિર્ભર રહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 66: નીચેના વિધાનો પર વિચાર કરો:
+1. ગુજરાતની પશ્ચિમે અરબી સમુદ્ર આવેલો છે અને ગુજરાત ભારતનો સૌથી લાંબો દરિયાકિનારો (1600 કિમી) ધરાવે છે.
+2. ગુજરાતની સરહદ શ્રીલંકા સાથે જોડાયેલી છે.
+3. નર્મદા, તાપી અને મહી એ ગુજરાતની મોટી નદીઓ છે, જેના પર મોટા બંધ (Dams) બાંધવામાં આવ્યા છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "અમે ગુજરાતી (પ્રકરણ 23)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ગુજરાતની સરહદ શ્રીલંકા સાથે જોડાયેલી છે. આ વિધાન અસત્ય છે. સાચું વિધાન: ગુજરાતની પશ્ચિમે અરબી સમુદ્ર આવેલો છે અને ગુજરાત ભારતનો સૌથી લાંબો દરિયાકિનારો (1600 કિમી) ધરાવે છે. અને નર્મદા, તાપી અને મહી એ ગુજરાતની મોટી નદીઓ છે, જેના પર મોટા બંધ (Dams) બાંધવામાં આવ્યા છે.. (સંદર્ભ: અમે ગુજરાતી (પ્રકરણ 23))"
+  },
+  {
+    "q": "પ્રશ્ન 67: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "નર્મદા, તાપી અને મહી એ ગુજરાતની મોટી નદીઓ છે, જેના પર મોટા બંધ (Dams) બાંધવામાં આવ્યા છે.",
+      "ગુજરાતની પશ્ચિમે અરબી સમુદ્ર આવેલો છે અને ગુજરાત ભારતનો સૌથી લાંબો દરિયાકિનારો (1600 કિમી) ધરાવે છે.",
+      "ગુજરાતની સરહદ શ્રીલંકા સાથે જોડાયેલી છે.",
+      "ગુજરાતના કચ્છ જિલ્લામાં રણપ્રદેશ આવેલો છે, જેમાં ઘુડખર (જંગલી ગધેડા) જોવા મળે છે."
+    ],
+    "ans": 2,
+    "unit": "અમે ગુજરાતી (પ્રકરણ 23)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: અમે ગુજરાતી (પ્રકરણ 23))"
+  },
+  {
+    "q": "પ્રશ્ન 68: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ગુજરાતના કચ્છ જિલ્લામાં રણપ્રદેશ આવેલો છે, જેમાં ઘુડખર (જંગલી ગધેડા) જોવા મળે છે.
+કારણ (R): કચ્છનું નાનું રણ ઘુડખર માટેનું એકમાત્ર અભયારણ્ય છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "અમે ગુજરાતી (પ્રકરણ 23)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: અમે ગુજરાતી (પ્રકરણ 23))"
+  },
+  {
+    "q": "પ્રશ્ન 69: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. નર્મદા		a. સરદાર સરોવર ડેમ
+2. અરબી સમુદ્ર		b. ગુજરાતની પશ્ચિમે
+3. કચ્છ		c. ઘુડખર અભયારણ્ય
+4. ગીર		d. એશિયાટિક સિંહનું નિવાસસ્થાન
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "અમે ગુજરાતી (પ્રકરણ 23)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: અમે ગુજરાતી (પ્રકરણ 23))"
+  },
+  {
+    "q": "પ્રશ્ન 70: ગુજરાતનું કયું અભયારણ્ય/રાષ્ટ્રીય ઉદ્યાન 'એશિયાટિક સિંહ' (Asiatic Lion) માટે સમગ્ર વિશ્વમાં પ્રખ્યાત છે?",
+    "options": [
+      "નળ સરોવર",
+      "ગીર રાષ્ટ્રીય ઉદ્યાન (Gir National Park)",
+      "વેળાવદર",
+      "વાંસદા"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "ગીરના જંગલો એશિયાટિક સિંહોનું એકમાત્ર ઘર છે."
+  },
+  {
+    "q": "પ્રશ્ન 71: નીચેના વિધાનો પર વિચાર કરો:
+1. ગોલકોંડા કિલ્લાની દીવાલો પરથી સૈનિકો ગઢમાં બનાવેલા છિદ્રોમાંથી નીચે અને દૂર સુધી જોઈ શકતા હતા.
+2. ગોલકોંડા કિલ્લામાં પીવાના પાણીની કોઈ વ્યવસ્થા ન હતી.
+3. પુરાતત્વ વિભાગ (Archaeological Survey) ના લોકો ઐતિહાસિક ઈમારતો અને ખંડેરોનું ખોદકામ કરી ભૂતકાળની માહિતી મેળવે છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "ઐતિહાસિક સ્મારકો અને દીવાલો (મિશ્રિત 1)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ગોલકોંડા કિલ્લામાં પીવાના પાણીની કોઈ વ્યવસ્થા ન હતી. આ વિધાન અસત્ય છે. સાચું વિધાન: ગોલકોંડા કિલ્લાની દીવાલો પરથી સૈનિકો ગઢમાં બનાવેલા છિદ્રોમાંથી નીચે અને દૂર સુધી જોઈ શકતા હતા. અને પુરાતત્વ વિભાગ (Archaeological Survey) ના લોકો ઐતિહાસિક ઈમારતો અને ખંડેરોનું ખોદકામ કરી ભૂતકાળની માહિતી મેળવે છે.. (સંદર્ભ: ઐતિહાસિક સ્મારકો અને દીવાલો (મિશ્રિત 1))"
+  },
+  {
+    "q": "પ્રશ્ન 72: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "પુરાતત્વ વિભાગ (Archaeological Survey) ના લોકો ઐતિહાસિક ઈમારતો અને ખંડેરોનું ખોદકામ કરી ભૂતકાળની માહિતી મેળવે છે.",
+      "ગોલકોંડા કિલ્લાની દીવાલો પરથી સૈનિકો ગઢમાં બનાવેલા છિદ્રોમાંથી નીચે અને દૂર સુધી જોઈ શકતા હતા.",
+      "ગોલકોંડા કિલ્લામાં પીવાના પાણીની કોઈ વ્યવસ્થા ન હતી.",
+      "ઐતિહાસિક સ્મારકો પર નામ લખવું કે તેને નુકસાન પહોંચાડવું એ ગુનો છે."
+    ],
+    "ans": 2,
+    "unit": "ઐતિહાસિક સ્મારકો અને દીવાલો (મિશ્રિત 1)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: ઐતિહાસિક સ્મારકો અને દીવાલો (મિશ્રિત 1))"
+  },
+  {
+    "q": "પ્રશ્ન 73: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ઐતિહાસિક સ્મારકો પર નામ લખવું કે તેને નુકસાન પહોંચાડવું એ ગુનો છે.
+કારણ (R): આ સ્મારકો આપણી સાંસ્કૃતિક ધરોહર છે, જે આવનારી પેઢી માટે ઇતિહાસની સમજ પૂરી પાડે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "ઐતિહાસિક સ્મારકો અને દીવાલો (મિશ્રિત 1)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: ઐતિહાસિક સ્મારકો અને દીવાલો (મિશ્રિત 1))"
+  },
+  {
+    "q": "પ્રશ્ન 74: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. માટીના પાઇપ		a. કિલ્લામાં પાણીના વહન માટે
+2. તોપ		b. કાંસા અને લોખંડની બનેલી
+3. મ્યુઝિયમ		c. ઐતિહાસિક વસ્તુઓ સાચવવાની જગ્યા
+4. કિલ્લાની ખાઈ		d. દુશ્મનોથી રક્ષણ માટે
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "ઐતિહાસિક સ્મારકો અને દીવાલો (મિશ્રિત 1)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: ઐતિહાસિક સ્મારકો અને દીવાલો (મિશ્રિત 1))"
+  },
+  {
+    "q": "પ્રશ્ન 75: કિલ્લામાં પાણી પહોંચાડવા માટે પ્રાચીન સમયમાં શાનો ઉપયોગ થતો હતો?",
+    "options": [
+      "ઇલેક્ટ્રિક મોટર",
+      "માટીના પાઇપ અને બળદ આધારિત પાણી ખેંચવાના પૈડા (Rehat)",
+      "પ્લાસ્ટિકના પાઇપ",
+      "હેન્ડપમ્પ"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "કિલ્લાઓમાં ઊંચાઈ પર પાણી ચઢાવવા માટીના પાઇપ અને બળદની શક્તિનો ઉપયોગ થતો."
+  },
+  {
+    "q": "પ્રશ્ન 76: નીચેના વિધાનો પર વિચાર કરો:
+1. પૃથ્વી પરની વસ્તુઓ ગુરુત્વાકર્ષણને કારણે જમીન પર રહે છે, જ્યારે અવકાશમાં ગુરુત્વાકર્ષણ ન હોવાથી વસ્તુઓ તરે છે.
+2. ચંદ્રને પોતાનો પ્રકાશ છે, તે સૂર્યના પ્રકાશથી ચમકતો નથી.
+3. પૃથ્વીના ગોળા પર દેખાતી દેશો વચ્ચેની રેખાઓ માત્ર નકશા પર માણસો દ્વારા દોરવામાં આવી છે, વાસ્તવમાં પૃથ્વી પર આવી કોઈ રેખાઓ નથી.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "અવકાશ વિજ્ઞાન (મિશ્રિત 2)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ચંદ્રને પોતાનો પ્રકાશ છે, તે સૂર્યના પ્રકાશથી ચમકતો નથી. આ વિધાન અસત્ય છે. સાચું વિધાન: પૃથ્વી પરની વસ્તુઓ ગુરુત્વાકર્ષણને કારણે જમીન પર રહે છે, જ્યારે અવકાશમાં ગુરુત્વાકર્ષણ ન હોવાથી વસ્તુઓ તરે છે. અને પૃથ્વીના ગોળા પર દેખાતી દેશો વચ્ચેની રેખાઓ માત્ર નકશા પર માણસો દ્વારા દોરવામાં આવી છે, વાસ્તવમાં પૃથ્વી પર આવી કોઈ રેખાઓ નથી.. (સંદર્ભ: અવકાશ વિજ્ઞાન (મિશ્રિત 2))"
+  },
+  {
+    "q": "પ્રશ્ન 77: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "પૃથ્વીના ગોળા પર દેખાતી દેશો વચ્ચેની રેખાઓ માત્ર નકશા પર માણસો દ્વારા દોરવામાં આવી છે, વાસ્તવમાં પૃથ્વી પર આવી કોઈ રેખાઓ નથી.",
+      "પૃથ્વી પરની વસ્તુઓ ગુરુત્વાકર્ષણને કારણે જમીન પર રહે છે, જ્યારે અવકાશમાં ગુરુત્વાકર્ષણ ન હોવાથી વસ્તુઓ તરે છે.",
+      "ચંદ્રને પોતાનો પ્રકાશ છે, તે સૂર્યના પ્રકાશથી ચમકતો નથી.",
+      "જો તમે એક સિક્કો અને પીંછુ અવકાશમાં છોડો તો બંને એક જ જગ્યાએ તરતા રહેશે."
+    ],
+    "ans": 2,
+    "unit": "અવકાશ વિજ્ઞાન (મિશ્રિત 2)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: અવકાશ વિજ્ઞાન (મિશ્રિત 2))"
+  },
+  {
+    "q": "પ્રશ્ન 78: વિધાન અને કારણ ચકાસો:
+વિધાન (A): જો તમે એક સિક્કો અને પીંછુ અવકાશમાં છોડો તો બંને એક જ જગ્યાએ તરતા રહેશે.
+કારણ (R): અવકાશમાં વજનનો કોઈ પ્રભાવ પડતો નથી કારણ કે ત્યાં ગુરુત્વાકર્ષણ (Gravity) હોતું નથી.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "અવકાશ વિજ્ઞાન (મિશ્રિત 2)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: અવકાશ વિજ્ઞાન (મિશ્રિત 2))"
+  },
+  {
+    "q": "પ્રશ્ન 79: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. સૂર્ય		a. તારો (પોતાનો પ્રકાશ)
+2. ચંદ્ર		b. પૃથ્વીનો ઉપગ્રહ
+3. પૃથ્વી		c. ગ્રહ
+4. ઉલ્કા		d. ખરતો તારો
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "અવકાશ વિજ્ઞાન (મિશ્રિત 2)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: અવકાશ વિજ્ઞાન (મિશ્રિત 2))"
+  },
+  {
+    "q": "પ્રશ્ન 80: આકાશમાં દેખાતો 'ખરતો તારો' (Shooting Star) વાસ્તવમાં શું હોય છે?",
+    "options": [
+      "તૂટેલો ગ્રહ",
+      "ઉલ્કા (Meteor) જે પૃથ્વીના વાતાવરણમાં પ્રવેશતા જ ઘર્ષણને કારણે સળગી ઉઠે છે",
+      "કોઈ એલિયનનું જહાજ",
+      "રોકેટ"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "ખરતો તારો એ ઉલ્કાપિંડ છે જે વાતાવરણના ઘર્ષણથી સળગી ઊઠે છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: નીચેના વિધાનો પર વિચાર કરો:
+1. કોલસો, પેટ્રોલિયમ અને કુદરતી ગેસ એ અશ્મિભૂત ઈંધણ (Fossil Fuels) છે, જે લાખો વર્ષોની પ્રક્રિયાથી બને છે.
+2. પેટ્રોલ અને ડીઝલનો ઉપયોગ વધવાથી પર્યાવરણને કોઈ નુકસાન થતું નથી.
+3. CNG (કોમ્પ્રેસ્ડ નેચરલ ગેસ) ના ઉપયોગથી વાહનોમાં પ્રદૂષણ ઓછું થાય છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "ઊર્જા અને પર્યાવરણ (મિશ્રિત 3)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: પેટ્રોલ અને ડીઝલનો ઉપયોગ વધવાથી પર્યાવરણને કોઈ નુકસાન થતું નથી. આ વિધાન અસત્ય છે. સાચું વિધાન: કોલસો, પેટ્રોલિયમ અને કુદરતી ગેસ એ અશ્મિભૂત ઈંધણ (Fossil Fuels) છે, જે લાખો વર્ષોની પ્રક્રિયાથી બને છે. અને CNG (કોમ્પ્રેસ્ડ નેચરલ ગેસ) ના ઉપયોગથી વાહનોમાં પ્રદૂષણ ઓછું થાય છે.. (સંદર્ભ: ઊર્જા અને પર્યાવરણ (મિશ્રિત 3))"
+  },
+  {
+    "q": "પ્રશ્ન 82: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "CNG (કોમ્પ્રેસ્ડ નેચરલ ગેસ) ના ઉપયોગથી વાહનોમાં પ્રદૂષણ ઓછું થાય છે.",
+      "કોલસો, પેટ્રોલિયમ અને કુદરતી ગેસ એ અશ્મિભૂત ઈંધણ (Fossil Fuels) છે, જે લાખો વર્ષોની પ્રક્રિયાથી બને છે.",
+      "પેટ્રોલ અને ડીઝલનો ઉપયોગ વધવાથી પર્યાવરણને કોઈ નુકસાન થતું નથી.",
+      "ટ્રાફિક સિગ્નલ પર લાલ લાઈટ હોય ત્યારે વાહનનું એન્જિન બંધ કરી દેવું જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "ઊર્જા અને પર્યાવરણ (મિશ્રિત 3)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: ઊર્જા અને પર્યાવરણ (મિશ્રિત 3))"
+  },
+  {
+    "q": "પ્રશ્ન 83: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ટ્રાફિક સિગ્નલ પર લાલ લાઈટ હોય ત્યારે વાહનનું એન્જિન બંધ કરી દેવું જોઈએ.
+કારણ (R): આમ કરવાથી કિંમતી ઈંધણની બચત થાય છે અને હવાનું પ્રદૂષણ પણ ઘટે છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "ઊર્જા અને પર્યાવરણ (મિશ્રિત 3)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: ઊર્જા અને પર્યાવરણ (મિશ્રિત 3))"
+  },
+  {
+    "q": "પ્રશ્ન 84: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. પેટ્રોલિયમ		a. પ્રવાહી સોનું
+2. LPG		b. રાંધણ ગેસ
+3. ડામર		c. રસ્તા બનાવવા
+4. સૌર ઊર્જા		d. પ્રદૂષણમુક્ત ઊર્જા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "ઊર્જા અને પર્યાવરણ (મિશ્રિત 3)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: ઊર્જા અને પર્યાવરણ (મિશ્રિત 3))"
+  },
+  {
+    "q": "પ્રશ્ન 85: નીચેનામાંથી કઈ પદ્ધતિ પેટ્રોલિયમ અને ડીઝલ બચાવવાનો શ્રેષ્ઠ ઉપાય છે?",
+    "options": [
+      "દરેકે પોતાની અંગત કાર લઈને ઓફિસ જવું",
+      "જાહેર પરિવહન (બસ, ટ્રેન) અથવા કાર-પૂલિંગ નો ઉપયોગ કરવો",
+      "ટ્રાફિક સિગ્નલ પર એન્જિન ચાલુ રાખવું",
+      "વધુ માઇલેજ ન આપતા વાહનો ચલાવવા"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "જાહેર પરિવહનના ઉપયોગથી માથાદીઠ ઈંધણનો વપરાશ ખૂબ જ ઘટે છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: નીચેના વિધાનો પર વિચાર કરો:
+1. લદ્દાખને 'ઠંડુ રણ' (Cold Desert) કહેવામાં આવે છે કારણ કે ત્યાં બરફ આચ્છાદિત ઊંચા પર્વતો અને ઓછો વરસાદ છે.
+2. ચાંગપા લોકો કાયમી મકાન બનાવીને એક જ જગ્યાએ જીવન પસાર કરે છે.
+3. ચાંગપા જાતિના લોકો પોતાના ઘેટાં-બકરાઓને ચરાવવા માટે પર્વતો પર ઊંચાઈએ લઈ જાય છે, જ્યાંની હવા ઠંડી અને ખુશ્ક હોય છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "પર્વતીય જીવન અને સંસ્કૃતિ (મિશ્રિત 4)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ચાંગપા લોકો કાયમી મકાન બનાવીને એક જ જગ્યાએ જીવન પસાર કરે છે. આ વિધાન અસત્ય છે. સાચું વિધાન: લદ્દાખને 'ઠંડુ રણ' (Cold Desert) કહેવામાં આવે છે કારણ કે ત્યાં બરફ આચ્છાદિત ઊંચા પર્વતો અને ઓછો વરસાદ છે. અને ચાંગપા જાતિના લોકો પોતાના ઘેટાં-બકરાઓને ચરાવવા માટે પર્વતો પર ઊંચાઈએ લઈ જાય છે, જ્યાંની હવા ઠંડી અને ખુશ્ક હોય છે.. (સંદર્ભ: પર્વતીય જીવન અને સંસ્કૃતિ (મિશ્રિત 4))"
+  },
+  {
+    "q": "પ્રશ્ન 87: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "ચાંગપા જાતિના લોકો પોતાના ઘેટાં-બકરાઓને ચરાવવા માટે પર્વતો પર ઊંચાઈએ લઈ જાય છે, જ્યાંની હવા ઠંડી અને ખુશ્ક હોય છે.",
+      "લદ્દાખને 'ઠંડુ રણ' (Cold Desert) કહેવામાં આવે છે કારણ કે ત્યાં બરફ આચ્છાદિત ઊંચા પર્વતો અને ઓછો વરસાદ છે.",
+      "ચાંગપા લોકો કાયમી મકાન બનાવીને એક જ જગ્યાએ જીવન પસાર કરે છે.",
+      "પશ્મિના બકરીના વાળ જેટલી ઊંચાઈએ અને ઠંડી જગ્યાએ રહે, તેટલા જ વધુ મુલાયમ અને ગરમ હોય છે."
+    ],
+    "ans": 2,
+    "unit": "પર્વતીય જીવન અને સંસ્કૃતિ (મિશ્રિત 4)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: પર્વતીય જીવન અને સંસ્કૃતિ (મિશ્રિત 4))"
+  },
+  {
+    "q": "પ્રશ્ન 88: વિધાન અને કારણ ચકાસો:
+વિધાન (A): પશ્મિના બકરીના વાળ જેટલી ઊંચાઈએ અને ઠંડી જગ્યાએ રહે, તેટલા જ વધુ મુલાયમ અને ગરમ હોય છે.
+કારણ (R): ઠંડી સામે રક્ષણ મેળવવા બકરીના શરીર પર કુદરતી રીતે જ ઝીણા અને મુલાયમ વાળનો થર જામી જાય છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "પર્વતીય જીવન અને સંસ્કૃતિ (મિશ્રિત 4)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: પર્વતીય જીવન અને સંસ્કૃતિ (મિશ્રિત 4))"
+  },
+  {
+    "q": "પ્રશ્ન 89: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ચાંગથંગ		a. લદ્દાખનો ઊંચો વિસ્તાર
+2. ડોંગા		b. નદીમાં તરતું ઘર
+3. શિકારા		c. દાલ લેકની નાની હોડી
+4. ડબ		d. બારીની બહાર નીકળતી કોતરણી
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "પર્વતીય જીવન અને સંસ્કૃતિ (મિશ્રિત 4)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: પર્વતીય જીવન અને સંસ્કૃતિ (મિશ્રિત 4))"
+  },
+  {
+    "q": "પ્રશ્ન 90: ચાંગપા લોકો પોતાના તંબુ (રેબો) ની નજીક ઘેટાં-બકરા રાખવા માટે જે પથ્થરની દીવાલોવાળી જગ્યા બનાવે છે તેને શું કહે છે?",
+    "options": [
+      "લેખા",
+      "ગૌશાળા",
+      "ઇગ્લૂ",
+      "વાડો"
+    ],
+    "ans": 0,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "ચાંગપા લોકો પ્રાણીઓ રાખવાની જગ્યાને 'લેખા' કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 91: નીચેના વિધાનો પર વિચાર કરો:
+1. ભૂકંપની તીવ્રતા માપવાના મશીનને સિસ્મોગ્રાફ (Seismograph) કહે છે અને તે રિકટર સ્કેલ (Richter scale) પર મપાય છે.
+2. ભૂકંપ એ આગાહી કરી શકાય તેવી આફત છે, તે ક્યારે આવશે તે ચોક્કસ કહી શકાય છે.
+3. કુદરતી આફત સમયે સેના, પોલીસ, ફાયર બ્રિગેડ અને NGO રાહત બચાવનું કામ કરે છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "કુદરતી આફતો (મિશ્રિત 5)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: ભૂકંપ એ આગાહી કરી શકાય તેવી આફત છે, તે ક્યારે આવશે તે ચોક્કસ કહી શકાય છે. આ વિધાન અસત્ય છે. સાચું વિધાન: ભૂકંપની તીવ્રતા માપવાના મશીનને સિસ્મોગ્રાફ (Seismograph) કહે છે અને તે રિકટર સ્કેલ (Richter scale) પર મપાય છે. અને કુદરતી આફત સમયે સેના, પોલીસ, ફાયર બ્રિગેડ અને NGO રાહત બચાવનું કામ કરે છે.. (સંદર્ભ: કુદરતી આફતો (મિશ્રિત 5))"
+  },
+  {
+    "q": "પ્રશ્ન 92: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "કુદરતી આફત સમયે સેના, પોલીસ, ફાયર બ્રિગેડ અને NGO રાહત બચાવનું કામ કરે છે.",
+      "ભૂકંપની તીવ્રતા માપવાના મશીનને સિસ્મોગ્રાફ (Seismograph) કહે છે અને તે રિકટર સ્કેલ (Richter scale) પર મપાય છે.",
+      "ભૂકંપ એ આગાહી કરી શકાય તેવી આફત છે, તે ક્યારે આવશે તે ચોક્કસ કહી શકાય છે.",
+      "ભૂકંપ પછી તરત જ ભોગ બનેલા લોકોને ભોજન, પાણી અને તબીબી સારવારની જરૂર પડે છે."
+    ],
+    "ans": 2,
+    "unit": "કુદરતી આફતો (મિશ્રિત 5)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: કુદરતી આફતો (મિશ્રિત 5))"
+  },
+  {
+    "q": "પ્રશ્ન 93: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ભૂકંપ પછી તરત જ ભોગ બનેલા લોકોને ભોજન, પાણી અને તબીબી સારવારની જરૂર પડે છે.
+કારણ (R): આફતને કારણે મકાનો પડી ગયા હોય છે અને મૂળભૂત સુવિધાઓ નષ્ટ પામી હોય છે.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "કુદરતી આફતો (મિશ્રિત 5)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: કુદરતી આફતો (મિશ્રિત 5))"
+  },
+  {
+    "q": "પ્રશ્ન 94: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ભૂકંપ		a. ધરતીનું કંપન
+2. સુનામી		b. દરિયામાં આવતો ભયંકર મોજું
+3. પૂર		c. અતિભારે વરસાદથી થાય
+4. દુષ્કાળ		d. વરસાદની ગેરહાજરી
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "કુદરતી આફતો (મિશ્રિત 5)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: કુદરતી આફતો (મિશ્રિત 5))"
+  },
+  {
+    "q": "પ્રશ્ન 95: ગુજરાતના કચ્છમાં આવેલો વિનાશકારી ભૂકંપ કયા દિવસે અને વર્ષે આવ્યો હતો?",
+    "options": [
+      "15 ઓગસ્ટ 2000",
+      "26 જાન્યુઆરી 2001",
+      "2 ઓક્ટોબર 2002",
+      "31 ડિસેમ્બર 1999"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "પાઠ્યપુસ્તકના પાના મુજબ, 26 જાન્યુઆરી 2001ના દિવસે ગુજરાતમાં ભયંકર ભૂકંપ આવ્યો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 96: નીચેના વિધાનો પર વિચાર કરો:
+1. શિયાળામાં કાચ પર ફૂંક મારવાથી મોંમાંથી નીકળતી ગરમ હવા અને બહારના ઠંડા કાચ વચ્ચે સંપર્ક થતાં કાચ પર ભેજ (Condensation) જમા થાય છે.
+2. સ્ટેથોસ્કોપ (Stethoscope) નો ઉપયોગ ડોક્ટરો આંખોની તપાસ માટે કરે છે.
+3. ગરમ વસ્તુઓ પર ફૂંક મારવાથી હવાના પ્રવાહને લીધે વસ્તુઓ ઝડપથી ઠંડી પડે છે.
+ઉપરોક્ત પૈકી કયું/કયા વિધાન સાચું/સાચા છે?",
+    "options": [
+      "માત્ર 1",
+      "માત્ર 1 અને 3",
+      "માત્ર 2 અને 3",
+      "1, 2 અને 3"
+    ],
+    "ans": 1,
+    "unit": "વિજ્ઞાન અને વ્યવહાર (મિશ્રિત 6)",
+    "exp": "વિધાન 2 ખોટું છે. સાચી માહિતી મુજબ: સ્ટેથોસ્કોપ (Stethoscope) નો ઉપયોગ ડોક્ટરો આંખોની તપાસ માટે કરે છે. આ વિધાન અસત્ય છે. સાચું વિધાન: શિયાળામાં કાચ પર ફૂંક મારવાથી મોંમાંથી નીકળતી ગરમ હવા અને બહારના ઠંડા કાચ વચ્ચે સંપર્ક થતાં કાચ પર ભેજ (Condensation) જમા થાય છે. અને ગરમ વસ્તુઓ પર ફૂંક મારવાથી હવાના પ્રવાહને લીધે વસ્તુઓ ઝડપથી ઠંડી પડે છે.. (સંદર્ભ: વિજ્ઞાન અને વ્યવહાર (મિશ્રિત 6))"
+  },
+  {
+    "q": "પ્રશ્ન 97: નીચેનામાંથી કયું વિધાન અસત્ય (ખોટું) છે?",
+    "options": [
+      "ગરમ વસ્તુઓ પર ફૂંક મારવાથી હવાના પ્રવાહને લીધે વસ્તુઓ ઝડપથી ઠંડી પડે છે.",
+      "શિયાળામાં કાચ પર ફૂંક મારવાથી મોંમાંથી નીકળતી ગરમ હવા અને બહારના ઠંડા કાચ વચ્ચે સંપર્ક થતાં કાચ પર ભેજ (Condensation) જમા થાય છે.",
+      "સ્ટેથોસ્કોપ (Stethoscope) નો ઉપયોગ ડોક્ટરો આંખોની તપાસ માટે કરે છે.",
+      "ડૉ. ઝાકિર હુસૈને બાળકો માટે રસપ્રદ વાર્તાઓ લખી છે."
+    ],
+    "ans": 2,
+    "unit": "વિજ્ઞાન અને વ્યવહાર (મિશ્રિત 6)",
+    "exp": "વિકલ્પ C નું વિધાન ખોટું છે. (સંદર્ભ: વિજ્ઞાન અને વ્યવહાર (મિશ્રિત 6))"
+  },
+  {
+    "q": "પ્રશ્ન 98: વિધાન અને કારણ ચકાસો:
+વિધાન (A): ડૉ. ઝાકિર હુસૈને બાળકો માટે રસપ્રદ વાર્તાઓ લખી છે.
+કારણ (R): તેઓ ભારતના પૂર્વ રાષ્ટ્રપતિ હતા અને તેમને શિક્ષણ તથા બાળસાહિત્યમાં ઊંડો રસ હતો.
+નીચેનામાંથી યોગ્ય વિકલ્પ પસંદ કરો:",
+    "options": [
+      "A અને R બંને સાચા છે અને R એ A ની સાચી સમજૂતી છે.",
+      "A અને R બંને સાચા છે પરંતુ R એ A ની સાચી સમજૂતી નથી.",
+      "A સાચું છે પણ R ખોટું છે.",
+      "A ખોટું છે પણ R સાચું છે."
+    ],
+    "ans": 0,
+    "unit": "વિજ્ઞાન અને વ્યવહાર (મિશ્રિત 6)",
+    "exp": "વિધાન અને કારણ બંને વૈજ્ઞાનિક અને તાર્કિક રીતે સુસંગત છે. (સંદર્ભ: વિજ્ઞાન અને વ્યવહાર (મિશ્રિત 6))"
+  },
+  {
+    "q": "પ્રશ્ન 99: નીચેના જોડકાં ધ્યાને લો:
+વિભાગ-I			વિભાગ-II
+1. ફૂંક મારવી		a. ગરમ કરવા અથવા ઠંડુ કરવા
+2. સ્ટેથોસ્કોપ		b. હૃદયના ધબકારા માપવા
+3. ડૉ. ઝાકિર હુસૈન		c. લેખક અને પૂર્વ રાષ્ટ્રપતિ
+4. બાષ્પીભવન		d. વરાળ બનવાની ક્રિયા
+કયો વિકલ્પ સાચો છે?",
+    "options": [
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "ans": 0,
+    "unit": "વિજ્ઞાન અને વ્યવહાર (મિશ્રિત 6)",
+    "exp": "આપેલા તમામ જોડકાં સામસામે યોગ્ય રીતે જ ગોઠવાયેલા છે. (સંદર્ભ: વિજ્ઞાન અને વ્યવહાર (મિશ્રિત 6))"
+  },
+  {
+    "q": "પ્રશ્ન 100: વૈજ્ઞાનિક દ્રષ્ટિએ, આપણે જ્યારે વાંસળી (Flute) વગાડીએ છીએ ત્યારે અવાજ કેવી રીતે ઉત્પન્ન થાય છે?",
+    "options": [
+      "લાકડું ધ્રૂજવાથી",
+      "ફૂંક મારવાથી વાંસળીમાં રહેલા હવાના સ્તંભ (Air column) ના કંપન (Vibration) થી",
+      "આંગળીઓના અવાજથી",
+      "માત્ર શ્વાસ લેવાથી"
+    ],
+    "ans": 1,
+    "unit": "ધોરણ 5 પર્યાવરણ (પ્રકરણ 10 થી 23)",
+    "exp": "વાંસળીના છિદ્રોમાંથી પસાર થતી હવાનું કંપન અવાજ ઉત્પન્ન કરે છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "TET 1 પર્યાવરણ (EVS) - ધોરણ 5 (પ્રકરણ 10 થી 23)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "pro",
+            testFileName: "evs5thirdpart.html",
+            testUploadDate: "2026-11-15"
+        })
+    });
+}
+</script>
+</body>
+</html>
