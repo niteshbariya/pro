@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPSC શિક્ષણ સેવા વર્ગ-૧ અને વર્ગ-૨ | ડી.એલ.એડ્. કોર્સ - ૨(બ) | ૧૦૦ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> GPSC શિક્ષણ સેવા વર્ગ-૧ અને ૨ : ડી.એલ.એડ્. કોર્સ - ૨(બ)</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-earth-asia"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">GPSC શિક્ષણ સેવા વર્ગ-૧ અને વર્ગ-૨ | ડી.એલ.એડ્. કોર્સ - ૨(બ)</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">સંપૂર્ણ અભ્યાસક્રમ આધારિત: 'ભારતીય શિક્ષણ દર્શન અને પ્રવર્તમાન ભારતીય સમાજ' | ૧૦૦ ઉચ્ચ કઠિનતામૂલ્ય (HOT) પ્રશ્નો</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> GPSC શિક્ષણ સેવા વર્ગ-૧ અને વર્ગ-૨ : ડી.એલ.એડ્. કોર્સ - ૨(બ) 'ભારતીય શિક્ષણ દર્શન અને પ્રવર્તમાન ભારતીય સમાજ' | ૧૦૦ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ ઉચ્ચ કઠિનતામૂલ્ય (HOT) પ્રશ્નોનો ડેટાસેટ (કોર્સ-૧(અ): બોધ અને જ્ઞાન તથા રમતો)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: પ્રાચીન ભારતીય શિક્ષણ દર્શનના સંદર્ભમાં 'વિદ્' ધાતુમાંથી ઉતરી આવેલા શબ્દો અને તેની તાત્વિક પ્રક્રિયા અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ સચોટ અને વ્યાપક છે?",
+    "options": [
+      "વિદ્ ધાતુનો અર્થ માત્ર બાહ્ય માહિતી એકત્ર કરવાનો છે, જેમાંથી 'વેદ' એટલે કે ભૌતિક શાસ્ત્રોનો ગ્રંથ અસ્તિત્વમાં આવ્યો.",
+      "વિદ્ ધાતુ એટલે ભણવું, શીખવું કે જાણવું; જેમાંથી 'વેદ' (જ્ઞાન) અસ્તિત્વમાં આવ્યા અને પ્રત્યેક મંત્રની 'ઋચા' (પ્રકાશ) દ્વારા શિક્ષણ એ 'આંતરિક પ્રદિપ્તીકરણ' તથા માનવ સશક્તિકરણની પ્રક્રિયા બને છે.",
+      "વિદ્ ધાતુ એ માત્ર કર્મકાંડ સાથે સંકળાયેલ છે, જેના આધારે વેદકાલીન સમયમાં ગુરુકુળોમાં લૌકિક વ્યવસાયિક તાલીમ આપવામાં આવતી.",
+      "વિદ્ ધાતુમાંથી બૌદ્ધકાળમાં 'ત્રિપિટિકા' ની રચના થઈ જે બાહ્ય પ્રદિપ્તીકરણ અને શારીરિક શિસ્ત પર ભાર મૂકે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1 (ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ). સમજૂતી: 'વિદ્' ધાતુનો અર્થ ભણવું, શીખવું કે જાણવું થાય છે. આ સંસ્કૃત ધાતુમાંથી 'વેદ' (જ્ઞાન) શબ્દ બન્યો. પ્રત્યેક મંત્રને 'ઋચા' એટલે કે 'પ્રકાશ' કહેવાય છે. કેળવણી એ 'આંતરિક પ્રદિપ્તીકરણ' અને માનવ સશક્તિકરણની પ્રક્રિયા છે, જેના દ્વારા જીવન વ્યવહારુ અને ઉન્નત બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 2: વેદકાલીન શિક્ષણ વ્યવસ્થાના ઉદ્દેશો અને લાક્ષણિકությունઓના સંદર્ભમાં નીચેના વિધાનો ધ્યાનમાં લો:",
+    "options": [
+      "ફક્ત ૧ અને ૨",
+      "ફક્ત ૨ અને ૩",
+      "ફક્ત ૧ અને ૩",
+      "૧, ૨ અને ૩ તમામ"
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1 (ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ). સમજૂતી: વિધાન ૧ અને ૨ સાચા છે. વિધાન ૩ ખોટું છે કારણ કે ૧૨ વર્ષ બ્રહ્મચર્ય પાળનાર વિદ્યાર્થી 'સ્નાતક' કહેવાય છે (૨૪ વર્ષવાળો વસુ, ૩૬ વર્ષવાળો રુદ્ર અને ૪૮ વર્ષવાળો આદિત્ય કહેવાય છે)."
+  },
+  {
+    "q": "પ્રશ્ન 3: વૈદિક શિક્ષણ પ્રણાલીની અતિ મહત્વની વિશેષતા ગણાતી 'કક્ષાનાયક પ્રણાલી' (વડા વિદ્યાર્થીની પ્રથા) વિશે નીચેનામાંથી કયું વિધાન અસત્ય છે?",
+    "options": [
+      "આ પદ્ધતિ અનુસાર ઉચ્ચ વર્ગના બુદ્ધિશાળી અને પ્રતિભાશાળી વિદ્યાર્થી (નાયક) નિમ્ન વર્ગના વિદ્યાર્થીઓને શિક્ષણ આપવામાં ગુરુને મદદરૂપ બનતા.",
+      "આ પદ્ધતિના કારણે ગુરુની ગેરહાજરીમાં પણ શિક્ષણકાર્ય અબાધિત રૂપે ચાલુ રહેતું હતું.",
+      "વૈદિક કાળની આ કક્ષાનાયક પ્રણાલીથી પ્રભાવિત થઈને બ્રિટિશ શિક્ષણકાર બેલ અને લેંકાસ્ટરે તેમના દેશમાં આ પદ્ધતિ અમલમાં મૂકી હતી.",
+      "આ પદ્ધતિ માત્ર લૌકિક વિષયો અને હસ્તકલા શીખવવા માટે જ મર્યાદિત હતી અને તેમાં આધ્યાત્મિક મંત્રોના પઠન માટે નાયક વિદ્યાર્થીને પ્રતિબંધ હતો."
+    ],
+    "ans": 3,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1 (ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ). સમજૂતી: વિકલ્પ d અસત્ય છે કારણ કે કક્ષાનાયક પ્રણાલી વૈદિક શિક્ષણની વ્યાપક વિશેષતા હતી અને તે માત્ર લૌકિક પૂરતી સીમિત નહોતી. બેલ અને લેંકાસ્ટરે તેનાથી પ્રભાવિત થઈ આ પદ્ધતિ ઇંગ્લેન્ડમાં અપનાવી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 4: બૌદ્ધકાલીન શિક્ષણ વ્યવસ્થા અને તેના સંસ્કારોના સંદર્ભમાં નીચેના જોડકાં ચકાસો:",
+    "options": [
+      "ફક્ત ૧ અને ૨",
+      "ફક્ત ૨ અને ૩",
+      "ફક્ત ૧ અને ૩",
+      "૧, ૨ અને ૩ તમામ"
+    ],
+    "ans": 3,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1 (ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ). સમજૂતી: આપેલા ત્રણેય વિધાનો બૌદ્ધકાલીન શિક્ષણના સંદર્ભમાં સંપૂર્ણપણે સત્ય છે. પબજ્જા ૮ વર્ષે અને ઉપસંપદા ૨૬ વર્ષની ઉંમરે (૧૨ વર્ષના અભ્યાસ પછી) થતી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 5: મધ્યકાલીન ઈસ્લામિક શિક્ષણ પ્રણાલીના સંદર્ભમાં જ્ઞાનના વિભાજન અને સંસ્થાઓ વિશે નીચેનામાંથી કયું યુગ્મ યોગ્ય રીતે સુસંગત નથી?",
+    "options": [
+      "મકતબ: પ્રાથમિક શિક્ષણનું કેન્દ્ર, જે 'કુતુબ' શબ્દ પરથી બન્યું અને જ્યાં લખવાનું તથા કુરાનની આયાતો પઢવાનું શીખવાતું.",
+      "મદરેસા: ઉચ્ચ શિક્ષણનું કેન્દ્ર, જે ફારસી ભાષાના 'દરસ' (ભાષણ આપવું) શબ્દ પરથી ઉતરી આવ્યું.",
+      "ઉલમ-ઈ-શરીયા: ઇમામ ઘજાલી દ્વારા વર્ગીકૃત ધાર્મિક વિજ્ઞાનની શાખા, જેને અલ્લાહના પયગંબર દ્વારા શીખવાયેલ જ્ઞાન મનાતું.",
+      "ફાજિલ ઉપાધિ: સાહિત્યમાં અસાધારણ અને ઊંડું જ્ઞાન ધરાવનાર વિદ્યાર્થીઓને અપાતી પદવી."
+    ],
+    "ans": 3,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1 (ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ). સમજૂતી: વિકલ્પ d અસત્ય છે કારણ કે સાહિત્યના વિદ્યાર્થીઓને 'કાબિલ' ની ઉપાધિ અપાતી હતી, જ્યારે તર્કશાસ્ત્ર અને દર્શનશાસ્ત્રના વિદ્યાર્થીઓને 'ફાજિલ' તથા ધર્મશાસ્ત્રના વિદ્યાર્થીઓને 'આલિમ' ની ઉપાધિ અપાતી."
+  },
+  {
+    "q": "પ્રશ્ન 6: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 7: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 8: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 9: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 10: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 11: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 12: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 13: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 14: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 15: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 16: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 17: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 18: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 19: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 20: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 21: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 22: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 23: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 24: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 25: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 26: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 27: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 28: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 29: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 30: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 31: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 32: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 33: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 34: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 35: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ",
+    "exp": "પ્રકરણ: એકમ 1: ભારતમાં શિક્ષણ પ્રણાલીનો વિકાસ. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 36: મુખ્ય શિક્ષક (આચાર્ય) ના સ્થાન અને ભૂમિકાના સંદર્ભમાં મહાનુભાવોના કથનો બાબતે નીચેનામાંથી કયું જોડકું અસંગત છે?",
+    "options": [
+      "વિનોબા ભાવે: 'શીલવાન સાધુ હોય છે, પ્રજ્ઞાવાન જ્ઞાની હોય છે, કરુણાવાન મા હોય છે, પરંતુ આચાર્ય તો સાધુ, જ્ઞાની અને મા ત્રણે હોય છે.'",
+      "પીટર પ્રિન્સિપલ: 'જે શિક્ષક એક મુખ્ય શિક્ષક બને તેની પાસે માત્ર વહીવટી કુશળતા હોવી જોઈએ, અધ્યાપન શક્તિ અનિવાર્ય નથી.'",
+      "શાળા પ્રત્યે ઉપમા: 'ઘડિયાળમાં જે સ્થાન કમાનનું છે, જહાજમાં જે સ્થાન એન્જિનનું છે, તેવું સ્થાન શાળામાં મુખ્ય શિક્ષકનું છે.'",
+      "વિમલાતાઈ: 'શિક્ષક થવું એ મહાન સાધના છે; શિક્ષક થવા માટે વિદ્રોહી, જાગ્રત અને સચેત જીવંત આત્મા જોઈએ.'"
+    ],
+    "ans": 1,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2 (શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા). સમજૂતી: પીટર પ્રિન્સિપલ અનુસાર 'જે શિક્ષક ઉત્તમ અધ્યાપક હોય પણ વહીવટી કુશળતા ન હોય તે મુખ્ય શિક્ષક બને તો શાળા એક સારો શિક્ષક ગુમાવે છે અને નિષ્ફળ મુખ્ય શિક્ષક ખુરશીમાં બેસે છે'. તેથી વિકલ્પ b અસંગત છે."
+  },
+  {
+    "q": "પ્રશ્ન 37: મુખ્ય શિક્ષકની શૈક્ષણિક અને વહીવટી ફરજોના સંદર્ભમાં આર.ટી.ઈ. (RTE Act 2009) અને સરકારી માર્ગદર્શિકા મુજબ કઈ ફરજ મુખ્ય શિક્ષકની નથી?",
+    "options": [
+      "શાળા વિસ્તારમાં ૬ થી ૧૪ વર્ષની ઉંમરના તમામ બાળકોનો સર્વે કરાવી તેમને શાળામાં પ્રવેશ આપવો.",
+      "પ્રવેશ ન લીધેલ કે સતત ગેરહાજર રહેનાર બાળકના ઘરે મુલાકાત લેવી અને શાળા વ્યવસ્થાપન સમિતિને જાણ કરવી.",
+      "પ્રાથમિક શિક્ષણ પૂરું થતા સુધીમાં કોઈપણ બાળકને શિસ્તના કારણસર શાળામાંથી કાઢી મૂકવા કે રોકી રાખવાનો અધિકાર મુખ્ય શિક્ષકનો છે.",
+      "શાળામાં કોઈપણ બાળકને શારીરિક શિક્ષા કે માનસિક કનડગત ન થાય તથા શિક્ષકો પ્રાઈવેટ ટ્યૂશન ન કરે તે સુનિશ્ચિત કરવું."
+    ],
+    "ans": 2,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2 (શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા). સમજૂતી: RTE 2009 મુજબ કોઈપણ બાળકને પ્રાથમિક શિક્ષણ પૂરું થતા સુધીમાં રોકી શકાતું નથી કે શાળામાંથી કાઢી શકાતું નથી. તેથી વિકલ્પ c મુખ્ય શિક્ષકની ફરજ નથી પરંતુ તેનાથી વિરુદ્ધ ગેરકાયદેસર છે."
+  },
+  {
+    "q": "પ્રશ્ન 38: શિક્ષકના કાર્યકૌશલ્ય ક્ષેત્રો (Teacher's Working Skill Areas) માં નીચેનામાંથી કયા પાંચ ક્ષેત્રોનો સમાવેશ GCERT ના મોડ્યૂલમાં કરવામાં આવ્યો છે?",
+    "options": [
+      "૧. વર્ગ કાર્યકૌશલ્ય, ૨. શાળા કક્ષાએ કાર્યકૌશલ્ય, ૩. શાળા બહારની શૈક્ષણિક પ્રવૃત્તિઓનું સંચાલન, ૪. માતા-પિતા/વાલીઓ સાથે સંબંધો સ્થાપવાનું કાર્યકૌશલ્ય, ૫. સ્થાનિક સમાજ સાથેના વ્યવહારનું કાર્યકૌશલ્ય.",
+      "૧. નાણાકીય લેખાજોખા, ૨. રાજકીય નેતૃત્વ, ૩. માળખાકીય બાંધકામ, ૪. પરીક્ષા પ્રશ્નપત્ર નિર્માણ, ૫. આંતરરાષ્ટ્રીય અભ્યાસ.",
+      "૧. પ્રયોગશાળા સંચાલન, ૨. ગ્રંથાલય કેટલોગિંગ, ૩. છાત્રાલય ભોજન વ્યવસ્થા, ૪. રમતગમત કોચિંગ, ૫. વાહન પાર્કિંગ વ્યવસ્થા.",
+      "૧. કમ્પ્યુટર કોડિંગ, ૨. વેબ ડિઝાઇનિંગ, ૩. સોશિયલ મીડિયા માર્કેટિંગ, ૪. ડેટા એનાલિસિસ, ૫. ફાઇનાન્શિયલ પ્લાનિંગ."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2 (શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા). સમજૂતી: મોડ્યૂલ મુજબ શિક્ષકના ૫ મુખ્ય કાર્યકૌશલ્ય ક્ષેત્રોમાં વર્ગ કાર્યકૌશલ્ય, શાળા કક્ષાએ કાર્યકૌશલ્ય, શાળા બહારની શૈક્ષણિક પ્રવૃત્તિઓ, વાલીઓ સાથે સંબંધ અને સ્થાનિક સમાજ સાથેના વ્યવહારનું કાર્યકૌશલ્ય આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 39: શિક્ષકની પ્રતિબદ્ધતાના પાંચ ક્ષેત્રો (Commitment Areas) માં નીચેનામાંથી કયા ક્ષેત્રનો સમાવેશ થતો નથી?",
+    "options": [
+      "વિદ્યાર્થીઓ પ્રત્યે પ્રતિબદ્ધતા",
+      "સમાજ પ્રત્યે પ્રતિબદ્ધતા",
+      "વ્યવસાય પ્રત્યે પ્રતિબદ્ધતા",
+      "રાજકીય પક્ષ અને સરકારી સત્તા પ્રત્યે પ્રતિબદ્ધતા"
+    ],
+    "ans": 3,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2 (શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા). સમજૂતી: મોડ્યૂલ મુજબ શિક્ષકના ૫ પ્રતિબદ્ધતા ક્ષેત્રો છે: ૧. વિદ્યાર્થીઓ પ્રત્યે, ૨. સમાજ પ્રત્યે, ૩. વ્યવસાય પ્રત્યે, ૪. ઉત્કૃષ્ટતાની સંપ્રાપ્તિ પ્રત્યે, ૫. જીવનના મૂળભૂત મૂલ્યો પ્રત્યે. રાજકીય પક્ષ પ્રત્યે પ્રતિબદ્ધતાનો કોઈ સમાવેશ નથી."
+  },
+  {
+    "q": "પ્રશ્ન 40: શિક્ષકના વૈયક્તિક અને વ્યાવસાયિક ગુણોના સંદર્ભમાં 'અધમણ ઉપદેશ કરતાં અધોળ આચરણ વધારે સારું છે' આ પંક્તિ કયા ગુણની મહત્તા દર્શાવે છે?",
+    "options": [
+      "નૈતિક ગુણો અને ઉત્તમ ચારિત્ર્ય",
+      "વિષય પર પ્રભુત્વ",
+      "શૈક્ષણિક મનોવિજ્ઞાનનું જ્ઞાન",
+      "અધ્યાપનકળાનું કૌશલ્ય"
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2 (શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા). સમજૂતી: શિક્ષકનું આચરણ અને ચારિત્ર્ય વિદ્યાર્થીઓ પર સૌથી વધુ પ્રભાવ પાડે છે. માત્ર મૌખિક ઉપદેશ કરતાં શિક્ષકનું શુદ્ધ આચરણ (અધોળ આચરણ) એ નૈતિક ગુણો અને ચારિત્ર્ય નિર્માણનું પ્રતીક છે."
+  },
+  {
+    "q": "પ્રશ્ન 41: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 42: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 43: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 44: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 45: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 46: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 47: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 48: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 49: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 50: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 51: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 52: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 53: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 54: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 55: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 56: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 57: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 58: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 59: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 60: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 61: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 62: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 63: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 64: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 65: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા",
+    "exp": "પ્રકરણ: એકમ 2: શિક્ષણની આધારશિલાના શિલ્પી : મુખ્ય શિક્ષક અને શિક્ષકની સજ્જતા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 66: શિક્ષણના સમાજશાસ્ત્ર (Sociology of Education) ની સંકલ્પના અને તેના જનક વિશે નીચેનામાંથી કયું વિધાન સંપૂર્ણ સત્ય છે?",
+    "options": [
+      "શિક્ષણના સમાજશાસ્ત્રના જનક જ્યૉર્જ પેઈન (George Payne) છે, જેમણે ૧૯૨૮માં વ્યાખ્યા આપી હતી કે તે સામાજિક પ્રથાઓ, સમૂહો અને પ્રક્રિયાઓ મારફતે મળતા અનુભવોનું વર્ણન અને અર્થગઠન કરે છે.",
+      "શિક્ષણનું સમાજશાસ્ત્ર એ માત્ર સામાન્ય સમાજશાસ્ત્રની શાખા છે, જેનો શિક્ષણ સાથે કોઈ સીધો સંબંધ નથી.",
+      "બ્રાઉન (F.J. Brown) ના મતે શિક્ષણનું સમાજશાસ્ત્ર એ માત્ર શૈક્ષણિક મનોવિજ્ઞાનનું જ બીજું રૂપ છે.",
+      "શિક્ષણનું સમાજશાસ્ત્ર કેવળ વર્ગખંડની ભૌતિક રચના અને ફર્નિચરનો અભ્યાસ કરે છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3 (શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા). સમજૂતી: જ્યૉર્જ પેઈનને શિક્ષણના સમાજશાસ્ત્રના જનક ગણવામાં આવે છે અને તેમણે ૧૯૨૮માં તેની શાસ્ત્રીય વ્યાખ્યા આપી હતી."
+  },
+  {
+    "q": "પ્રશ્ન 67: સામાજિક પરિવર્તન (Social Change) અને શિક્ષણના સંબંધના સંદર્ભમાં નીચેના વિધાનો ચકાસો:",
+    "options": [
+      "ફક્ત ૧ અને ૨",
+      "ફક્ત ૨ અને ૩",
+      "ફક્ત ૧ અને ૩",
+      "૧, ૨ અને ૩ તમામ"
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3 (શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા). સમજૂતી: વિધાન ૧ અને ૨ સાચા છે. વિધાન ૩ ખોટું છે કારણ કે પરિવર્તન શબ્દ તટસ્થ છે; તે સારું કે નરસું, ઊર્ધ્વગામી કે અધોગામી કોઈપણ હોઈ શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 68: લોકશાહી અને શિક્ષણના સંદર્ભમાં અબ્રાહમ લિંકન, જ્હૉન ડ્યૂઈ અને ગણેશ વાસુદેવ માવલંકરના વિચારો બાબતે કયું યુગ્મ સાચું છે?",
+    "options": [
+      "અબ્રાહમ લિંકન: 'લોકશાહી એ પૃથ્વી પરથી નાશ નહીં પામે તેવું લોકોનું, લોકો દ્વારા ચાલતું અને લોકો માટેનું શાસન છે.'",
+      "જ્હૉન ડ્યૂઈ: 'આધુનિક જીવન એટલે લોકશાહી અને લોકશાહી એટલે મનની પોતાની રીતે પોતાનું કામ કરવાની સ્વતંત્રતા.'",
+      "ગણેશ વાસુદેવ માવલંકર: 'લોકશાહીનો પાયો લખાણો પર નથી, નિયમો પર નથી પરંતુ પ્રજાની વૃત્તિઓ અને નીતિ પર છે.'",
+      "ઉપરોક્ત તમામ યુગ્મ સાચાં છે."
+    ],
+    "ans": 3,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3 (શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા). સમજૂતી: આપેલા તમામ મહાનુભાવોની વ્યાખ્યાઓ અને કથનો મોડ્યૂલના એકમ ૩ માં તથ્યાત્મક રીતે બિલકુલ સાચાં છે."
+  },
+  {
+    "q": "પ્રશ્ન 69: આધુનિકીકરણ (Modernization) ની સંકલ્પના અને લક્ષણોના સંદર્ભમાં એલેક્સ ઈકલ્સ અને અન્ય સમાજશાસ્ત્રીઓના મતે કયું લક્ષણ આધુનિકીકરણનું નથી?",
+    "options": [
+      "નવા વિચારોને સ્વીકારવાની અને નવી પદ્ધતિઓ અપનાવવાની તૈયારી.",
+      "ભૂતકાળની રૂઢિચુસ્ત પરંપરાઓ અને અંધશ્રદ્ધાને આજીવન વળગી રહેવું.",
+      "કાર્યક્ષમતા પર વિશેષ ભાર અને આયોજન કરવાની વૃત્તિ.",
+      "વિજ્ઞાન અને ટેકનોલૉજીમાં શ્રદ્ધા તથા દુનિયાને તર્કયુક્ત રીતે સમજવાનો અભિગમ."
+    ],
+    "ans": 1,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3 (શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા). સમજૂતી: આધુનિકીકરણમાં ભૂતકાળની રૂઢિચુસ્તતા અને અંધશ્રદ્ધાને વળગી રહેવાને બદલે વર્તમાન અને ભવિષ્યમાં રસ, તર્કયુક્ત અભિગમ અને વૈજ્ઞાનિક દૃષ્ટિકોણ અપનાવાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 70: શહેરીકરણ (Urbanization) અને ઔદ્યોગિકીકરણના પરિણામો તથા શિક્ષણ પર તેની અસરોના સંદર્ભમાં કયું વિધાન અસત્ય છે?",
+    "options": [
+      "શહેરીકરણ એ ઔદ્યોગિકીકરણનું અવિભાજ્ય ભાગીદાર છે, જેમાં વસ્તીનું ગામડાં તરફથી શહેર તરફ સ્થળાંતર થાય છે.",
+      "શહેરીકરણના કારણે સંયુક્ત કુટુંબ વ્યવસ્થા મજબૂત બને છે અને ગ્રામ્ય સંસ્કૃતિ વધુ વ્યાપક બને છે.",
+      "શહેરીકરણ અને યાંત્રીકરણને લીધે ફુરસદનું પ્રમાણ વધ્યું છે, જેના સર્જનાત્મક ઉપયોગ માટે શિક્ષણના કાર્યક્રમો જરૂરી છે.",
+      "શહેરીકરણના કારણે શિક્ષણનો વ્યાપ વધ્યો છે પરંતુ વ્યસનો અને ઇન્ટરનેટના દુરુપયોગ જેવા ભયસ્થાનો પણ ઉદ્ભવ્યા છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3 (શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા). સમજૂતી: શહેરીકરણ અને ઔદ્યોગિકીકરણના પરિણામે સંયુક્ત કુટુંબ વ્યવસ્થા ભાંગી પડી છે અને વિભક્ત કુટુંબ (Nuclear Family) તરફ વળાંક આવ્યો છે. તેથી વિકલ્પ b અસત્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 71: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 72: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 73: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 74: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 75: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 76: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 77: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 78: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 79: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 80: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 82: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 83: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 84: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 85: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 87: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 88: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 89: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 90: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 91: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 92: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 93: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 94: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 95: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 96: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 97: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 98: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 99: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 100: ડી.એલ.એડ્. કોર્સ-૨(બ) ના અભ્યાસક્રમ અંતર્ગત એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા ના સંદર્ભમાં નીચેનામાંથી કયો શૈક્ષણિક અભિગમ સૌથી વધુ સચોટ છે?",
+    "options": [
+      "શિક્ષણ એ વિદ્યાર્થીના સર્વાંગી વિકાસ, ચારિત્ર્યઘડતર અને આંતરિક પ્રદિપ્તીકરણની પ્રક્રિયા છે.",
+      "શિક્ષણ માત્ર પુસ્તકીય જ્ઞાન અને ગોખણપટ્ટી પૂરતું મર્યાદિત છે.",
+      "શિક્ષણનો મુખ્ય ઉદ્દેશ કેવળ બાહ્ય પરીક્ષા પાસ કરવાનો છે.",
+      "શિક્ષણ વ્યવસ્થામાં સામાજિક મૂલ્યોનું કોઈ મહત્વ નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા",
+    "exp": "પ્રકરણ: એકમ 3: શિક્ષણની સમાજશાસ્ત્રીય આધારશિલા. સમજૂતી: GCERT મોડ્યૂલ મુજબ શિક્ષણ એ માનવ સશક્તિકરણ, આંતરિક પ્રદિપ્તીકરણ અને સર્વાંગી વિકાસનું માધ્યમ છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "GPSC શિક્ષણ સેવા વર્ગ-૧ અને વર્ગ-૨ : ડી.એલ.એડ્. કોર્સ - ૨(બ) 'ભારતીય શિક્ષણ દર્શન અને પ્રવર્તમાન ભારતીય સમાજ'",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "pro",
+            testFileName: "fy2b.html",
+            testUploadDate: "2026-11-15"
+        })
+    });
+}
+</script>
+</body>
+</html>
