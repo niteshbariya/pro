@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPSC શિક્ષણ સેવા વર્ગ-1,2 : ઉચ્ચ કઠિનતા મૂલ્ય (HOTS) પ્રશ્નો | ૧૦૦ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> GPSC શિક્ષણ સેવા વર્ગ-1,2 : ઉચ્ચ કઠિનતા મૂલ્ય (HOTS) પ્રશ્નો</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-earth-asia"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">GPSC શિક્ષણ સેવા વર્ગ-1,2 : ઉચ્ચ કઠિનતા મૂલ્ય (HOTS) પ્રશ્નો</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">આ ફાઈલમાં GPSC ના અભ્યાસક્રમ મુજબ ૧૦૦ અત્યંત કઠિન અને વિશ્લેષણાત્મક પ્રશ્નોનો સમાવેશ છે.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> GPSC શિક્ષણ સેવા વર્ગ-1,2 : ઉચ્ચ કઠિનતા મૂલ્ય (HOTS) પ્રશ્નો | ૧૦૦ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ ઉચ્ચ કઠિનતામૂલ્ય (HOTS) પ્રશ્નોનો ડેટાસેટ (GPSC શિક્ષણ સેવા વર્ગ-1,2 : ઉચ્ચ કઠિનતા મૂલ્ય (HOTS) પ્રશ્નો)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 2: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 3: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 4: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 5: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 6: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 7: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 8: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 9: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 10: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 11: વિશ્લેષણાત્મક કસોટી: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 12: વિશ્લેષણાત્મક કસોટી: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 13: વિશ્લેષણાત્મક કસોટી: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 14: વિશ્લેષણાત્મક કસોટી: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 15: વિશ્લેષણાત્મક કસોટી: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 16: વિશ્લેષણાત્મક કસોટી: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 17: વિશ્લેષણાત્મક કસોટી: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 18: વિશ્લેષણાત્મક કસોટી: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 19: વિશ્લેષણાત્મક કસોટી: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 20: વિશ્લેષણાત્મક કસોટી: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 21: તાર્કિક મૂલ્યાંકન: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 22: તાર્કિક મૂલ્યાંકન: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 23: તાર્કિક મૂલ્યાંકન: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 24: તાર્કિક મૂલ્યાંકન: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 25: તાર્કિક મૂલ્યાંકન: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 26: તાર્કિક મૂલ્યાંકન: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 27: તાર્કિક મૂલ્યાંકન: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 28: તાર્કિક મૂલ્યાંકન: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 29: તાર્કિક મૂલ્યાંકન: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 30: તાર્કિક મૂલ્યાંકન: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 31: વિધાન ચકાસણી: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 32: વિધાન ચકાસણી: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 33: વિધાન ચકાસણી: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 34: વિધાન ચકાસણી: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 35: વિધાન ચકાસણી: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 36: વિધાન ચકાસણી: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 37: વિધાન ચકાસણી: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 38: વિધાન ચકાસણી: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 39: વિધાન ચકાસણી: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 40: વિધાન ચકાસણી: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 41: GPSC વિશેષ: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 42: GPSC વિશેષ: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 43: GPSC વિશેષ: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 44: GPSC વિશેષ: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 45: GPSC વિશેષ: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 46: GPSC વિશેષ: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 47: GPSC વિશેષ: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 48: GPSC વિશેષ: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 49: GPSC વિશેષ: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 50: GPSC વિશેષ: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 51: ઉચ્ચ કઠિનતા મૂલ્યાંકન: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 52: ઉચ્ચ કઠિનતા મૂલ્યાંકન: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 53: ઉચ્ચ કઠિનતા મૂલ્યાંકન: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 54: ઉચ્ચ કઠિનતા મૂલ્યાંકન: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 55: ઉચ્ચ કઠિનતા મૂલ્યાંકન: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 56: ઉચ્ચ કઠિનતા મૂલ્યાંકન: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 57: ઉચ્ચ કઠિનતા મૂલ્યાંકન: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 58: ઉચ્ચ કઠિનતા મૂલ્યાંકન: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 59: ઉચ્ચ કઠિનતા મૂલ્યાંકન: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 60: ઉચ્ચ કઠિનતા મૂલ્યાંકન: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 61: સૈદ્ધાંતિક પ્રશ્ન: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 62: સૈદ્ધાંતિક પ્રશ્ન: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 63: સૈદ્ધાંતિક પ્રશ્ન: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 64: સૈદ્ધાંતિક પ્રશ્ન: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 65: સૈદ્ધાંતિક પ્રશ્ન: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 66: સૈદ્ધાંતિક પ્રશ્ન: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 67: સૈદ્ધાંતિક પ્રશ્ન: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 68: સૈદ્ધાંતિક પ્રશ્ન: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 69: સૈદ્ધાંતિક પ્રશ્ન: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 70: સૈદ્ધાંતિક પ્રશ્ન: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 71: વ્યવહારુ પ્રશ્ન: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 72: વ્યવહારુ પ્રશ્ન: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 73: વ્યવહારુ પ્રશ્ન: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 74: વ્યવહારુ પ્રશ્ન: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 75: વ્યવહારુ પ્રશ્ન: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 76: વ્યવહારુ પ્રશ્ન: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 77: વ્યવહારુ પ્રશ્ન: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 78: વ્યવહારુ પ્રશ્ન: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 79: વ્યવહારુ પ્રશ્ન: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 80: વ્યવહારુ પ્રશ્ન: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: તુલનાત્મક પ્રશ્ન: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 82: તુલનાત્મક પ્રશ્ન: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 83: તુલનાત્મક પ્રશ્ન: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 84: તુલનાત્મક પ્રશ્ન: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 85: તુલનાત્મક પ્રશ્ન: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 86: તુલનાત્મક પ્રશ્ન: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 87: તુલનાત્મક પ્રશ્ન: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 88: તુલનાત્મક પ્રશ્ન: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 89: તુલનાત્મક પ્રશ્ન: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 90: તુલનાત્મક પ્રશ્ન: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 91: આલોચનાત્મક પ્રશ્ન: ગાંધીજીના 'બુનિયાદી શિક્ષણ' અને જ્હોન ડ્યૂઈના 'ક્રિયા દ્વારા શિક્ષણ' વચ્ચેના તાત્વિક ભેદને અનુલક્ષીને નીચેનામાંથી કયું વિધાન સૌથી વધુ સુસંગત છે?",
+    "options": [
+      "ગાંધીજીનું શિક્ષણ આર્થિક સ્વાવલંબન અને આધ્યાત્મિક વિકાસ પર ભાર મૂકે છે, જ્યારે ડ્યૂઈનું શિક્ષણ સામાજિક અનુભવો અને લોકશાહી મૂલ્યોના વિકાસ પર કેન્દ્રિત છે.",
+      "બંને ચિંતકો માત્ર શારીરિક શ્રમને જ કેળવણીનું અંતિમ ધ્યેય માને છે, પરંતુ બૌદ્ધિક વિકાસને નકારે છે.",
+      "ડ્યૂઈ વ્યાવસાયિક શિક્ષણને સંપૂર્ણપણે નકારે છે, જ્યારે ગાંધીજી તેને માત્ર ઉચ્ચ શિક્ષણમાં જ સ્વીકારે છે.",
+      "ગાંધીજી પ્રોજેક્ટ પદ્ધતિના વાસ્તવિક પ્રણેતા છે, જ્યારે ડ્યૂઈ સમવાય (Correlation) પદ્ધતિના પ્રણેતા છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગાંધીજી હસ્ત ઉદ્યોગ દ્વારા શારીરિક, માનસિક અને આર્થિક સ્વાવલંબનને પ્રાધાન્ય આપે છે, જ્યારે વ્યવહારવાદી ડ્યૂઈ શિક્ષણને સામાજિકીકરણની પ્રક્રિયા અને શાળાને સમાજની લઘુ આવૃત્તિ માને છે."
+  },
+  {
+    "q": "પ્રશ્ન 92: આલોચનાત્મક પ્રશ્ન: રૂસોના પ્રકૃતિવાદી શિક્ષણ દર્શન (Naturalism) ના સંદર્ભમાં કયું વિધાન તેમની ફિલસૂફીની સાચી સમજૂતી આપે છે?",
+    "options": [
+      "તેઓ પુસ્તકિયા જ્ઞાનને સમર્થન આપે છે અને બાલ્યાવસ્થામાં મહત્તમ વાંચન પર ભાર મૂકે છે.",
+      "તેઓ 'હ્યુરિસ્ટિક પદ્ધતિ' (Heuristic method) ની હિમાયત કરે છે, જેમાં બાળક સ્વયં સંશોધક બનીને પ્રત્યક્ષ અનુભવ દ્વારા શીખે છે.",
+      "રૂસોના મતે શિક્ષણ એ કૃત્રિમ પ્રક્રિયા છે જે સમાજ દ્વારા બળજબરીથી લાદવામાં આવવી જોઈએ.",
+      "તેઓ સામાજિક શિસ્ત લાદવા માટે કઠોર શારીરિક શિક્ષાના પ્રખર હિમાયતી હતા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "રૂસો શબ્દાળુ કેળવણીના કટ્ટર વિરોધી હતા. તેઓ 'વાંચનને બાલ્યાવસ્થાનો અભિશાપ' માને છે અને ઇન્દ્રિયોના વિકાસ દ્વારા પ્રત્યક્ષ અનુભવ (હ્યુરિસ્ટિક પદ્ધતિ) પર ભાર મૂકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 93: આલોચનાત્મક પ્રશ્ન: રાષ્ટ્રીય શિક્ષણ નીતિ-1986 (NPE-86) અંતર્ગત સ્થાપિત DIET ની કઈ શાખા સીધી રીતે 'અભ્યાસક્રમ, સાધન-સામગ્રી નિર્માણ અને મૂલ્યાંકન' સાથે સંકળાયેલી છે?",
+    "options": [
+      "PSTE (પૂર્વસેવા શિક્ષક પ્રશિક્ષણ શાખા)",
+      "IFIC (ક્ષેત્રિય આંતરક્રિયા અને નાવીન્ય સંકલન શાખા)",
+      "CMDE (પાઠ્યક્રમ, સામગ્રી વિકાસ અને મૂલ્યાંકન શાખા)",
+      "DRU (જિલ્લા સંસાધન એકમ)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CMDE (Curriculum, Material Development and Evaluation) શાખા અભ્યાસક્રમ, સ્વ-નિર્મિત સાધનો અને નવી મૂલ્યાંકન પ્રણાલી અંગે માર્ગદર્શન પૂરું પાડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 94: આલોચનાત્મક પ્રશ્ન: 'વિશ્વભારતી' (શાંતિનિકેતન) ની સ્થાપના પાછળ રવિન્દ્રનાથ ટાગોરનો મુખ્ય શૈક્ષણિક ઉદ્દેશ કયો હતો?",
+    "options": [
+      "માત્ર બંગાળની પ્રાદેશિક સંસ્કૃતિનું રાષ્ટ્રીયકરણ કરવું.",
+      "પૌર્વાત્ય અને પાશ્ચાત્ય સંસ્કૃતિઓનો સમન્વય કરી વૈશ્વિક બંધુત્વ (Internationalism) અને મુક્ત વાતાવરણમાં સર્જનાત્મક શિક્ષણ આપવું.",
+      "ઉચ્ચ ટેકનોલોજી અને ઔદ્યોગિક શિક્ષણને પ્રોત્સાહન આપવા માટે એક વૈશ્વિક ઔદ્યોગિક કેન્દ્ર બનાવવું.",
+      "પ્રાચીન ગુરુકુળ પ્રથાનું એવું પુનરુત્થાન જેમાં પાશ્ચાત્ય વિજ્ઞાનનો સંપૂર્ણ બહિષ્કાર હોય."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ટાગોરે શાંતિનિકેતનને વિશ્વભારતીમાં પરિવર્તિત કર્યું જેનું ધ્યેય પ્રકૃતિની ગોદમાં મુક્ત વાતાવરણ પૂરું પાડી પૂર્વ-પશ્ચિમનો સમન્વય તથા આંતરરાષ્ટ્રીય સદભાવ (Universal Brotherhood) ઊભો કરવાનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 95: આલોચનાત્મક પ્રશ્ન: શ્રી અરવિંદના શિક્ષણ દર્શનમાં 'ક્રમિક શિક્ષણ પદ્ધતિ' (Successive method of teaching) નો વાસ્તવિક અર્થ શું થાય છે?",
+    "options": [
+      "એકસાથે 8-10 વિષયો શીખવીને વિદ્યાર્થીનો બહુઆયામી વિકાસ કરવો.",
+      "વિદ્યાર્થી એક કે બે વિષય હાથમાં લઈ તેમાં સંપૂર્ણ નિપુણતા પ્રાપ્ત કરે, ત્યાર પછી જ બીજા વિષયો ક્રમિક રીતે શીખે.",
+      "શિક્ષક જ તમામ વિષયો ક્રમિક રીતે ભણાવે, જેમાં વિદ્યાર્થીની કોઈ સક્રિય ભૂમિકા ન હોય.",
+      "માત્ર શારીરિક શ્રમ અને ઉદ્યોગ દ્વારા જ ક્રમિક વિકાસ સાધવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ - પૂરક વાચન",
+    "exp": "શ્રી અરવિંદ વર્તમાન શિક્ષણની ટુકડે-ટુકડે શીખવવાની પ્રથાના વિરોધી હતા. તેઓ પ્રાચીન ભારતની જેમ એક-બે વિષયમાં સંપૂર્ણ નિપુણતા (Successive method) પ્રાપ્ત કરવા પર ભાર મૂકતા હતા."
+  },
+  {
+    "q": "પ્રશ્ન 96: આલોચનાત્મક પ્રશ્ન: મેકડૂગલની 18 સહજવૃત્તિઓ (Instincts) ના સંદર્ભમાં, જો કોઈ વિદ્યાર્થી વર્ગખંડમાં સતત નવા મોડેલ બનાવવા અને વૈજ્ઞાનિક પ્રયોગો કરવા પ્રેરાતો હોય, તો શિક્ષકે તેની કઈ સહજવૃત્તિને હકારાત્મક દિશા આપી ગણાય?",
+    "options": [
+      "આત્મસ્થાપન (Self-assertion)",
+      "સંગ્રહવૃત્તિ (Acquisition)",
+      "રચનાવૃત્તિ (Constructiveness)",
+      "યાચનાવૃત્તિ (Appeal)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મેકડૂગલની સહજવૃત્તિઓમાં 'રચનાવૃત્તિ' વિદ્યાર્થીને કંઈક નવું સર્જન કરવા તરફ દોરે છે. શિક્ષક આ વૃત્તિનું ઉર્ધ્વીકરણ કરી બાળકની સર્જનાત્મકતા વિકસાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 97: આલોચનાત્મક પ્રશ્ન: ડૉ. મારિયા મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શિક્ષકની ભૂમિકા' અંગે નીચેનામાંથી કયું વિધાન સૌથી વધુ યોગ્ય છે?",
+    "options": [
+      "શિક્ષકની વાચાળતા કરતાં તેનું મૌન વધારે કામનું છે; તેણે પડદા પાછળ રહીને બાળકોનું વૈજ્ઞાનિક અવલોકન કરવું જોઈએ.",
+      "શિક્ષક એ 'કંપોઝિટર' જેવો હોવો જોઈએ જે માત્ર માહિતીનું યાંત્રિક વિતરણ કરે.",
+      "અધ્યયનમાં શબ્દવિલાસ અને છળપ્રધાન વાણીનો પ્રયોગ શિક્ષકે સતત કરવો જોઈએ.",
+      "શિક્ષકે બાળકને સ્વતંત્રતા આપવાને બદલે કડક માર્ગદર્શનથી દરેક ક્રિયા નિયંત્રિત કરવી જોઈએ."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "મોન્ટેસરી પદ્ધતિમાં શિક્ષક પાસે શબ્દસામર્થ્ય હોવું જોઈએ, પરંતુ શબ્દવિલાસ ટાળવો જોઈએ. સત્યપૂર્ણ, ટૂંકી વાણી અને વૈજ્ઞાનિક અવલોકન એ સાચા શિક્ષકનું આભૂષણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 98: આલોચનાત્મક પ્રશ્ન: શ્રી ગિજુભાઈ બધેકાના બાળકેન્દ્રી શિક્ષણમાં 'સ્વ-નિયમન' (Self-discipline) ની સંકલ્પના શું સૂચવે છે?",
+    "options": [
+      "શિક્ષકના ડરથી બાળકે પોતાની તમામ સ્વતંત્ર ઈચ્છાઓ દબાવી દેવી.",
+      "પ્રવૃત્તિની સંલગ્નતામાંથી જન્મેલી આત્મનિયમનની ક્ષણો, જેમાં બાળક ઈનામ કે સજાના ડરથી મુક્ત થઈ નિજાનંદ મેળવે છે.",
+      "બાળકને શાળાના નિયમો ગોખાવીને તેનું યાંત્રિક રીતે પાલન કરાવવું.",
+      "સ્વ-નિયમન એટલે બાળકને સંપૂર્ણ છૂટ આપી દેવી જેથી તે વર્ગમાં અન્યને ખલેલ પહોંચાડી શકે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "ગિજુભાઈ મુક્ત શિસ્તમાં માનતા હતા. તેમની દ્રષ્ટિએ સાચી શિસ્ત એ દમનકારી નથી, પરંતુ કોઈપણ રચનાત્મક પ્રવૃત્તિમાં તલ્લીન થવાથી આપોઆપ આવતું આત્માનુશાસન છે."
+  },
+  {
+    "q": "પ્રશ્ન 99: આલોચનાત્મક પ્રશ્ન: સ્વામી વિવેકાનંદના શિક્ષણ દર્શનમાં 'એકાગ્રતા અને કેન્દ્રીકરણની પદ્ધતિ' (Method of Concentration) નું અંતિમ લક્ષ્ય શું છે?",
+    "options": [
+      "પુસ્તકોમાંથી મહત્તમ માહિતી ટૂંકા સમયમાં ગોખી લેવી.",
+      "યૌગિક વિધિ દ્વારા ચિત્તવૃત્તિઓનું નિયંત્રણ કરી મનને એકાગ્ર કરવું, જેથી મનુષ્યમાં રહેલી આંતરિક પૂર્ણતા (Perfection) પ્રગટ થઈ શકે.",
+      "માત્ર શારીરિક વ્યાયામ અને શારીરિક બળ વધારવા માટેની શ્વસન પ્રક્રિયા.",
+      "વિદેશી ભાષાઓ અને વિજ્ઞાનના સિદ્ધાંતોનું ઝડપી અધ્યયન."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 શિક્ષણની તાત્વિક સમજ",
+    "exp": "વિવેકાનંદના મતે શિક્ષણ એટલે 'માણસમાં પહેલેથી જ રહેલી પૂર્ણતાનું પ્રગટીકરણ'. આ આંતરિક જ્ઞાનને ઉજાગર કરવા માટે એકાગ્રતા અને બ્રહ્મચર્ય શ્રેષ્ઠ માધ્યમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 100: આલોચનાત્મક પ્રશ્ન: પ્રાથમિક શિક્ષણ વ્યવસ્થાના વહીવટી માળખામાં CRC (Cluster Resource Centre) ની ચોક્કસ કાર્યભૂમિકા કઈ છે?",
+    "options": [
+      "તે રાજ્ય કક્ષાએ પ્રાથમિક શિક્ષણની નીતિઓ અને અભ્યાસક્રમ ઘડે છે.",
+      "તે 8 થી 10 શાળાઓ વચ્ચેનું એક સંકુલ છે જે નિકટવર્તી શાળાઓના શિક્ષકોને સીધું શૈક્ષણિક માર્ગદર્શન અને તાલીમ પૂરું પાડે છે.",
+      "તે માત્ર માધ્યમિક અને ઉચ્ચત્તર માધ્યમિક શાળાઓનું આર્થિક નિયમન કરે છે.",
+      "CRC એ માત્ર મધ્યાહન ભોજન યોજના (MDM) નું નિરીક્ષણ કરતું એકાઉન્ટિંગ એકમ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 શિક્ષણ, રાજકારણ અને સમાજ",
+    "exp": "CRC એ પાયાના સ્તરે 8-10 શાળાઓના ક્લસ્ટર વચ્ચે સંકલન કરી વર્ગ વ્યવહાર અને શૈક્ષણિક ગુણવત્તા સુધારવા માટે પ્રત્યક્ષ માર્ગદર્શન આપતું એકમ છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "GPSC શિક્ષણ સેવા વર્ગ-1,2 : ઉચ્ચ કઠિનતા મૂલ્ય (HOTS) પ્રશ્નો",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "pro",
+            testFileName: "fy2apro.html",
+            testUploadDate: "2026-11-15"
+        })
+    });
+}
+</script>
+</body>
+</html>
