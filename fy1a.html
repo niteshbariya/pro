@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPSC શિક્ષણ સેવા વર્ગ 1-2: બાળ વિકાસ અને પૂર્વ પ્રાથમિક શિક્ષણ | ૧૦૦ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-graduation-cap"></i> GPSC શિક્ષણ સેવા વર્ગ 1-2: બાળ વિકાસ અને પૂર્વ પ્રાથમિક શિક્ષણ</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-child-reaching"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">GPSC શિક્ષણ સેવા વર્ગ 1-2: બાળ વિકાસ અને પૂર્વ પ્રાથમિક શિક્ષણ</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">ઉચ્ચ કઠિનતામૂલ્ય (HOT) ધરાવતા તર્ક, વિશ્લેષણ અને ઊંડી સમજણ આધારિત ૧૦૦ પ્રશ્નો</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> GPSC શિક્ષણ સેવા વર્ગ 1-2: બાળ વિકાસ અને પૂર્વ પ્રાથમિક શિક્ષણ | ૧૦૦ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ ઉચ્ચ કઠિનતામૂલ્ય (HOT) પ્રશ્નોનો ડેટાસેટ (કોર્સ-૧(અ): બોધ અને જ્ઞાન તથા રમતો)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: રાજુની ઉંમર 5 વર્ષ છે. તેના વજન અને ઊંચાઈમાં નોંધપાત્ર વધારો થયો છે, પરંતુ તે હજુ પણ તેની ઉંમરના અન્ય બાળકોની જેમ પોતાની જાતે બૂટની દોરી બાંધી શકતો નથી. મનોવિજ્ઞાનની દૃષ્ટિએ આ પરિસ્થિતિ શું સ્પષ્ટ કરે છે?",
+    "options": [
+      "તેની વૃદ્ધિ સામાન્ય છે, પરંતુ વિકાસ મંદ છે.",
+      "તેનો વિકાસ સામાન્ય છે, પરંતુ વૃદ્ધિ મંદ છે.",
+      "વૃદ્ધિ અને વિકાસ બંને સામાન્ય છે.",
+      "બંનેમાં ખામી છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "વૃદ્ધિ શારીરિક (વજન/ઊંચાઈ) છે, જ્યારે દોરી બાંધવી (માનસિક/સ્નાયુબદ્ધ કૌશલ્ય) વિકાસ છે. વૃદ્ધિ છે પણ વિકાસ ધીમો છે."
+  },
+  {
+    "q": "પ્રશ્ન 2: 6 વર્ષની મીનાના મગજનું કદ અને વજન વધ્યું છે, પરંતુ તે હજુ સાદી તાર્કિક સમસ્યાઓ ઉકેલી શકતી નથી. મનોવિજ્ઞાનની દૃષ્ટિએ આ પરિસ્થિતિ શું સ્પષ્ટ કરે છે?",
+    "options": [
+      "બૌદ્ધિક વિકાસ થયો છે, શારીરિક વૃદ્ધિ બાકી છે.",
+      "શારીરિક વૃદ્ધિ થઈ છે, બૌદ્ધિક વિકાસ બાકી છે.",
+      "પરિપક્વતા આવી છે પણ વૃદ્ધિ નથી.",
+      "આ માત્ર વાતાવરણનો દોષ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "મગજનું કદ વધવું એ વૃદ્ધિ છે, જ્યારે તર્ક કરવો એ વિકાસ છે."
+  },
+  {
+    "q": "પ્રશ્ન 3: 4 વર્ષનો કિશન સ્પષ્ટ ઉચ્ચારણ સાથે વાક્યો બોલે છે, પરંતુ તેના પગના સ્નાયુઓ નબળા હોવાથી દોડી શકતો નથી. મનોવિજ્ઞાનની દૃષ્ટિએ આ પરિસ્થિતિ શું સ્પષ્ટ કરે છે?",
+    "options": [
+      "તેનો સર્વાંગી વિકાસ ઉત્તમ છે.",
+      "ભાષાકીય વિકાસ સારો છે, પરંતુ શારીરિક વૃદ્ધિ/વિકાસ મંદ છે.",
+      "તે માત્ર સામાજિક રીતે વિકસિત છે.",
+      "વૃદ્ધિ વિના વિકાસ અશક્ય છે તે સાબિત કરે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "અહીં ભાષા (વિકાસ) સારો છે, પણ શારીરિક (વૃદ્ધિ) પછાત છે. વૃદ્ધિ અને વિકાસ એકબીજાથી સ્વતંત્ર રીતે અલગ ગતિ ધરાવી શકે છે."
+  },
+  {
+    "q": "પ્રશ્ન 4: 8 વર્ષની ગીતા શારીરિક રીતે પુખ્ત દેખાય છે, પરંતુ નાની બાબતોમાં રડી પડે છે અને આવેગો પર કાબૂ નથી. મનોવિજ્ઞાનની દૃષ્ટિએ આ પરિસ્થિતિ શું સ્પષ્ટ કરે છે?",
+    "options": [
+      "શારીરિક વૃદ્ધિ સામાન્ય છે, સાંવેગિક વિકાસ અપરિપક્વ છે.",
+      "સાંવેગિક વિકાસ ઉત્તમ છે, શારીરિક વૃદ્ધિ મંદ છે.",
+      "તેનો સામાજિક વિકાસ થઈ રહ્યો છે.",
+      "આ માત્ર વારસાગત ખામી છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "શારીરિક દેખાવ વૃદ્ધિ છે, આવેગ નિયંત્રણ એ સાંવેગિક વિકાસ છે."
+  },
+  {
+    "q": "પ્રશ્ન 5: એરિક્સનના મનોસામાજિક સિદ્ધાંત મુજબ, એક 2 વર્ષનું બાળક જ્યારે પણ જાતે કપડાં પહેરવાનો પ્રયત્ન કરે છે, ત્યારે તેના માતાપિતા તેને અટકાવી બધું જાતે જ કરી દે છે. આ પરિસ્થિતિ તેના વ્યક્તિત્વમાં કઈ ભાવના વિકસાવશે?",
+    "options": [
+      "અપરાધભાવ (Guilt)",
+      "શરમ અને શંકા (Shame and doubt)",
+      "વિશ્વાસ (Trust)",
+      "લઘુતા (Inferiority)"
+    ],
+    "ans": 1,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "18 માસથી 3 વર્ષ 'સ્વાયત્તતા વિરુદ્ધ શરમ' નો તબક્કો છે. વધુ પડતું રક્ષણ શરમ અને શંકા જન્માવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 6: એરિક્સનના મનોસામાજિક સિદ્ધાંત મુજબ, એક 5 વર્ષનું બાળક નવી રમતો અને સ્થળો શોધવાનો પ્રયાસ કરે છે, પરંતુ વાલીઓ તેને સતત રોકટોક કરી ડરાવે છે. આ પરિસ્થિતિ તેના વ્યક્તિત્વમાં કઈ ભાવના વિકસાવશે?",
+    "options": [
+      "અપરાધભાવ (Guilt)",
+      "લઘુતાગ્રંથિ (Inferiority)",
+      "ભૂમિકા મૂંઝવણ (Role confusion)",
+      "અવિશ્વાસ (Mistrust)"
+    ],
+    "ans": 0,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "3 થી 6 વર્ષ 'પહેલ કરવી વિરુદ્ધ અપરાધભાવ' નો તબક્કો છે. રોકટોક કરવાથી અપરાધભાવ વિકસે છે."
+  },
+  {
+    "q": "પ્રશ્ન 7: એરિક્સનના મનોસામાજિક સિદ્ધાંત મુજબ, એક 9 વર્ષનો વિદ્યાર્થી પ્રોજેક્ટમાં ખૂબ મહેનત કરે છે, પરંતુ શિક્ષક તેની સરખામણી અન્ય વિદ્યાર્થીઓ સાથે કરી તેને ઉતારી પાડે છે. આ પરિસ્થિતિ તેના વ્યક્તિત્વમાં કઈ ભાવના વિકસાવશે?",
+    "options": [
+      "ઓળખ (Identity)",
+      "પરિશ્રમ (Industry)",
+      "લઘુતાગ્રંથિ (Inferiority)",
+      "અપરાધભાવ (Guilt)"
+    ],
+    "ans": 2,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "6 થી 12 વર્ષ 'પરિશ્રમ વિરુદ્ધ લઘુતા' નો તબક્કો છે. સતત સરખામણી અને નિષ્ફળતાનો અહેસાસ લઘુતા લાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 8: એરિક્સનના મનોસામાજિક સિદ્ધાંત મુજબ, એક 15 વર્ષનો તરુણ પોતાની રુચિઓ અને ભવિષ્યની કારકિર્દી અંગે સ્પષ્ટ નિર્ણય લઈ શકતો નથી અને અલગ-અલગ ભૂમિકાઓ વચ્ચે અટવાયેલો રહે છે. આ પરિસ્થિતિ તેના વ્યક્તિત્વમાં કઈ ભાવના વિકસાવશે?",
+    "options": [
+      "સ્થગિતતા (Stagnation)",
+      "ભૂમિકા મૂંઝવણ (Role confusion)",
+      "વિખૂટાપણું (Isolation)",
+      "લઘુતા (Inferiority)"
+    ],
+    "ans": 1,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "12 થી 18 વર્ષ 'ઓળખ વિરુદ્ધ ભૂમિકા મૂંઝવણ' નો તબક્કો છે."
+  },
+  {
+    "q": "પ્રશ્ન 9: જીન પિયાજેના જ્ઞાનાત્મક વિકાસના સિદ્ધાંત અનુસાર, 4 વર્ષનું બાળક માને છે કે પોતે જે વિચારે છે તે જ સાચું છે અને આખી દુનિયા તેના દૃષ્ટિકોણથી જ જુએ છે. આ લક્ષણ પિયાજેની કઈ સંકલ્પના દર્શાવે છે?",
+    "options": [
+      "વિકેન્દ્રિતા (Decentration)",
+      "અહંકેન્દ્રિતા (Egocentrism)",
+      "સાતત્ય (Conservation)",
+      "વર્ગીકરણ (Classification)"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "પૂર્વ ક્રિયાત્મક અવસ્થામાં બાળક અહંકેન્દ્રી હોય છે, તે બીજાના દૃષ્ટિકોણને સમજી શકતું નથી."
+  },
+  {
+    "q": "પ્રશ્ન 10: જીન પિયાજેના જ્ઞાનાત્મક વિકાસના સિદ્ધાંત અનુસાર, 5 વર્ષનું બાળક વસ્તુઓને એક જ સમયે એક કરતાં વધુ લક્ષણો (જેમ કે રંગ અને આકાર બંને) ના આધારે વર્ગીકૃત કરી શકતું નથી. આ લક્ષણ પિયાજેની કઈ સંકલ્પના દર્શાવે છે?",
+    "options": [
+      "શ્રેણીબદ્ધ ગોઠવણીનો અભાવ",
+      "અહંકેન્દ્રિતા",
+      "વર્ગીકરણની અક્ષમતા / એકમાર્ગીય વિચાર",
+      "સાતત્ય પૂર્ણતા"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "2 થી 5 વર્ષના બાળકમાં એકથી વધુ ગુણધર્મોને આધારે વર્ગીકરણ કરવાની ક્ષમતા હોતી નથી."
+  },
+  {
+    "q": "પ્રશ્ન 11: જીન પિયાજેના જ્ઞાનાત્મક વિકાસના સિદ્ધાંત અનુસાર, 6 વર્ષનું બાળક વસ્તુઓને તેની લંબાઈ કે કદના આધારે ચડતા કે ઉતરતા ક્રમમાં ગોઠવી શકતું નથી. આ લક્ષણ પિયાજેની કઈ સંકલ્પના દર્શાવે છે?",
+    "options": [
+      "અહંકેન્દ્રિતા",
+      "શ્રેણીબદ્ધ ગોઠવણીનો અભાવ (Lack of Seriation)",
+      "સાતત્યનો અભાવ",
+      "વિકેન્દ્રિતા"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "લંબાઈના આધારે ક્રમમાં ગોઠવવાની ક્ષમતા પૂર્વ ક્રિયાત્મક અવસ્થામાં (ખાસ કરીને શરૂઆતના વર્ષોમાં) હોતી નથી."
+  },
+  {
+    "q": "પ્રશ્ન 12: જીન પિયાજેના જ્ઞાનાત્મક વિકાસના સિદ્ધાંત અનુસાર, 5 વર્ષનું બાળક માટીના ગોળામાંથી લાંબી લાકડી બનાવ્યા પછી એમ માને છે કે માટીનો જથ્થો વધી ગયો છે. આ લક્ષણ પિયાજેની કઈ સંકલ્પના દર્શાવે છે?",
+    "options": [
+      "સાતત્ય કે પરિવર્તનીયતાનો અભાવ (Lack of conservation)",
+      "વર્ગીકરણ",
+      "અહંકેન્દ્રિતા",
+      "અમૂર્ત તર્ક"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "આકારો બદલાય તો પણ જથ્થો સમાન રહે છે તેવો 'સાતત્ય' (Conservation) નો ખ્યાલ આ અવસ્થામાં વિકસ્યો હોતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 13: મેડમ મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'ગુલાબી મિનારો' (Pink Tower) નો ઉપયોગ મુખ્યત્વે કઈ જ્ઞાનેન્દ્રિયના વિકાસ અને કયા ખ્યાલ માટે થાય છે?",
+    "options": [
+      "દર્શેન્દ્રિય - પરિમાણ (નાનું-મોટું)",
+      "સ્પર્શેન્દ્રિય - આકાર",
+      "દર્શેન્દ્રિય - રંગ",
+      "કર્ણેન્દ્રિય - અવાજ"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "ગુલાબી મિનારો પરિમાણ (Dimension) ના જ્ઞાન માટે દર્શેન્દ્રિયનું સાધન છે."
+  },
+  {
+    "q": "પ્રશ્ન 14: મેડમ મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'ભૌમિતિક આકૃતિની પેટી' નો ઉપયોગ મુખ્યત્વે કઈ જ્ઞાનેન્દ્રિયના વિકાસ અને કયા ખ્યાલ માટે થાય છે?",
+    "options": [
+      "સ્પર્શેન્દ્રિય - વજન",
+      "દર્શેન્દ્રિય - આકાર (Shape)",
+      "ધ્રાણેન્દ્રિય - ગંધ",
+      "દર્શેન્દ્રિય - પરિમાણ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "ભૌમિતિક આકૃતિની પેટી દર્શેન્દ્રિય દ્વારા આકારના જ્ઞાન માટે વપરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 15: મેડમ મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'શીતોષ્ણ પારખવાનું સાધન' (Thermic bottles) નો ઉપયોગ મુખ્યત્વે કઈ જ્ઞાનેન્દ્રિયના વિકાસ અને કયા ખ્યાલ માટે થાય છે?",
+    "options": [
+      "સ્વાદેન્દ્રિય - તાપમાન",
+      "સ્પર્શેન્દ્રિય - તાપમાનનો ભેદ (શીતોષ્ણ)",
+      "દર્શેન્દ્રિય - રંગ",
+      "ધ્રાણેન્દ્રિય - ગંધ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "શીતોષ્ણ પારખવાનું સાધન સ્પર્શેન્દ્રિય માટે છે."
+  },
+  {
+    "q": "પ્રશ્ન 16: મેડમ મોન્ટેસરીની શિક્ષણ પદ્ધતિમાં 'અવાજની ડબ્બી' (Sound boxes) નો ઉપયોગ મુખ્યત્વે કઈ જ્ઞાનેન્દ્રિયના વિકાસ અને કયા ખ્યાલ માટે થાય છે?",
+    "options": [
+      "કર્ણેન્દ્રિય - ધ્વનિ તીવ્રતાનો ભેદ",
+      "સ્પર્શેન્દ્રિય - કંપન",
+      "દર્શેન્દ્રિય - લય",
+      "ધ્રાણેન્દ્રિય - અવાજ"
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "અવાજની ડબ્બી કર્ણેન્દ્રિય (Auditory sense) ના વિકાસ માટે છે."
+  },
+  {
+    "q": "પ્રશ્ન 17: ફ્રોબેલની 'કિન્ડર ગાર્ટન' પદ્ધતિમાં બાળકને 'મોટા ઘનના આઠ સરખા ભાગો' વાળી બક્ષિસ (Gift) આપવામાં આવે છે. આ પ્રવૃત્તિ દ્વારા ફ્રોબેલ બાળકમાં કયું શૈક્ષણિક મૂલ્ય/ખ્યાલ વિકસાવવા માંગે છે?",
+    "options": [
+      "રંગોનું મિશ્રણ",
+      "સમગ્ર અને અંશનો સંબંધ (Whole and part relationship)",
+      "સ્થિરતા અને અસ્થિરતા",
+      "વજન અને કદ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "મોટા ઘનના આઠ સરખા ભાગો દ્વારા બાળકને સમગ્ર અને અંશના પરસ્પર સંબંધનો ખ્યાલ આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 18: ફ્રોબેલની 'કિન્ડર ગાર્ટન' પદ્ધતિમાં ગોળ, ઘન અને નળાકારની પેટીમાંથી બાળક રમી રહ્યું છે. આ પ્રવૃત્તિ દ્વારા ફ્રોબેલ બાળકમાં કયું શૈક્ષણિક મૂલ્ય/ખ્યાલ વિકસાવવા માંગે છે?",
+    "options": [
+      "સમગ્ર અને અંશ",
+      "પ્રવાહી અને ઘનનો ભેદ",
+      "સ્થિરતા (ઘન) અને અસ્થિરતા (ગોળ) નો ભૌતિક ખ્યાલ",
+      "રંગોની પરખ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "રમત દ્વારા બાળકને દર્શન થાય છે કે ગોળ અસ્થિર છે અને ઘન સ્થિર છે."
+  },
+  {
+    "q": "પ્રશ્ન 19: ફ્રોબેલની 'કિન્ડર ગાર્ટન' પદ્ધતિમાં બાળકોને માટીકામ, કાગળકામ અને કાતરકામ જેવી હસ્તઉદ્યોગની પ્રવૃત્તિઓ કરાવવામાં આવે છે. આ પ્રવૃત્તિ દ્વારા ફ્રોબેલ બાળકમાં કયું શૈક્ષણિક મૂલ્ય/ખ્યાલ વિકસાવવા માંગે છે?",
+    "options": [
+      "માત્ર શારીરિક શ્રમની આદત પાડવા",
+      "સર્જનાત્મક સ્વયંપ્રવૃત્તિ દ્વારા આંતરિક શક્તિઓનું પ્રગટીકરણ",
+      "વાંચન અને લેખનની સીધી તૈયારી",
+      "ગણિતના પાયાના ખ્યાલો માટે"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "ફ્રોબેલનો મુખ્ય સિદ્ધાંત સર્જનાત્મક સ્વયંપ્રવૃત્તિ દ્વારા બાળકનો સર્વાંગી વિકાસ છે."
+  },
+  {
+    "q": "પ્રશ્ન 20: ફ્રોબેલની 'કિન્ડર ગાર્ટન' પદ્ધતિમાં ઉનના રંગીન છ દડાઓ (3 મૂળ રંગ, 3 મિશ્ર રંગ) રમવા આપવામાં આવે છે. આ પ્રવૃત્તિ દ્વારા ફ્રોબેલ બાળકમાં કયું શૈક્ષણિક મૂલ્ય/ખ્યાલ વિકસાવવા માંગે છે?",
+    "options": [
+      "સ્થિરતા અને અસ્થિરતા",
+      "મૂળ રંગો અને તેમના મિશ્રણથી બનતા રંગોની ઓળખ",
+      "સમગ્ર અને અંશ",
+      "ભૌમિતિક આકારો"
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "આ બક્ષિસમાં ઉનના છ દડાઓ દ્વારા મૂળ રંગ અને મિશ્ર રંગનું જ્ઞાન અપાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 21: સામાજિકીકરણની પ્રક્રિયાના સંદર્ભમાં, એવરોનનો જંગલી બાળ 'વિક્ટર' અને બંગાળની 'અમલા-કમલા' પ્રાણીઓના વાતાવરણમાં ઉછર્યા અને પ્રાણીઓ જેવું વર્તન શીખ્યા. આ ઘટના શું સિદ્ધ કરે છે?",
+    "options": [
+      "માનવ બાળ માટે સામાજિકીકરણ બિનજરૂરી છે.",
+      "માનવ બાળના વિકાસમાં પ્રારંભિક માનવીય સામાજિકીકરણ અનિવાર્ય છે.",
+      "જૈવિક વારસો જ અંતિમ સત્ય છે.",
+      "પ્રાણીઓ માનવ ભાષા શીખી શકે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "આ કથાઓ સાબિત કરે છે કે માનવ બાળ પ્રાણી સમાજમાં પ્રાણી જેવું વર્તન શીખે છે, તેથી માનવ તરીકેના વિકાસ માટે પ્રારંભિક સામાજિકીકરણ જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 22: સામાજિકીકરણની પ્રક્રિયાના સંદર્ભમાં, માર્ગરેટ મીડે ન્યુગિની પ્રદેશની આદિવાસી જાતિઓનો અભ્યાસ કરી દર્શાવ્યું કે સ્ત્રી-પુરુષના લક્ષણો જન્મજાત નથી, પણ સમાજ ઘડે છે. આ ઘટના શું સિદ્ધ કરે છે?",
+    "options": [
+      "સ્ત્રી-પુરુષના સ્વભાવ માત્ર જૈવિક છે.",
+      "બધા સમાજની સંસ્કૃતિ એકસમાન હોય છે.",
+      "ભિન્ન સમાજની સંસ્કૃતિ મુજબ સામાજિકીકરણ ભિન્ન હોય છે.",
+      "આદિવાસી જાતિઓમાં સામાજિકીકરણ થતું જ નથી."
+    ],
+    "ans": 2,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "નૃવંશશાસ્ત્રીઓના અભ્યાસો બતાવે છે કે જુદા જુદા સમાજની સંસ્કૃતિ જુદી જુદી હોવાથી તેમનું સામાજિકીકરણ જુદું થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 23: સામાજિકીકરણની પ્રક્રિયાના સંદર્ભમાં, બે સમાન ઉંમરના બાળકો, એક શહેરમાં અને બીજો અંતરિયાળ ગામડામાં ઉછરે છે, બંનેના સામાજિક મૂલ્યો તદ્દન અલગ છે. આ ઘટના શું સિદ્ધ કરે છે?",
+    "options": [
+      "આ માત્ર શાળા શિક્ષણનો તફાવત છે.",
+      "બંનેના જૈવિક વારસામાં ખામી છે.",
+      "ભૌગોલિક અને સાંસ્કૃતિક વાતાવરણની ભિન્નતા સામાજિકીકરણને સીધી અસર કરે છે.",
+      "શહેરી બાળકોમાં સામાજિકતા વધુ હોય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "સામાજિક, આર્થિક અને સાંસ્કૃતિક રીતે સમાજના જુદા જુદા વાતાવરણમાં ઉછેર સામાજિકીકરણમાં ભિન્નતા લાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 24: સામાજિકીકરણની પ્રક્રિયાના સંદર્ભમાં, એક બાળક શાળામાં પ્રવેશતાની સાથે જ મિત્રોની ટોળીમાં ભળીને સહકાર અને સહિષ્ણુતા શીખે છે. આ ઘટના શું સિદ્ધ કરે છે?",
+    "options": [
+      "શાળા એ કુટુંબ કરતાં નિમ્ન સંસ્થા છે.",
+      "સમવયસ્ક જૂથ (Peer group) સામાજિક અનુકૂલન માટેનું પ્રબળ માધ્યમ છે.",
+      "બાળક માત્ર શિક્ષક પાસેથી જ શીખે છે.",
+      "માતાપિતાની ભૂમિકા અહીં શૂન્ય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "શિશુ અવસ્થાના ઉત્તરાર્ધથી ટોળીમાં ભળતું બાળક અનાયાસે સામાજિક અનુકૂલનના નિયમો જાણી લે છે."
+  },
+  {
+    "q": "પ્રશ્ન 25: એક શિક્ષક વિદ્યાર્થીના પરસ્પર સામાજિક સંબંધો, મિત્રતાની પસંદગી અને જૂથમાં સ્વીકૃતિ નું માપન કરવા માંગે છે, આ માટે મનોવિજ્ઞાનની દૃષ્ટિએ નીચેનામાંથી કઈ કસોટી/પ્રયુક્તિ સૌથી વધુ યોગ્ય રહેશે?",
+    "options": [
+      "મૂની સમસ્યા ઓળખયાદી",
+      "બેલ અનુકૂલન સંશોધનિકા",
+      "વાક્યપૂર્તિ કસોટી",
+      "સામાજિકતામિતિ (Sociometry)"
+    ],
+    "ans": 3,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "સામાજિકતામિતિ દ્વારા વિદ્યાર્થીઓનો પરસ્પર સામાજિક સંબંધ અને સ્વીકાર-અસ્વીકાર જાણી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 26: એક શિક્ષક વિદ્યાર્થીના શૈક્ષણિક, આર્થિક અને સામાજિક ક્ષેત્રે તેને નડતી ચોક્કસ સમસ્યાઓ નું માપન કરવા માંગે છે, આ માટે મનોવિજ્ઞાનની દૃષ્ટિએ નીચેનામાંથી કઈ કસોટી/પ્રયુક્તિ સૌથી વધુ યોગ્ય રહેશે?",
+    "options": [
+      "સામાજિકતામિતિ",
+      "બદામી રચિત વિદ્યાર્થી સમસ્યા સંશોધનિકા",
+      "વાક્યપૂર્તિ કસોટી",
+      "બુદ્ધિ કસોટી"
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "બદામી રચિત સંશોધનિકા શૈક્ષણિક, આર્થિક અને સામાજિક સમસ્યાઓના ક્ષેત્રોને આવરી લે છે."
+  },
+  {
+    "q": "પ્રશ્ન 27: એક શિક્ષક વિદ્યાર્થીના અવચેતન મનમાં રહેલી અધૂરી ઈચ્છાઓ અને વલણો (Projective technique) નું માપન કરવા માંગે છે, આ માટે મનોવિજ્ઞાનની દૃષ્ટિએ નીચેનામાંથી કઈ કસોટી/પ્રયુક્તિ સૌથી વધુ યોગ્ય રહેશે?",
+    "options": [
+      "વાક્યપૂર્તિ કસોટી (Sentence Completion Test)",
+      "સામાજિકતામિતિ",
+      "ચેકલિસ્ટ",
+      "શારીરિક કસોટી"
+    ],
+    "ans": 0,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "વાક્યપૂર્તિ કસોટી શાબ્દિક પ્રક્ષેપણ કસોટી છે, જેમાં અધૂરા વાક્યો પૂરા કરી મનોભાવ વ્યક્ત થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 28: એક શિક્ષક વિદ્યાર્થીના સામાજિક અને ભાવાત્મક અનુકૂલન ક્ષમતા (Social & Emotional Adjustment) નું માપન કરવા માંગે છે, આ માટે મનોવિજ્ઞાનની દૃષ્ટિએ નીચેનામાંથી કઈ કસોટી/પ્રયુક્તિ સૌથી વધુ યોગ્ય રહેશે?",
+    "options": [
+      "મૂની ઓળખયાદી",
+      "વાક્યપૂર્તિ કસોટી",
+      "બેલ અનુકૂલન સંશોધનિકા (Bell Adjustment Inventory)",
+      "સામાજિકતામિતિ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "બેલ અનુકૂલન સંશોધનિકા સામાજિક, ભાવાત્મક અને વ્યાવસાયિક અનુકૂલન ક્ષમતા માપે છે."
+  },
+  {
+    "q": "પ્રશ્ન 29: વર્ગખંડમાં એક બાળક તેના નવા જન્મેલા ભાઈ કે બહેન પ્રત્યે, અથવા ક્લાસમાં અન્ય વિદ્યાર્થીની સફળતા પ્રત્યે તીવ્ર 'ઈર્ષ્યા' દર્શાવે છે. મનોવિજ્ઞાનના સિદ્ધાંતો અનુસાર શિક્ષકે આ પરિસ્થિતિને નિયંત્રિત કરવા કયો શ્રેષ્ઠ શૈક્ષણિક ઉપાય અજમાવવો જોઈએ?",
+    "options": [
+      "તેને જાહેરમાં ઠપકો આપવો.",
+      "તેની ઈર્ષ્યા પ્રત્યે બેદરકારી ન દાખવતા તેને પૂરતી લાગણી આપી તેનું આત્મસન્માન સાચવવું.",
+      "તેને શારીરિક શિક્ષા કરવી.",
+      "તેને વર્ગની બહાર કાઢી મૂકવો."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "ઈર્ષ્યાના સંવેગ સમયે બાળકને આત્મસન્માન અને હૂંફ આપી સ્વસ્થ કરવો જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 30: વર્ગખંડમાં વિદ્યાર્થી કોઈ ચોક્કસ વિષય કે અંધારાથી 'ભય' અનુભવે છે અને સતત ચિંતામાં રહે છે. મનોવિજ્ઞાનના સિદ્ધાંતો અનુસાર શિક્ષકે આ પરિસ્થિતિને નિયંત્રિત કરવા કયો શ્રેષ્ઠ શૈક્ષણિક ઉપાય અજમાવવો જોઈએ?",
+    "options": [
+      "માત્ર શાબ્દિક દિલાસો આપવો.",
+      "તેની મજાક ઉડાવવી.",
+      "પ્રત્યક્ષ અનુભવ કરાવી સમજાવવું કે કલ્પનાથી ડરવાનું કારણ નથી.",
+      "વાલીને ફરિયાદ કરવી."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "ભયનું નિરાકરણ સમજપૂર્વક તેમજ પ્રત્યક્ષ અનુભવોથી કરવા કોશિશ કરવી જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 31: વર્ગખંડમાં એક તેજસ્વી પરંતુ આક્રમક વિદ્યાર્થી વારંવાર અન્ય બાળકો પર 'ગુસ્સો' કરે છે અને મારપીટ કરે છે. મનોવિજ્ઞાનના સિદ્ધાંતો અનુસાર શિક્ષકે આ પરિસ્થિતિને નિયંત્રિત કરવા કયો શ્રેષ્ઠ શૈક્ષણિક ઉપાય અજમાવવો જોઈએ?",
+    "options": [
+      "તેના ગુસ્સાનું ઉર્ધ્વીકરણ (Sublimation) કરવા તેને કળા, સાહિત્ય કે રમતગમતમાં જોડવો.",
+      "તેને શાળામાંથી કાઢી મૂકવો.",
+      "તેને એકલો પાડી દેવો.",
+      "તેને તેની જ ભાષામાં જવાબ આપવો."
+    ],
+    "ans": 0,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "અનિચ્છનીય સંવેગોનું ઉર્ધ્વીકરણ (Sublimation) કરવા માટે કળા, સાહિત્ય અને વ્યાયામ ઉત્તમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 32: વર્ગખંડમાં બાળક પરીક્ષાના પરિણામ અંગે અતિશય 'ચિંતા' (Anxiety) અનુભવે છે અને માનસિક સંઘર્ષમાં રહે છે. મનોવિજ્ઞાનના સિદ્ધાંતો અનુસાર શિક્ષકે આ પરિસ્થિતિને નિયંત્રિત કરવા કયો શ્રેષ્ઠ શૈક્ષણિક ઉપાય અજમાવવો જોઈએ?",
+    "options": [
+      "તેને પરીક્ષા ન આપવા દેવી.",
+      "હકારાત્મક સુદ્રઢકો (શાબાશ, સરસ) પૂરા પાડી આત્મવિશ્વાસ વધારવો.",
+      "તેને વધુ કઠિન પ્રશ્નો આપવા.",
+      "તેના પર ધ્યાન ન આપવું."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "હકારાત્મક સુદ્રઢકો અને પ્રોત્સાહન દ્વારા ચિંતા દૂર કરી આત્મવિશ્વાસ કેળવી શકાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 33: બાળકના ભાષાવિકાસ પર અસર કરતા પરિબળોના સંદર્ભમાં, નીચેનામાંથી કયું વિધાન લિંગભેદ (Gender) ની અસરને સૌથી સચોટ રીતે દર્શાવે છે?",
+    "options": [
+      "કુમારો કન્યાઓ કરતાં વહેલું બોલતા શીખે છે.",
+      "બંનેનો ભાષા વિકાસ સમાન હોય છે.",
+      "પ્રારંભિક બાલ્યાવસ્થામાં કન્યાઓ કુમારો કરતાં વહેલું બોલતા શીખે છે.",
+      "લિંગભેદની ભાષા પર કોઈ અસર નથી."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "કન્યાઓ વહેલી બોલવા માંડે છે, વાક્યની લંબાઈ અને વ્યાકરણમાં તેઓ શરૂઆતમાં સરસાઈ બતાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 34: બાળકના ભાષાવિકાસ પર અસર કરતા પરિબળોના સંદર્ભમાં, નીચેનામાંથી કયું વિધાન બુદ્ધિમત્તા (Intelligence) ની અસર દર્શાવે છે?",
+    "options": [
+      "બુદ્ધિ અને ભાષાને કોઈ સંબંધ નથી.",
+      "તેજસ્વી બાળકો સામાન્ય બાળકો કરતાં લગભગ ચાર મહિના વહેલા બોલતા શીખી જાય છે.",
+      "સામાન્ય બાળકો તેજસ્વી બાળકો કરતાં વહેલા બોલે છે.",
+      "મંદબુદ્ધિ બાળકો ઝડપી બોલે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "માનસિક શક્તિ ભાષાની પ્રગતિ પર અસર કરે છે; બુદ્ધિમાન બાળક વહેલું બોલવા લાગે છે."
+  },
+  {
+    "q": "પ્રશ્ન 35: બાળકના ભાષાવિકાસ પર અસર કરતા પરિબળોના સંદર્ભમાં, નીચેનામાંથી કયું વિધાન સામાજિક-આર્થિક મોભાની અસર દર્શાવે છે?",
+    "options": [
+      "ગરીબ કુટુંબના બાળકોનો ભાષાવિકાસ ઝડપી હોય છે.",
+      "ઉચ્ચ સામાજિક-આર્થિક મોભાવાળા કુટુંબના બાળકો ભાષાશક્તિમાં ચડિયાતા હોય છે.",
+      "આર્થિક સ્થિતિ અને ભાષા વચ્ચે કોઈ સંબંધ નથી.",
+      "આ માત્ર વારસાગત છે, આર્થિક મોભો ભાગ ભજવતો નથી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "ઉચ્ચ સામાજિક-આર્થિક મોભાવાળા કુટુંબના બાળકો ભાષાશક્તિમાં ચડિયાતા હોય છે (વારસાગત અને વાતાવરણજન્ય બંને પરિબળો)."
+  },
+  {
+    "q": "પ્રશ્ન 36: બાળકના ભાષાવિકાસ પર અસર કરતા પરિબળોના સંદર્ભમાં, નીચેનામાંથી કયું વિધાન શારીરિક સ્વાસ્થ્યની અસર દર્શાવે છે?",
+    "options": [
+      "શારીરિક વૃદ્ધિ અને ભાષાવિકાસ વચ્ચે વ્યસ્ત પ્રમાણ છે.",
+      "જે બાળકોની શરીરની વૃદ્ધિનો દર યોગ્ય હોય છે, તેઓની ભાષામાં પ્રગતિ સારી હોય છે.",
+      "રોગિષ્ટ બાળકો વધુ સારું બોલે છે.",
+      "સ્વાસ્થ્યની ભાષા પર કોઈ અસર નથી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "શરીરની વૃદ્ધિનો દર યોગ્ય હોય તેવા બાળકોની ભાષામાં પ્રગતિ સારી જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 37: બાળવિકાસનો સિદ્ધાંત સ્પષ્ટ કરે છે કે બાળક સૌપ્રથમ પોતાના માથા અને ડોક પર નિયંત્રણ મેળવે છે અને ત્યારબાદ ધડ અને પગ પર કાબૂ મેળવે છે. આ કયો સિદ્ધાંત છે?",
+    "options": [
+      "વિકાસ કેન્દ્રથી પરિઘ તરફ થાય છે.",
+      "વિકાસ મસ્તકથી ધડ (ઉપરથી નીચેની તરફ) થાય છે.",
+      "વિકાસ સામાન્યથી વિશિષ્ટ તરફ થાય છે.",
+      "વિકાસની કોઈ ચોક્કસ દિશા હોતી નથી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "વિકાસની પ્રક્રિયા ઉપરથી નીચેની તરફ એટલે કે મસ્તકથી ધડ તરફ થાય છે (Cephalocaudal)."
+  },
+  {
+    "q": "પ્રશ્ન 38: બાળવિકાસનો સિદ્ધાંત સ્પષ્ટ કરે છે કે બાળક પહેલા પોતાના ખભા અને હાથ પર કાબૂ મેળવે છે અને છેલ્લે આંગળીઓના સૂક્ષ્મ સ્નાયુઓ પર નિયંત્રણ મેળવે છે. આ કયો સિદ્ધાંત છે?",
+    "options": [
+      "વિકાસ મસ્તકથી ધડ તરફ થાય છે.",
+      "વિકાસ કેન્દ્ર (મધ્યભાગ) થી પરિઘ (છેડા) તરફ થાય છે.",
+      "વિકાસ સામાન્યથી વિશિષ્ટ તરફ થાય છે.",
+      "વિકાસ એ સતત પ્રક્રિયા છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "કેન્દ્રથી પરિઘ તરફ (Proximodistal) સિદ્ધાંત મુજબ મધ્યભાગથી હાથ-પગના છેડા તરફ વિકાસ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 39: બાળવિકાસનો સિદ્ધાંત સ્પષ્ટ કરે છે કે બાળક શરૂઆતમાં કોઈ વસ્તુ પકડવા આખા શરીરનો ઉપયોગ કરે છે, પરંતુ મોટું થતાં માત્ર આંગળીઓથી વસ્તુ પકડે છે. આ કયો સિદ્ધાંત છે?",
+    "options": [
+      "વિકાસ ચોક્કસ તરેહ પ્રમાણે થાય છે.",
+      "વિકાસ મસ્તકથી ધડ તરફ થાય છે.",
+      "વિકાસ સામાન્યથી વિશિષ્ટ તરફ થાય છે.",
+      "વિકાસ કેન્દ્રથી પરિઘ તરફ થાય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "પહેલા સામાન્ય પ્રતિભાવ (આખું શરીર) અને પછી વિશિષ્ટ પ્રતિભાવ (માત્ર આંગળી) જોવા મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 40: બાળવિકાસનો સિદ્ધાંત સ્પષ્ટ કરે છે કે બાળકના વિકાસની પ્રક્રિયા ગર્ભાધાનથી શરૂ થઈને મૃત્યુ સુધી અટક્યા વિના ચાલુ રહે છે. આ કયો સિદ્ધાંત છે?",
+    "options": [
+      "વિકાસમાં વ્યક્તિગત ભિન્નતા છે.",
+      "વિકાસ સામાન્યથી વિશિષ્ટ તરફ થાય છે.",
+      "વિકાસ એ જન્મથી મૃત્યુ સુધી સતત ચાલતી પ્રક્રિયા છે.",
+      "વિકાસ ચોક્કસ તરેહ પ્રમાણે થાય છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "વિકાસ ક્યારેય અટકતો નથી, તે આજીવન ચાલતી પ્રક્રિયા છે."
+  },
+  {
+    "q": "પ્રશ્ન 41: વ્યક્તિના વિકાસમાં વારસો અને વાતાવરણના પ્રદાન વિશે વોટ્સનનું વિધાન છે કે 'મને એક ડઝન તંદુરસ્ત બાળકો આપો, હું તેને ડૉક્ટર, વકીલ કે ચોર બનાવી દઉં, ભલે તેનો વારસો ગમે તેવો હોય'. આ મનોવૈજ્ઞાનિક દૃષ્ટિકોણ શું સ્પષ્ટ કરે છે?",
+    "options": [
+      "વારસો જ સર્વસ્વ છે.",
+      "વિકાસમાં વાતાવરણની ભૂમિકા વારસા કરતાં અતિશય પ્રબળ છે.",
+      "વારસો અને વાતાવરણ બંને સરખા છે.",
+      "બંનેની કોઈ ભૂમિકા નથી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "વોટ્સન કટ્ટર વર્તનવાદી હતા અને તેમણે વાતાવરણ (Environment) ને સર્વોપરી માન્યું."
+  },
+  {
+    "q": "પ્રશ્ન 42: વ્યક્તિના વિકાસમાં વારસો અને વાતાવરણના પ્રદાન વિશે હોર્ને (1983) દ્વારા 300 દત્તક બાળકોના બુદ્ધિઆંકનો અભ્યાસ કરવામાં આવ્યો. આ મનોવૈજ્ઞાનિક દૃષ્ટિકોણ શું સ્પષ્ટ કરે છે?",
+    "options": [
+      "માત્ર પાલક માતાપિતાનું વાતાવરણ જ બુદ્ધિ નક્કી કરે છે.",
+      "માત્ર વાસ્તવિક માતાપિતાના જનીન જ બુદ્ધિ નક્કી કરે છે.",
+      "વાતાવરણ અને આનુવંશિકતા (વારસો) બંને બુદ્ધિ નક્કી કરનારા અગત્યનાં પરિબળો છે.",
+      "બુદ્ધિ પર કોઈની અસર થતી નથી."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "હોર્નેના અભ્યાસ મુજબ બુદ્ધિના નિર્ણાયક તરીકે વારસો અને વાતાવરણ બંને અગત્યના છે."
+  },
+  {
+    "q": "પ્રશ્ન 43: વ્યક્તિના વિકાસમાં વારસો અને વાતાવરણના પ્રદાન વિશે રશિયન મનોવૈજ્ઞાનિકો દ્વારા સઘન તાલીમ દ્વારા બાળકોનો બુદ્ધિઆંક વધારવાના પ્રયોગો થયા. આ મનોવૈજ્ઞાનિક દૃષ્ટિકોણ શું સ્પષ્ટ કરે છે?",
+    "options": [
+      "વારસાગત બુદ્ધિ ક્યારેય વધારી શકાતી નથી.",
+      "યોગ્ય શૈક્ષણિક વાતાવરણ અને સઘન તાલીમ દ્વારા બુદ્ધિઆંક વધારી શકાય છે.",
+      "માત્ર વારસો જ બુદ્ધિઆંક નક્કી કરે છે.",
+      "તાલીમની બુદ્ધિ પર નકારાત્મક અસર થાય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "રશિયન મનોવૈજ્ઞાનિકો વાતાવરણની અસર સ્વીકારી તાલીમ દ્વારા IQ 200 સુધી લઈ જવામાં સફળ થયા છે."
+  },
+  {
+    "q": "પ્રશ્ન 44: વ્યક્તિના વિકાસમાં વારસો અને વાતાવરણના પ્રદાન વિશે ક્રો અને ક્રોના મતે 'વ્યક્તિનું ઘડતર માત્ર વારસાથી કે માત્ર વાતાવરણથી થતું નથી'. આ મનોવૈજ્ઞાનિક દૃષ્ટિકોણ શું સ્પષ્ટ કરે છે?",
+    "options": [
+      "વ્યક્તિત્વ વિકાસ એ વારસો અને વાતાવરણની આંતરક્રિયા (Interaction) નું પરિણામ છે.",
+      "વાતાવરણ વારસાનો નાશ કરે છે.",
+      "વારસો વાતાવરણ પર હાવી રહે છે.",
+      "આ બન્ને પરિબળો સ્વતંત્ર છે અને ભળતા નથી."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "વ્યક્તિત્વ વિકાસ બંનેની આંતરક્રિયા (Interaction) થી થાય છે, બંને પરસ્પર પૂરક છે."
+  },
+  {
+    "q": "પ્રશ્ન 45: શિક્ષક તરીકે પ્રારંભિક બાલ્યાવસ્થા (2 થી 6 વર્ષ) ના બાળકોના મનોવિજ્ઞાનને ધ્યાનમાં રાખીને, શિક્ષણકાર્યને અસરકારક બનાવવા તમે કયો શૈક્ષણિક ફલિતાર્થ અપનાવશો?",
+    "options": [
+      "તેમને આકરો દંડ આપવો.",
+      "નકારાત્મક સૂચનો ('આમ ન કરાય') ને બદલે હકારાત્મક ('આમ કરાય') સૂચનો આપી જિજ્ઞાસા સંતોષવી.",
+      "માત્ર લેખન કાર્ય જ કરાવવું.",
+      "તેમને સ્પર્ધામાં ઉતારવા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "આ ઉંમર પ્રશ્ન પૂછવાની ઉંમર છે. હકારાત્મક સૂચનો અને વાર્તાઓ દ્વારા શિક્ષણ આપવું જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 46: શિક્ષક તરીકે ઉત્તર બાલ્યાવસ્થા (6 થી 12 વર્ષ) ના બાળકોના મનોવિજ્ઞાનને ધ્યાનમાં રાખીને, શિક્ષણકાર્યને અસરકારક બનાવવા તમે કયો શૈક્ષણિક ફલિતાર્થ અપનાવશો?",
+    "options": [
+      "તેમને એકલા જ ભણવા દબાણ કરવું.",
+      "તેમને વારંવાર ડરાવવા.",
+      "આ 'ટોળાની ઉંમર' હોવાથી શિસ્ત શીખવવા સામૂહિક રમતો અને ઇત્તર પ્રવૃત્તિઓનું આયોજન કરવું.",
+      "તેમને માત્ર ગોખણપટ્ટી કરાવવી."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "છ થી બાર વર્ષની ઉંમર 'ટોળાની ઉંમર' છે, જ્યાં બાળક મિત્રો સાથે સામૂહિક પ્રવૃત્તિઓથી વધુ શીખે છે."
+  },
+  {
+    "q": "પ્રશ્ન 47: શિક્ષક તરીકે તરુણાવસ્થા (12 થી 18 વર્ષ) ના બાળકોના મનોવિજ્ઞાનને ધ્યાનમાં રાખીને, શિક્ષણકાર્યને અસરકારક બનાવવા તમે કયો શૈક્ષણિક ફલિતાર્થ અપનાવશો?",
+    "options": [
+      "તેમની દરેક સમસ્યાની અવગણના કરવી.",
+      "તેમના વિચિત્ર વર્તન બદલ તેમને જાહેરમાં અપમાનિત કરવા.",
+      "વિરપૂજાની વૃત્તિ હોવાથી તેમના સમક્ષ આદર્શ ચરિત્રો રજૂ કરવા અને મનોવૈજ્ઞાનિક માર્ગદર્શન આપવું.",
+      "તેમને માત્ર પરીક્ષાના માર્કસ માટે જ દબાણ કરવું."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "તરુણાવસ્થા કલ્પનાશીલતા અને વિરપૂજા (Hero worship) નો કાળ છે. શિક્ષકે મનોવૈજ્ઞાનિક દૃષ્ટિએ સમજવા જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 48: શિક્ષક તરીકે શૈશવ (જન્મથી 2 વર્ષ) ના બાળકોના મનોવિજ્ઞાનને ધ્યાનમાં રાખીને, શિક્ષણકાર્યને અસરકારક બનાવવા તમે કયો શૈક્ષણિક ફલિતાર્થ અપનાવશો?",
+    "options": [
+      "બાળકની શારીરિક જરૂરિયાતોની અવગણના કરવી.",
+      "બાળકને સ્વતંત્રતા આપી બધું જાતે કરવા દબાણ કરવું.",
+      "બાળકની શારીરિક અને સાંવેગિક જરૂરિયાતો સંતોષવી જેથી તેનામાં પર્યાવરણ પ્રત્યે 'વિશ્વાસ' ની ભાવના કેળવાય.",
+      "બાળકને ભય બતાવી કાબૂમાં રાખવું."
+    ],
+    "ans": 2,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "શરૂઆતના વર્ષોમાં જરૂરિયાતો સંતોષાતા બાળકમાં વિશ્વાસ (Trust) વિકસે છે."
+  },
+  {
+    "q": "પ્રશ્ન 49: પૂર્વ પ્રાથમિક શિક્ષણના સંદર્ભમાં બાળકના 'રસ' (Interest) અને 'સર્જનાત્મકતા' (Creativity) અંગે બાળક માટી, રેતી કે પાણી સાથે કલાકો સુધી તલ્લીન થઈને રમે છે, છતાં તેને થાક લાગતો નથી. આ પરિસ્થિતિ માટે શ્રેષ્ઠ મનોવૈજ્ઞાનિક સમજૂતી કઈ છે?",
+    "options": [
+      "આ માત્ર તેનો સમય બગાડે છે.",
+      "આ બાળકનો 'નૈસર્ગિક કે સ્વાભાવિક રસ' (Natural interest) છે જે સ્વયંસ્ફુરિત છે.",
+      "આ 'ઉપાર્જિત રસ' છે.",
+      "તેનામાં બુદ્ધિનો અભાવ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "જે વિષયમાં આપોઆપ રસ પડે તેને નૈસર્ગિક કે સ્વાભાવિક રસ કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 50: પૂર્વ પ્રાથમિક શિક્ષણના સંદર્ભમાં બાળકના 'રસ' (Interest) અને 'સર્જનાત્મકતા' (Creativity) અંગે એક બાળક શરૂઆતમાં સંગીતમાં ખૂબ રસ લે છે, પરંતુ થોડા મહિના પછી તે ચિત્રકામ તરફ વળે છે અને સંગીત છોડી દે છે. આ પરિસ્થિતિ માટે શ્રેષ્ઠ મનોવૈજ્ઞાનિક સમજૂતી કઈ છે?",
+    "options": [
+      "તેનામાં એકાગ્રતાની ખામી છે.",
+      "તેની બુદ્ધિ મંદ પડી ગઈ છે.",
+      "પૂર્વપ્રાથમિક કક્ષાએ બાળકોના રસમાં સ્થિરતા હોતી નથી, તે વારંવાર બદલાય છે.",
+      "શિક્ષક તેને બરાબર શીખવતા નથી."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "બાળકોનો રસ એક ધારો રહેતો નથી. શરૂઆતનો શોખ બીજી પ્રવૃત્તિ તરફ વળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 51: પૂર્વ પ્રાથમિક શિક્ષણના સંદર્ભમાં બાળકના 'રસ' (Interest) અને 'સર્જનાત્મકતા' (Creativity) અંગે શિક્ષક બાળકોને વર્ગમાં માટીમાંથી રમકડાં બનાવવા, કાગળનું કાતરકામ કરવા અને ભીંડાની છાપ પાડવાની પ્રવૃત્તિ કરાવે છે. આ પરિસ્થિતિ માટે શ્રેષ્ઠ મનોવૈજ્ઞાનિક સમજૂતી કઈ છે?",
+    "options": [
+      "આ પ્રવૃત્તિઓ બાળકની મૌલિકતા અને ઉત્પાદન ક્ષમતા (સર્જનાત્મકતા) ખીલવવા માટે અનિવાર્ય છે.",
+      "આ માત્ર શિક્ષકનો સમય પસાર કરવાનો રસ્તો છે.",
+      "આ પ્રવૃત્તિથી બાળકની યાદશક્તિ જ વધે છે.",
+      "આ પ્રવૃત્તિઓ માત્ર શારીરિક વ્યાયામ છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "સર્જનાત્મકતાના ઘટકો (મૌલિકતા, કલ્પના, ઉત્પાદન ક્ષમતા) ના વિકાસ માટે આ કલા પ્રવૃત્તિઓ ઉપયોગી છે."
+  },
+  {
+    "q": "પ્રશ્ન 52: પૂર્વ પ્રાથમિક શિક્ષણના સંદર્ભમાં બાળકના 'રસ' (Interest) અને 'સર્જનાત્મકતા' (Creativity) અંગે વિદ્યાર્થી ડૉક્ટર બનવાના ધ્યેયથી જીવવિજ્ઞાનના પુસ્તકો ખૂબ રસપૂર્વક વાંચે છે. આ પરિસ્થિતિ માટે શ્રેષ્ઠ મનોવૈજ્ઞાનિક સમજૂતી કઈ છે?",
+    "options": [
+      "આ નૈસર્ગિક રસ છે.",
+      "આ 'ઉપાર્જિત રસ' (Acquired interest) છે, જે ચોક્કસ ધ્યેય પ્રાપ્તિ માટે પ્રયત્નપૂર્વક કેળવાયેલો છે.",
+      "આ માત્ર ક્ષણિક રસ છે.",
+      "આમાં કોઈ રસ નથી, માત્ર દબાણ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "કોઈ ધ્યેયની પ્રાપ્તિ માટે તે વિષયમાં રસ કેળવવો એટલે ઉપાર્જિત રસ કે કેળવાયેલો રસ."
+  },
+  {
+    "q": "પ્રશ્ન 53: શૈક્ષણિક મનોવિજ્ઞાન મુજબ, માનસિક પ્રક્રિયા (Mental Process) તરીકે 'સ્મૃતિ (Memory)' નો ઉપયોગ વર્ગખંડમાં કેવી રીતે થાય છે?",
+    "options": [
+      "શિક્ષક નવો મુદ્દો ભણાવતા પહેલા પૂર્વજ્ઞાનની ચકાસણી માટે પ્રશ્નો પૂછે છે, જેથી વિદ્યાર્થી ભૂતકાળના અનુભવોનું પુનરાવહન કરે.",
+      "વિદ્યાર્થી માત્ર શારીરિક રમતો રમે છે.",
+      "શિક્ષક વિદ્યાર્થીને શિક્ષા કરે છે.",
+      "વિદ્યાર્થી માત્ર ભવિષ્યની કલ્પના કરે છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "સ્મૃતિ એટલે ભૂતકાળમાં થયેલા અનુભવોને અર્થયુક્ત રીતે વર્તમાનમાં પુનઃજાગૃત કરવા (દા.ત. પૂર્વજ્ઞાનની ચકાસણી)."
+  },
+  {
+    "q": "પ્રશ્ન 54: શૈક્ષણિક મનોવિજ્ઞાન મુજબ, માનસિક પ્રક્રિયા (Mental Process) તરીકે 'તર્ક (Reasoning)' નો ઉપયોગ વર્ગખંડમાં કેવી રીતે થાય છે?",
+    "options": [
+      "વિદ્યાર્થી ગોખણપટ્ટી કરીને જવાબ આપે છે.",
+      "વિદ્યાર્થી કોઈ ઘટના પર વિચાર કરી, દલીલ આધારિત કોઈ નિષ્કર્ષ કે સામાન્યીકરણ પર પહોંચે છે.",
+      "વિદ્યાર્થી માત્ર શિક્ષકનું અનુકરણ કરે છે.",
+      "વિદ્યાર્થી અચાનક જ જવાબ આપી દે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "તર્ક કોઇ સમસ્યા ઉકેલવા માટે દલીલ આધારિત જવાબરુપે પ્રગટ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 55: શૈક્ષણિક મનોવિજ્ઞાન મુજબ, માનસિક પ્રક્રિયા (Mental Process) તરીકે 'સંવેદન સ્મૃતિ (Sensory Memory)' નો ઉપયોગ વર્ગખંડમાં કેવી રીતે થાય છે?",
+    "options": [
+      "બાળકોને ગણિતના દાખલા ગણવા આપવા.",
+      "શિક્ષક પૂર્વપ્રાથમિક વર્ગમાં બાળકોને વિવિધ અવાજો સંભળાવીને તે કયા પ્રાણીનો અવાજ છે તે ઓળખવા કહે છે.",
+      "બાળકોને લાંબા નિબંધ લખવા આપવા.",
+      "બાળકોને માત્ર દોડવા કહેવું."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "નાના બાળકોમાં વિવિધ અવાજો, રંગ, સ્વાદ, ગંધના અનુભવો દ્વારા સંવેદન સ્મૃતિનો વિકાસ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 56: શૈક્ષણિક મનોવિજ્ઞાન મુજબ, માનસિક પ્રક્રિયા (Mental Process) તરીકે 'સમસ્યા ઉકેલ (Problem Solving)' નો ઉપયોગ વર્ગખંડમાં કેવી રીતે થાય છે?",
+    "options": [
+      "શિક્ષક બધો જ જવાબ પાટિયા પર લખી દે છે.",
+      "શિક્ષક બાળકો સમક્ષ પીરામીડ ગોઠવવાની રમત રજૂ કરે છે, જ્યાં બાળક પ્રયત્ન અને ભૂલ દ્વારા જાતે જ્ઞાન પ્રાપ્ત કરે છે.",
+      "વિદ્યાર્થીઓ માત્ર વાર્તા સાંભળે છે.",
+      "શિક્ષક વિદ્યાર્થીને ડરાવીને કામ કઢાવે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "સમસ્યા ઉકેલ પ્રક્રિયામાં બાળક જાતે પ્રવૃત્તિ કરી પ્રયત્ન અને ભૂલ દ્વારા શીખે છે."
+  },
+  {
+    "q": "પ્રશ્ન 57: બાળ કેળવણીના ઇતિહાસમાં રુસો (Rousseau) નું પ્રદાન ખૂબ મહત્ત્વનું છે. તેમનો મુખ્ય શૈક્ષણિક સિદ્ધાંત કયો હતો?",
+    "options": [
+      "ઇન્દ્રિય શિક્ષણ અને સાધનોનો ઉપયોગ.",
+      "બાળકને કડક શિસ્તમાં રાખવું.",
+      "કુદરત જ સાચો શિક્ષક છે, બાળકને કુદરતના ખોળે મુક્ત રીતે વિકસવા દો ('કુદરત તરફ પાછા વળો').",
+      "શિક્ષકે જ સર્વેસર્વા છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "રુસો નૂતન કેળવણીના પિતા ગણાય છે. તેમનો સિદ્ધાંત કુદરત દ્વારા મુક્ત વિકાસનો હતો."
+  },
+  {
+    "q": "પ્રશ્ન 58: બાળ કેળવણીના ઇતિહાસમાં પેસ્ટોલોજી (Pestalozzi) નું પ્રદાન ખૂબ મહત્ત્વનું છે. તેમનો મુખ્ય શૈક્ષણિક સિદ્ધાંત કયો હતો?",
+    "options": [
+      "બાળકની સાહજિક વૃત્તિઓનો વિકાસ અને 'ક્રિયા દ્વારા શિક્ષણ' (Learning by doing).",
+      "ગોખણપટ્ટી દ્વારા શિક્ષણ.",
+      "માત્ર ધાર્મિક શિક્ષણ.",
+      "બાળકને ભયથી ભણાવવું."
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "પેસ્ટોલોજીએ બાળકની સાહજિક વૃત્તિઓ અને ક્રિયા દ્વારા શિક્ષણનો ખ્યાલ આપ્યો."
+  },
+  {
+    "q": "પ્રશ્ન 59: બાળ કેળવણીના ઇતિહાસમાં ગિજુભાઈ બધેકા (Gijubhai Badheka) નું પ્રદાન ખૂબ મહત્ત્વનું છે. તેમનો મુખ્ય શૈક્ષણિક સિદ્ધાંત કયો હતો?",
+    "options": [
+      "શિક્ષણ માત્ર શ્રીમંતો માટે છે.",
+      "શિક્ષણ અંગ્રેજીમાં જ આપવું જોઈએ.",
+      "શિક્ષણમાંથી શિક્ષાનો બહિષ્કાર અને 'બાલ દેવો ભવ:' ની વિભાવના (મોન્ટેસરી પદ્ધતિનું ભારતીયકરણ).",
+      "શાળામાં કડક કાયદા હોવા જોઈએ."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "ગિજુભાઈ ('મૂછાળી મા') એ શિક્ષાનો બહિષ્કાર કરી બાલદેવો ભવ: નું સૂત્ર આપ્યું."
+  },
+  {
+    "q": "પ્રશ્ન 60: બાળ કેળવણીના ઇતિહાસમાં તારાબેન મોડક અને જુગતરામભાઈ દવે નું પ્રદાન ખૂબ મહત્ત્વનું છે. તેમનો મુખ્ય શૈક્ષણિક સિદ્ધાંત કયો હતો?",
+    "options": [
+      "શહેરી શિક્ષણ પર ભાર.",
+      "બુનિયાદી શિક્ષણની વિચારધારા આધારિત 'બાલવાડી' ની સ્થાપના કરી ગ્રામ્ય કક્ષાએ બાળકેળવણીનો વ્યાપ વધારવો.",
+      "માત્ર ઉચ્ચ શિક્ષણનો પ્રચાર.",
+      "માત્ર ઔદ્યોગિક તાલીમ."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "ગાંધીજીની બુનિયાદી શિક્ષણ યોજનામાંથી બાલવાડીનો જન્મ થયો જેમાં આ બંનેનું પ્રદાન અદ્ભુત હતું."
+  },
+  {
+    "q": "પ્રશ્ન 61: હિન્દુ શાસ્ત્રોના આધારે માનવ જીવનની વિકાસ અવસ્થાઓને 4 આશ્રમોમાં વહેંચવામાં આવી છે. આ મુજબ 'બ્રહ્મચર્યાશ્રમ (જન્મથી 25 વર્ષ)' નો મુખ્ય ઉદ્દેશ કયો છે?",
+    "options": [
+      "સંસારનો ત્યાગ કરવો.",
+      "જ્ઞાન પ્રાપ્ત કરવું, જીવન જીવવા માટે અને આર્થિક ઉપાર્જન માટેના કૌશલ્યો કેળવવા.",
+      "લગ્ન કરી કુટુંબ વસાવવું.",
+      "માત્ર યોગ ધ્યાન કરવું."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "બ્રહ્મચર્યાશ્રમ એ શિક્ષણ મેળવવાનો અને કૌશલ્ય પ્રાપ્ત કરવાનો ગાળો છે."
+  },
+  {
+    "q": "પ્રશ્ન 62: હિન્દુ શાસ્ત્રોના આધારે માનવ જીવનની વિકાસ અવસ્થાઓને 4 આશ્રમોમાં વહેંચવામાં આવી છે. આ મુજબ 'ગૃહસ્થાશ્રમ (26 થી 50 વર્ષ)' નો મુખ્ય ઉદ્દેશ કયો છે?",
+    "options": [
+      "જ્ઞાન પ્રાપ્ત કરવા શાળાએ જવું.",
+      "લગ્ન કરવાં, બાળકોનો ઉછેર કરવો અને ઘરની જવાબદારીઓ નિભાવી આર્થિક ઉપાર્જન કરવું.",
+      "પ્રભુ ભક્તિમાં લીન થવું.",
+      "જંગલમાં જઈ તપ કરવું."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "બ્રહ્મચર્યાશ્રમ બાદ ગૃહસ્થાશ્રમ શરૂ થાય છે, જેમાં કૌટુંબિક જવાબદારી અને આર્થિક ઉપાર્જન મુખ્ય છે."
+  },
+  {
+    "q": "પ્રશ્ન 63: હિન્દુ શાસ્ત્રોના આધારે માનવ જીવનની વિકાસ અવસ્થાઓને 4 આશ્રમોમાં વહેંચવામાં આવી છે. આ મુજબ 'વાનપ્રસ્થાશ્રમ (51 થી 75 વર્ષ)' નો મુખ્ય ઉદ્દેશ કયો છે?",
+    "options": [
+      "સંસારની જવાબદારીઓ સંતાનોને સોંપી, ત્યાગ અને ઈશ્વર પ્રત્યેનો અભિગમ કેળવી સમાજ ઉપયોગી પ્રવૃત્તિ કરવી.",
+      "લગ્ન કરી સંસાર શરૂ કરવો.",
+      "માત્ર ધન કમાવવા પર ધ્યાન આપવું.",
+      "માત્ર જ્ઞાન પ્રાપ્તિ માટે ભણવું."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "વાનપ્રસ્થાશ્રમમાં વ્યક્તિ માનસિક રીતે સંસારનો ત્યાગ કરતો જાય છે અને સમાજ ઉપયોગી પ્રવૃત્તિ કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 64: હિન્દુ શાસ્ત્રોના આધારે માનવ જીવનની વિકાસ અવસ્થાઓને 4 આશ્રમોમાં વહેંચવામાં આવી છે. આ મુજબ 'સંન્યાસાશ્રમ (76 વર્ષથી મૃત્યુ સુધી)' નો મુખ્ય ઉદ્દેશ કયો છે?",
+    "options": [
+      "નવો વ્યવસાય શરૂ કરવો.",
+      "કુટુંબનું પાલનપોષણ કરવું.",
+      "તમામ સાંસારિક બંધનોમાંથી સંપૂર્ણ મુક્ત થઈ, યોગ અને ધ્યાન દ્વારા પ્રભુ ભક્તિમાં લીન થવું.",
+      "સમાજમાં મોભો પ્રાપ્ત કરવો."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "સંન્યાસાશ્રમમાં સાંસારિક બંધનોમાંથી મુક્ત થઈ પ્રભુમય જીવન જીવવાનું હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 65: નીચેનામાંથી કયું વિધાન 'વૃદ્ધિ' (Growth) અને 'વિકાસ' (Development) વચ્ચેનો સાચો મનોવૈજ્ઞાનિક તફાવત દર્શાવે છે? (મુદ્દો: માપન અને ફેરફારનું સ્વરૂપ)",
+    "options": [
+      "વૃદ્ધિ માત્ર પ્રમાણાત્મક (Quantitative) છે, જ્યારે વિકાસ ગુણાત્મક (Qualitative) ફેરફાર દર્શાવે છે.",
+      "વૃદ્ધિ ગુણાત્મક છે, વિકાસ પ્રમાણાત્મક છે.",
+      "બંને માત્ર ગુણાત્મક છે.",
+      "બંનેનું માપન અશક્ય છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "હરલોકના મતે વૃદ્ધિ પ્રમાણાત્મક ફેરફાર છે, જ્યારે વિકાસ એ ગુણાત્મક ફેરફાર છે."
+  },
+  {
+    "q": "પ્રશ્ન 66: નીચેનામાંથી કયું વિધાન 'વૃદ્ધિ' (Growth) અને 'વિકાસ' (Development) વચ્ચેનો સાચો મનોવૈજ્ઞાનિક તફાવત દર્શાવે છે? (મુદ્દો: પ્રક્રિયાનો સમયગાળો)",
+    "options": [
+      "વિકાસ અમુક ઉંમરે અટકી જાય છે, વૃદ્ધિ આજીવન ચાલે છે.",
+      "વૃદ્ધિ અમુક ચોક્કસ ઉંમરે અટકી જાય છે, જ્યારે વિકાસ એ જન્મથી મૃત્યુ સુધી ચાલતી આજીવન પ્રક્રિયા છે.",
+      "બંને આજીવન ચાલે છે.",
+      "બંને તરુણાવસ્થામાં અટકી જાય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "વૃદ્ધિની પ્રક્રિયાનો સમય મર્યાદિત છે, જ્યારે વિકાસ સતત ચાલતી પ્રક્રિયા છે."
+  },
+  {
+    "q": "પ્રશ્ન 67: નીચેનામાંથી કયું વિધાન 'વૃદ્ધિ' (Growth) અને 'વિકાસ' (Development) વચ્ચેનો સાચો મનોવૈજ્ઞાનિક તફાવત દર્શાવે છે? (મુદ્દો: વ્યાપકતા અને ક્ષેત્ર)",
+    "options": [
+      "વૃદ્ધિ એ સર્વાંગી ફેરફાર છે, વિકાસ એકાંગી છે.",
+      "વૃદ્ધિ એ માત્ર શારીરિક અને એકાંગી ફેરફાર છે, જ્યારે વિકાસ એ શારીરિક, માનસિક, સાંવેગિક એમ સર્વાંગી ફેરફાર સૂચવે છે.",
+      "બંને માત્ર શારીરિક ફેરફાર છે.",
+      "બંને માત્ર માનસિક ફેરફાર છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "વૃદ્ધિ શારીરિક પાસાં સાથે સંબંધિત છે (એકાંગી), વિકાસ સર્વાંગી-સાંગોપાંગ ફેરફાર છે."
+  },
+  {
+    "q": "પ્રશ્ન 68: નીચેનામાંથી કયું વિધાન 'વૃદ્ધિ' (Growth) અને 'વિકાસ' (Development) વચ્ચેનો સાચો મનોવૈજ્ઞાનિક તફાવત દર્શાવે છે? (મુદ્દો: પરસ્પર આધાર)",
+    "options": [
+      "વૃદ્ધિ એ વિકાસની અનુગામી ઘટના છે.",
+      "વૃદ્ધિ એ વિકાસની પૂર્વશરત છે (દા.ત. સ્નાયુની વૃદ્ધિ), જ્યારે વિકાસ એ વૃદ્ધિની અનુગામી ઘટના છે (દા.ત. બ્રેક મારતા શીખવું).",
+      "બંને સ્વતંત્ર છે.",
+      "વિકાસ વિના વૃદ્ધિ શક્ય નથી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "વૃદ્ધિને પરિણામે પ્રાપ્ત થતું સામર્થ્ય એ વિકાસ છે. વૃદ્ધિ એ પૂર્વશરત છે."
+  },
+  {
+    "q": "પ્રશ્ન 69: મનોવિજ્ઞાનમાં વિકાસની વિવિધ અવસ્થાઓને તેના વિશિષ્ટ લક્ષણોના આધારે ઓળખવામાં આવે છે. નીચેનામાંથી કઈ અવસ્થાને 'પ્રશ્ન પૂછવાની ઉંમર (Questioning age)' તરીકે ઓળખવામાં આવે છે?",
+    "options": [
+      "ઉત્તર બાલ્યાવસ્થા",
+      "તરુણાવસ્થા",
+      "પ્રારંભિક બાલ્યાવસ્થા (2 થી 6 વર્ષ), કારણ કે આ સમયે બાળકની જિજ્ઞાસાવૃત્તિ અતિ તીવ્ર હોય છે.",
+      "વૃદ્ધાવસ્થા"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "2 થી 6 વર્ષના ગાળામાં બાળકમાં જિજ્ઞાસાવૃત્તિ તીવ્ર હોય છે, તેથી તે ખૂબ પ્રશ્નો પૂછે છે."
+  },
+  {
+    "q": "પ્રશ્ન 70: મનોવિજ્ઞાનમાં વિકાસની વિવિધ અવસ્થાઓને તેના વિશિષ્ટ લક્ષણોના આધારે ઓળખવામાં આવે છે. નીચેનામાંથી કઈ અવસ્થાને 'ટોળાની ઉંમર (Gang age)' તરીકે ઓળખવામાં આવે છે?",
+    "options": [
+      "પ્રારંભિક બાલ્યાવસ્થા",
+      "ઉત્તર બાલ્યાવસ્થા (6 થી 12 વર્ષ), કારણ કે આ ઉંમરે મિત્રોનું સ્થાન જીવનમાં વધુ હોય છે.",
+      "તરુણાવસ્થા",
+      "પુખ્તાવસ્થા"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "6 થી 12 વર્ષમાં બાળક શાળાએ જતું હોવાથી મિત્રોનું સ્થાન વધુ હોય છે, તેને ટોળાની ઉંમર કહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 71: મનોવિજ્ઞાનમાં વિકાસની વિવિધ અવસ્થાઓને તેના વિશિષ્ટ લક્ષણોના આધારે ઓળખવામાં આવે છે. નીચેનામાંથી કઈ અવસ્થાને 'સંક્રાંતિકાળ (Transitional period)' તરીકે ઓળખવામાં આવે છે?",
+    "options": [
+      "તરુણાવસ્થા (12 થી 21 વર્ષ), કારણ કે તેમાં નોંધપાત્ર શારીરિક-માનસિક ફેરફારો અને મુંઝવણો સર્જાય છે.",
+      "ઉત્તર બાલ્યાવસ્થા",
+      "પ્રૌઢાવસ્થા",
+      "શૈશવ"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "તરુણાવસ્થા એ બાલ્યાવસ્થા અને યુવાવસ્થા વચ્ચેનો સંક્રાંતિકાળ છે, જે સંઘર્ષ અને હતાશાનો ગાળો પણ છે."
+  },
+  {
+    "q": "પ્રશ્ન 72: મનોવિજ્ઞાનમાં વિકાસની વિવિધ અવસ્થાઓને તેના વિશિષ્ટ લક્ષણોના આધારે ઓળખવામાં આવે છે. નીચેનામાંથી કઈ અવસ્થાને 'અનુકરણનો કાળ (Imitation period)' તરીકે ઓળખવામાં આવે છે?",
+    "options": [
+      "શૈશવ (0-2 વર્ષ)",
+      "3 થી 6 વર્ષનો ગાળો, જેમાં બાળક માતાપિતા અને શિક્ષકના વર્તનની અદ્દલ નકલ કરી શીખે છે.",
+      "તરુણાવસ્થા",
+      "પ્રૌઢાવસ્થા"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "મનોવૈજ્ઞાનિકો 3 થી 6 વર્ષના સમયગાળાને અનુકરણના કાળ તરીકે ઓળખાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 73: પૂર્વ પ્રાથમિક શિક્ષણની વિશિષ્ટતાઓ અને કાર્યપદ્ધતિ માટે નીચેનામાંથી કયું વિધાન સૌથી વધુ તાર્કિક છે? (મુદ્દો: શિક્ષકની ભૂમિકા)",
+    "options": [
+      "શિક્ષકે કડક નિયંત્રક બનવાનું છે.",
+      "શિક્ષકે માહિતી આપનાર કે શીખવનાર નહીં, પરંતુ બાળકની સ્વયંસ્ફુરિત પ્રવૃત્તિઓમાં એક 'માર્ગદર્શક' (Guide) તરીકે રહેવાનું છે.",
+      "શિક્ષકે માત્ર વહીવટી કાર્ય કરવાનું છે.",
+      "શિક્ષકની કોઈ ભૂમિકા જ નથી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "પૂર્વ પ્રાથમિક કક્ષાએ શિક્ષણ બાળકેન્દ્રી છે, શિક્ષકની ભૂમિકા અહીં માર્ગદર્શકની રહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 74: પૂર્વ પ્રાથમિક શિક્ષણની વિશિષ્ટતાઓ અને કાર્યપદ્ધતિ માટે નીચેનામાંથી કયું વિધાન સૌથી વધુ તાર્કિક છે? (મુદ્દો: ઔપચારિકતાનો અભાવ)",
+    "options": [
+      "લેખનકાર્ય અને પાઠ્યપુસ્તકો અનિવાર્ય છે.",
+      "આ તબક્કે લેખનકાર્ય, ભારે દફ્તર કે પાઠ્યપુસ્તકોને કોઈ સ્થાન નથી; શિક્ષણ પ્રવૃત્તિલક્ષી અને આનંદપ્રદ હોવું જોઈએ.",
+      "શિક્ષા અને ઈનામની પ્રથા હોવી જોઈએ.",
+      "માત્ર ઔપચારિક પરીક્ષાઓ લેવાવી જોઈએ."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "આ ગાળો ઔપચારિક શિક્ષણનો નથી, તેથી દફ્તર કે બોજારૂપ બાબતોને કોઈ સ્થાન નથી."
+  },
+  {
+    "q": "પ્રશ્ન 75: પૂર્વ પ્રાથમિક શિક્ષણની વિશિષ્ટતાઓ અને કાર્યપદ્ધતિ માટે નીચેનામાંથી કયું વિધાન સૌથી વધુ તાર્કિક છે? (મુદ્દો: ધ્યેય)",
+    "options": [
+      "માત્ર અક્ષરજ્ઞાન અને ગણિત શીખવવું.",
+      "બાળકને માત્ર ચૂપચાપ બેસતા શીખવવું.",
+      "બાળકને પ્રાથમિક શાળા માટે તૈયાર કરતો 'સ્કૂલ રેડીનેસ પ્રોગ્રામ' (School Readiness Programme) છે.",
+      "માત્ર શારીરિક વ્યાયામ કરાવવો."
+    ],
+    "ans": 2,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "પૂર્વપ્રાથમિક શિક્ષણ એ પ્રાથમિક શાળાના શિક્ષણ માટે બાળકને તૈયાર કરતો કાર્યક્રમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 76: પૂર્વ પ્રાથમિક શિક્ષણની વિશિષ્ટતાઓ અને કાર્યપદ્ધતિ માટે નીચેનામાંથી કયું વિધાન સૌથી વધુ તાર્કિક છે? (મુદ્દો: માધ્યમ)",
+    "options": [
+      "માત્ર ભાષણ અને ગોખણપટ્ટી.",
+      "માત્ર પ્રશ્નોત્તરી.",
+      "માત્ર ગૃહકાર્ય.",
+      "સંગીત, રમત અને વાર્તા એ બાળશિક્ષણમાં સફળતા માટેના 'બ્રહ્માસ્ત્રો' છે."
+    ],
+    "ans": 3,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "સંગીત, રમત અને વાર્તા દ્વારા બાળકમાં અભિવ્યક્તિનો વિકાસ થાય છે અને આનંદ પ્રાપ્ત થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 77: પૂર્વ પ્રાથમિક વર્ગમાં શિક્ષક બાળકો પાસે 'માટી ગુંદવી, રેતીમાં રમવું અને જુદા-જુદા પ્રકારે કૂદવું' ની પ્રવૃત્તિ કરાવે છે. મનોવિજ્ઞાનની દૃષ્ટિએ આ પ્રવૃત્તિ બાળકના કયા વિકાસને સૌથી વધુ પોષે છે?",
+    "options": [
+      "સામાજિક વિકાસ",
+      "માનસિક વિકાસ",
+      "શારીરિક વિકાસ (નાના અને મોટા સ્નાયુઓનું સંકલન)",
+      "ભાષા વિકાસ"
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "માટી ગુંદવી વગેરે નાના-મોટા સ્નાયુઓની કેળવણી માટેની શારીરિક વિકાસની પ્રવૃત્તિઓ છે."
+  },
+  {
+    "q": "પ્રશ્ન 78: પૂર્વ પ્રાથમિક વર્ગમાં શિક્ષક બાળકો પાસે 'મહેમાનને પાણી આપવું, થાળી પીરસવી અને સમૂહ કવાયત' ની પ્રવૃત્તિ કરાવે છે. મનોવિજ્ઞાનની દૃષ્ટિએ આ પ્રવૃત્તિ બાળકના કયા વિકાસને સૌથી વધુ પોષે છે?",
+    "options": [
+      "શારીરિક વિકાસ",
+      "સામાજિક વિકાસ (જીવન વ્યવહાર અને સહકારની ભાવના)",
+      "ભાષા વિકાસ",
+      "સાંવેગિક વિકાસ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "મહેમાનને પાણી આપવું વગેરે જીવન વ્યવહારની અને સમૂહ પ્રવૃત્તિઓ સામાજિક વિકાસ પ્રેરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 79: પૂર્વ પ્રાથમિક વર્ગમાં શિક્ષક બાળકો પાસે 'સામ્યજોડ (Matching pairs), કાર્ડ્સનું વર્ગીકરણ અને પઝલ ગોઠવવી' ની પ્રવૃત્તિ કરાવે છે. મનોવિજ્ઞાનની દૃષ્ટિએ આ પ્રવૃત્તિ બાળકના કયા વિકાસને સૌથી વધુ પોષે છે?",
+    "options": [
+      "માનસિક વિકાસ (એકાગ્રતા, સ્મૃતિ અને તર્ક)",
+      "શારીરિક વિકાસ",
+      "સામાજિક વિકાસ",
+      "સાંવેગિક વિકાસ"
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "પઝલ, સામ્ય જોડ વગેરે સમસ્યા ઉકેલ અને માનસિક વિકાસને પોષક પ્રવૃત્તિઓ છે."
+  },
+  {
+    "q": "પ્રશ્ન 80: પૂર્વ પ્રાથમિક વર્ગમાં શિક્ષક બાળકો પાસે 'હાલરડાં, બાળગીતો ગાવા અને માટીકામ દ્વારા પેટર્ન બનાવવી' ની પ્રવૃત્તિ કરાવે છે. મનોવિજ્ઞાનની દૃષ્ટિએ આ પ્રવૃત્તિ બાળકના કયા વિકાસને સૌથી વધુ પોષે છે?",
+    "options": [
+      "સામાજિક વિકાસ",
+      "ભાષા વિકાસ અને લેખન માટેની પૂર્વ તૈયારી",
+      "શારીરિક વિકાસ",
+      "માત્ર સાંવેગિક વિકાસ"
+    ],
+    "ans": 1,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "ભાષા વિકાસ માટે હાલરડાં, વાર્તાઓ અને લેખનની પૂર્વ તૈયારી માટે પેટર્ન રાઇટીંગ, માટીકામ ઉપયોગી છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: સામાજિકીકરણ (Socialization) ના મુખ્ય પરિબળોમાં 'કુટુંબ (Family)' ની ભૂમિકા અંગે કયું વિધાન મનોવૈજ્ઞાનિક દૃષ્ટિએ સચોટ છે?",
+    "options": [
+      "તે માત્ર ઔપચારિક શિક્ષણ આપે છે.",
+      "તે બાળકની પ્રથમ અનૌપચારિક શૈક્ષણિક સંસ્થા છે, જ્યાં પ્રેમ અને હૂંફ દ્વારા બાળકના નૈતિક અને સાંવેગિક પાયા નંખાય છે.",
+      "તે સામાજિકીકરણમાં કોઈ ભાગ ભજવતું નથી.",
+      "તે માત્ર આર્થિક મદદ કરે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "ઘર એ પ્રારંભિક અનૌપચારિક શૈક્ષણિક સંસ્થા છે અને બાળકના વ્યક્તિત્વના પાયા નાખે છે."
+  },
+  {
+    "q": "પ્રશ્ન 82: સામાજિકીકરણ (Socialization) ના મુખ્ય પરિબળોમાં 'શાળા (School)' ની ભૂમિકા અંગે કયું વિધાન મનોવૈજ્ઞાનિક દૃષ્ટિએ સચોટ છે?",
+    "options": [
+      "તે ઘરની પૂરક ઔપચારિક સંસ્થા છે, જે સાંસ્કૃતિક વારસાના સંક્રમણ અને નાગરિકતાના શિક્ષણનું કાયદેસર માધ્યમ છે.",
+      "તે માત્ર વ્યાવસાયિક તાલીમ આપે છે.",
+      "તે અનૌપચારિક સંસ્થા છે.",
+      "તે સામાજિકીકરણ ઘટાડે છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "શાળા ઔપચારિક સંસ્થા છે જે સાંસ્કૃતિક વારસાનું સંવર્ધન અને સંક્રમણ કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 83: સામાજિકીકરણ (Socialization) ના મુખ્ય પરિબળોમાં 'સમવયસ્ક જૂથ (Peer Group)' ની ભૂમિકા અંગે કયું વિધાન મનોવૈજ્ઞાનિક દૃષ્ટિએ સચોટ છે?",
+    "options": [
+      "તે બાળકને એકલવાયા બનાવે છે.",
+      "તે બાળકને માત્ર અસામાજિક પ્રવૃત્તિઓ શીખવે છે.",
+      "તે બાળકને સામાજિક સંવેદનશીલતા, ટીકા પ્રત્યે સહિષ્ણુતા અને અન્યો સાથે સહકારથી કામ કરવાની તાલીમ આપે છે.",
+      "તે ભાષા વિકાસ અટકાવે છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "ટોળીમાં સક્રિય ભાગ લેવાથી સહકાર, સહિષ્ણુતા અને સામાજિક મનોવલણ વિકાસ પામે છે."
+  },
+  {
+    "q": "પ્રશ્ન 84: સામાજિકીકરણ (Socialization) ના મુખ્ય પરિબળોમાં 'ભાષા (Language)' ની ભૂમિકા અંગે કયું વિધાન મનોવૈજ્ઞાનિક દૃષ્ટિએ સચોટ છે?",
+    "options": [
+      "તે માત્ર મનોરંજન માટે છે.",
+      "તે સામાજિક આંતરક્રિયાને સરળ બનાવે છે અને ભૂતકાળના જ્ઞાનને વર્તમાન પેઢી સુધી પહોંચાડવાનું પ્રતિકાત્મક સાધન છે.",
+      "તે સામાજિકીકરણમાં અવરોધરૂપ છે.",
+      "તે માત્ર લેખિત જ હોવી જોઈએ."
+    ],
+    "ans": 1,
+    "unit": "એકમ-૩ મનોસામાજિક વિકાસ",
+    "exp": "ભાષા સામાજિક આંતરક્રિયાને સરળ બનાવે છે અને જ્ઞાનનું સંક્રમણ શક્ય બનાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 85: બાળકના સાંવેગિક વિકાસ અંગે મનોવૈજ્ઞાનિકોના સિદ્ધાંતોના સંદર્ભમાં કયું વિધાન સુસંગત છે? (મુદ્દો: વોટ્સનનો સિદ્ધાંત)",
+    "options": [
+      "બાળકમાં કોઈ સંવેગ જન્મજાત હોતા નથી.",
+      "નવજાત શિશુમાં મુખ્યત્વે ડર, ગુસ્સો અને પ્રેમ - આ ત્રણ આવેગોના શારીરિક લક્ષણો જ જન્મજાત જોવા મળે છે.",
+      "બાળકમાં માત્ર ડર હોય છે.",
+      "બાળક માત્ર આનંદ અનુભવે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "વર્તનવાદી વોટ્સનના મત પ્રમાણે બાળકમાં ડર, ગુસ્સો અને પ્રેમ ત્રણ આવેગો હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: બાળકના સાંવેગિક વિકાસ અંગે મનોવૈજ્ઞાનિકોના સિદ્ધાંતોના સંદર્ભમાં કયું વિધાન સુસંગત છે? (મુદ્દો: અભિવ્યક્તિમાં ઉંમરની અસર)",
+    "options": [
+      "તમામ ઉંમરે ગુસ્સાની અભિવ્યક્તિ સમાન હોય છે.",
+      "1 વર્ષનું બાળક ગુસ્સામાં બચકું ભરે છે, જ્યારે 10 વર્ષનું બાળક નિષેધાત્મક વલણ અપનાવી ગુસ્સો વ્યક્ત કરે છે.",
+      "ઉંમર વધતા સંવેગો નાશ પામે છે.",
+      "નાના બાળકો ગુસ્સો વ્યક્ત કરતા જ નથી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "સંવેગની અભિવ્યક્તિમાં ઉંમર પ્રમાણે ફરક હોય છે. શારીરિક પ્રતિક્રિયાથી લઈને માનસિક નિષેધ સુધી ફેરફાર થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 87: બાળકના સાંવેગિક વિકાસ અંગે મનોવૈજ્ઞાનિકોના સિદ્ધાંતોના સંદર્ભમાં કયું વિધાન સુસંગત છે? (મુદ્દો: માતાપિતાના પ્રેમનો અભાવ)",
+    "options": [
+      "બાળક વધુ હોંશિયાર બને છે.",
+      "બાળક સ્વતંત્ર અને સાહસિક બને છે.",
+      "જે બાળકને વાલીનો પ્રેમ મળતો નથી, તે પોતાની જાતને ત્યજાયેલ માને છે અને સાંવેગિક રીતે અપરિપક્વ/આક્રમક વર્તન કરે છે.",
+      "બાળક પર કોઈ અસર થતી નથી."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "માતાપિતાનો પ્રેમ ન મળતા બાળક અપરિપક્વ વર્તનો કરે છે અને આક્રમક બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 88: બાળકના સાંવેગિક વિકાસ અંગે મનોવૈજ્ઞાનિકોના સિદ્ધાંતોના સંદર્ભમાં કયું વિધાન સુસંગત છે? (મુદ્દો: સંવેગોની શારીરિક અસર)",
+    "options": [
+      "સંવેગો માત્ર મગજ પૂરતા મર્યાદિત છે.",
+      "ક્રોધ અને સતત ચિંતા જેવા નિષેધક સંવેગો બાળકના પાચનતંત્ર પર વિપરીત અસર કરી શારીરિક વિકાસને હાનિ પહોંચાડે છે.",
+      "સંવેગોથી શરીરનું વજન વધે છે.",
+      "નિષેધક સંવેગો રોગપ્રતિકારક શક્તિ વધારે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "સતત ચિંતા કે બીકમાં રહેતા બાળકમાં અનિદ્રા, અપચો જેવી મુશ્કેલીઓ ઉત્પન્ન થઈ શારીરિક વિકાસને હાનિ કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 89: બાળકના વ્યક્તિત્વ (Personality) પર અસર કરતા પરિબળોમાં 'શારીરિક બંધારણ (Physical Structure)' કેવી રીતે ભૂમિકા ભજવે છે?",
+    "options": [
+      "શારીરિક બાંધાની વ્યક્તિત્વ પર કોઈ અસર નથી.",
+      "વધારે પડતી ઊંચાઈ કે ઠીંગણાપણું બાળકને અન્યોની મજાકનું પાત્ર બનાવે છે, જે તેના 'સ્વ' (Self-concept) પર નકારાત્મક અસર કરે છે.",
+      "નબળું બાળક હંમેશા નેતા બને છે.",
+      "શારીરિક દેખાવ માત્ર બુદ્ધિ વધારે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "બાળકના શારીરિક બાંધા અને દેખાવને લીધે માતાપિતા અને સમાજના વલણોમાં ફરક પડે છે, જે વ્યક્તિત્વ ઘડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 90: બાળકના વ્યક્તિત્વ (Personality) પર અસર કરતા પરિબળોમાં 'બુદ્ધિમત્તા (Intelligence)' કેવી રીતે ભૂમિકા ભજવે છે?",
+    "options": [
+      "બુદ્ધિશાળી બાળક ક્યારેય અનુકૂલન સાધી શકતું નથી.",
+      "મંદબુદ્ધિ બાળક સૌથી વધુ લોકપ્રિય હોય છે.",
+      "સામાન્ય બુદ્ધિવાળું બાળક સમાજ સાથે ઝડપી અનુકૂલન સાધે છે, પરંતુ અતિ બુદ્ધિમાન (Gifted) બાળક વર્ગમાં કંટાળો અનુભવી અનુકૂલન સાધવામાં મુશ્કેલી અનુભવી શકે છે.",
+      "બુદ્ધિ અને વ્યક્તિત્વ સ્વતંત્ર છે."
+    ],
+    "ans": 2,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "અતિ બુદ્ધિમાન બાળકોની ગ્રહણશક્તિ તેજ હોવાથી તેમને વર્ગમાં કંટાળો આવે છે અને અનુકૂલનમાં મુશ્કેલી પડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 91: બાળકના વ્યક્તિત્વ (Personality) પર અસર કરતા પરિબળોમાં 'કુટુંબનું વાતાવરણ' કેવી રીતે ભૂમિકા ભજવે છે?",
+    "options": [
+      "કડક શિસ્તથી બાળક હંમેશા સફળ જ થાય છે.",
+      "જો ઘરમાં કડક શિસ્ત અને રોકટોક હોય, તો બાળકમાં કાં તો દબાયેલું (Timidity) વ્યક્તિત્વ વિકસે છે અથવા તે બળવાખોર (Rebellious) બની જાય છે.",
+      "ઝઘડાવાળા ઘરમાં બાળક પ્રેમાળ બને છે.",
+      "કુટુંબનું વાતાવરણ માત્ર શારીરિક વિકાસ કરે છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "તાલીમ પદ્ધતિ અને કડક શિસ્ત બાળકના વ્યક્તિત્વને દબાયેલું કે બળવાખોર બનાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 92: બાળકના વ્યક્તિત્વ (Personality) પર અસર કરતા પરિબળોમાં 'વિશેષ શક્તિઓ (Special abilities)' કેવી રીતે ભૂમિકા ભજવે છે?",
+    "options": [
+      "વિશેષ શક્તિ ધરાવતું બાળક હંમેશા નિરાશ રહે છે.",
+      "સંગીત કે ચિત્રકામ જેવી વિશિષ્ટ કળા ધરાવતું બાળક અન્ય બાળકોમાં આદર પામે છે, જે તેના આત્મવિશ્વાસ (સ્વ) માં ઘણો વધારો કરે છે.",
+      "કળાથી બાળક સમાજવિરોધી બને છે.",
+      "વિશેષ શક્તિઓ માત્ર સમયનો બગાડ છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "વિશેષ શક્તિઓને લીધે બાળક સમાજમાં વિશેષ સ્થાન પામે છે અને તેના 'સ્વ' ને પૃષ્ટિ મળે છે."
+  },
+  {
+    "q": "પ્રશ્ન 93: પિયાજેના જ્ઞાનાત્મક સિદ્ધાંત મુજબ, 2 થી 7 વર્ષના પ્રિ-સ્કૂલ બાળકોમાં કઈ ચોક્કસ માનસિક મર્યાદા (Cognitive limitation) જોવા મળે છે? (લક્ષણ: કેન્દ્રીકરણ (Centration))",
+    "options": [
+      "બાળકના વિચારો એકમાર્ગીય અને મર્યાદિત માહિતી પર જ કેન્દ્રિત હોય છે, તે સમસ્યાના તમામ પાસા વિચારી શકતું નથી.",
+      "બાળક બધું જ સમજી શકે છે.",
+      "બાળક સમસ્યાના અનેક પાસાઓ એકસાથે વિચારે છે.",
+      "બાળક માત્ર અમૂર્ત વિચારો કરે છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "પૂર્વ ક્રિયાત્મક અવસ્થામાં બાળકના વિચારો એકમાર્ગીય અને મર્યાદિત માહિતી પર કેન્દ્રિત હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 94: પિયાજેના જ્ઞાનાત્મક સિદ્ધાંત મુજબ, 2 થી 7 વર્ષના પ્રિ-સ્કૂલ બાળકોમાં કઈ ચોક્કસ માનસિક મર્યાદા (Cognitive limitation) જોવા મળે છે? (લક્ષણ: પ્રત્યક્ષીકરણ આધારિત તર્ક)",
+    "options": [
+      "બાળક સંપૂર્ણ તાર્કિક હોય છે.",
+      "બાળકનો તર્ક (Logic) વાસ્તવિક નિયમોને બદલે માત્ર તે જેવું 'જુએ છે' (Perception) તેના પર જ આધારિત હોય છે.",
+      "બાળક ગણિતના જટિલ નિયમો સમજે છે.",
+      "બાળક ક્યારેય કોઈ નિર્ણય લેતું નથી."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "આ અવસ્થામાં વિચારો તાર્કિક હોતા નથી, માત્ર 'પ્રત્યક્ષીકરણ' પર આધારિત હોય છે."
+  },
+  {
+    "q": "પ્રશ્ન 95: પિયાજેના જ્ઞાનાત્મક સિદ્ધાંત મુજબ, 2 થી 7 વર્ષના પ્રિ-સ્કૂલ બાળકોમાં કઈ ચોક્કસ માનસિક મર્યાદા (Cognitive limitation) જોવા મળે છે? (લક્ષણ: વિપરીત ક્રિયાની અક્ષમતા / પરિવર્તનીયતાનો અભાવ)",
+    "options": [
+      "બાળક સમજી શકતું નથી કે કોઈ ક્રિયાને ઉલટાવીને પાછી મૂળ સ્થિતિ મેળવી શકાય છે.",
+      "બાળક ઉલટસુલટ ક્રિયાઓ સહેલાઈથી કરે છે.",
+      "બાળક માત્ર વ્યાકરણના નિયમો ભૂલી જાય છે.",
+      "બાળકને ચાલવામાં મુશ્કેલી પડે છે."
+    ],
+    "ans": 0,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "બાળકમાં પરિવર્તનીયતા (Reversibility) ના ખ્યાલો વિકસ્યા હોતા નથી."
+  },
+  {
+    "q": "પ્રશ્ન 96: પિયાજેના જ્ઞાનાત્મક સિદ્ધાંત મુજબ, 2 થી 7 વર્ષના પ્રિ-સ્કૂલ બાળકોમાં કઈ ચોક્કસ માનસિક મર્યાદા (Cognitive limitation) જોવા મળે છે? (લક્ષણ: અહંકેન્દ્રિતા (Egocentrism))",
+    "options": [
+      "બાળક બધાના વિચારોનો આદર કરે છે.",
+      "બાળક અન્ય વ્યક્તિના દૃષ્ટિકોણ કે લાગણીને સમજવામાં સાતત્ય પૂર્ણ નિષ્ફળતા દર્શાવે છે, તે માને છે કે બધા તેના જેવું જ વિચારે છે.",
+      "બાળક હંમેશા પોતાનું રમકડું બીજાને આપી દે છે.",
+      "બાળક એકદમ સામાજિક હોય છે."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "અહંકેન્દ્રિતાને કારણે તે બીજાના વિચારો સ્વીકારી શકતું નથી."
+  },
+  {
+    "q": "પ્રશ્ન 97: વર્ગખંડમાં બનતી નીચેની પરિસ્થિતિમાં, એક આદર્શ શિક્ષક તરીકે તમે કયો મનોવૈજ્ઞાનિક અભિગમ અપનાવશો? પરિસ્થિતિ: એક બાળક બીજા બાળકની વારંવાર ઈર્ષ્યા કરે છે અને તેને નુકસાન પહોંચાડવાનો પ્રયાસ કરે છે.",
+    "options": [
+      "તેને ક્લાસમાંથી કાઢી મૂકવો.",
+      "તેની ઈર્ષ્યાને દબાવવાને બદલે તેને હૂંફ આપી, વર્ગમાં તેની જવાબદારીઓ વધારી તંદુરસ્ત સ્પર્ધા તરફ વાળવો.",
+      "તેના વાલીને માર મારવા કહેવું.",
+      "બંને બાળકોને એક રૂમમાં પૂરી દેવા."
+    ],
+    "ans": 1,
+    "unit": "એકમ-4 સાંવેગિક વિકાસ",
+    "exp": "ઈર્ષ્યા પ્રત્યે બેદરકારી ન દાખવતા, પૂરતી લાગણી આપી આત્મસન્માન સાચવી સ્વસ્થ કરવો જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 98: વર્ગખંડમાં બનતી નીચેની પરિસ્થિતિમાં, એક આદર્શ શિક્ષક તરીકે તમે કયો મનોવૈજ્ઞાનિક અભિગમ અપનાવશો? પરિસ્થિતિ: કોઈ બાળક તેના શારીરિક કે માનસિક વિકાસમાં સામાન્ય બાળકો કરતાં ધીમું છે.",
+    "options": [
+      "તેને 'મંદ' કે 'તોફાની' જેવું લેબલ આપવાને બદલે તેની વ્યક્તિગત ક્ષમતા મુજબ નિદાનાત્મક કાર્ય કરવું.",
+      "તેને ભણાવવાનું બંધ કરી દેવું.",
+      "તેની સતત અન્ય સાથે સરખામણી કરવી.",
+      "માત્ર હોંશિયાર બાળકો પર ધ્યાન આપવું."
+    ],
+    "ans": 0,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "કોઈપણ સમસ્યારૂપ વર્તનનું લેબલ ન કરવું જોઈએ, અને વ્યક્તિગત ભિન્નતા સમજી માર્ગદર્શન આપવું."
+  },
+  {
+    "q": "પ્રશ્ન 99: વર્ગખંડમાં બનતી નીચેની પરિસ્થિતિમાં, એક આદર્શ શિક્ષક તરીકે તમે કયો મનોવૈજ્ઞાનિક અભિગમ અપનાવશો? પરિસ્થિતિ: બાળકો વર્ગમાં ખૂબ ચંચળ છે અને તેમનો ધ્યાન-વિસ્તાર (Attention span) ખૂબ ઓછો છે.",
+    "options": [
+      "તેમને સજા કરવી.",
+      "એક જ પ્રવૃત્તિ લાંબો સમય ચલાવવાને બદલે પ્રવૃત્તિઓમાં વારંવાર વૈવિધ્ય લાવી જ્ઞાન સાથે ગમ્મત પીરસવી.",
+      "વર્ગ બંધ કરી દેવો.",
+      "માત્ર ભાષણ આપ્યા કરવું."
+    ],
+    "ans": 1,
+    "unit": "એકમ-2 બાળકનો મનોશારીરિક વિકાસ",
+    "exp": "બાળકનો ધ્યાન-વિસ્તાર 5-7 મિનિટનો હોય છે, તેથી પ્રવૃત્તિઓમાં વૈવિધ્ય જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 100: વર્ગખંડમાં બનતી નીચેની પરિસ્થિતિમાં, એક આદર્શ શિક્ષક તરીકે તમે કયો મનોવૈજ્ઞાનિક અભિગમ અપનાવશો? પરિસ્થિતિ: બાળક ઘરમાંથી પહેલીવાર શાળાએ આવે ત્યારે અસહાયપણું અને રડવાનું વર્તન દર્શાવે છે.",
+    "options": [
+      "તેને ડરાવીને ચૂપ કરવો.",
+      "વાલીને તરત પાછા બોલાવી લેવા.",
+      "શિક્ષકે 'માતા' બની નિર્દોષ લાગણીઓને સમજી તેને પ્રેમપૂર્વક વર્ગના વાતાવરણમાં સેટ થવા સમય આપવો.",
+      "તેને રમકડાં છીનવી લેવા."
+    ],
+    "ans": 2,
+    "unit": "એકમ-1 : વિકાસનો દૃષ્ટિકોણ",
+    "exp": "બાળક હુંફાળું વાતાવરણ છોડી આવે ત્યારે શિક્ષકે પ્રેમપૂર્વક અને લાગણીથી કામ પાર પાડવું જોઈએ."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "GPSC શિક્ષણ સેવા વર્ગ 1-2: બાળ વિકાસ અને પૂર્વ પ્રાથમિક શિક્ષણ",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "pro",
+            testFileName: "fy1a.html",
+            testUploadDate: "2026-11-15"
+        })
+    });
+}
+</script>
+</body>
+</html>
